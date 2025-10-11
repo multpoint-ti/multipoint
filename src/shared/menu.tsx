@@ -1,11 +1,3 @@
-//criar componente de menu
-//menu terá uma faixa azul superior, que tera as informacoes endereco, telefone, email e icons redes sociais. cada texto sera acompanhado de um icon da lucide icons. deixe space-between
-//a parte de baixo da faixa do menu, tera a imagem da logo, um menu de links do site, e uma barra de search
-//crie um outro componente para a barra de search no file src\shared\search-bar.tsx
-//o menu deve ser responsivo, sendo que em telas pequenas, a faixa azul deve manter apenas o telefone e s redes sociais 
-//ja a parte debaixo do menu ficara a logo, e um icon de menu hamburguer e logo abaixo deles, a barra de pesquisa
-//ao clicar no menu hamburguer, aparecera um menu com os links do site um abaixo do outro, sobrepondo a tela inteira, mas sem ocultar a faixa azul. mantenha a logo tambem, so mude o icon de hamburguer para um X
-
 "use client";
 
 import { useState } from 'react';
