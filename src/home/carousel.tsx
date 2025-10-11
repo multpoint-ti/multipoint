@@ -12,7 +12,7 @@
 "use client";
 
 import useEmblaCarousel from 'embla-carousel-react';
-import { Download } from 'lucide-react';
+import { Download, ShoppingBasket } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/shared/button';
 import CarrouselHome1 from '../../public/imgs/carrousel-home/carrousel-home-1.png'
@@ -106,19 +106,28 @@ export function Carousel() {
             />
           </div>
         ))}
-        </div>
-        {/* Dots for slide navigation */}
-        <div className="absolute bottom-40 md:bottom-20 left-1/2 transform -translate-x-1/2 flex gap-2">
-          {scrollSnaps.map((_, index) => (
-            <button key={index} onClick={() => scrollTo(index)} className="p-0 bg-transparent border-none">
-              <div
-                className={`w-2 h-2 rounded-full cursor-pointer transition duration-300 ${
-                  index === selectedIndex ? 'bg-red-500 w-6' : 'bg-gray-oxide-steel'
+      </div>
+      {/* Dots for slide navigation */}
+      <div className="absolute bottom-40 md:bottom-20 left-1/2 transform -translate-x-1/2 flex gap-2">
+        {scrollSnaps.map((_, index) => (
+          <button key={index} onClick={() => scrollTo(index)} className="p-0 bg-transparent border-none">
+            <div
+              className={`w-2 h-2 rounded-full cursor-pointer transition duration-300 ${index === selectedIndex ? 'bg-red-500 w-6' : 'bg-gray-oxide-steel'
                 }`}
-              />
-            </button>
-          ))}
-        </div>
+            />
+          </button>
+        ))}
+      </div>
+      <div className="p-4 gap-2 flex md:hidden text-blue-ignition">
+        <Button variant="outline" className='gap-2 border-gray-400'>
+          <Download className="h-5 w-5" />
+          Baixar Catálogo
+        </Button>
+        <Button variant="outline" className='gap-2 border-gray-400'>
+          <ShoppingBasket className="h-5 w-5" />
+          Ver Produtos
+        </Button>
+      </div>
     </div>
   );
 }
