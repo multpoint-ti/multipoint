@@ -1,0 +1,4 @@
+- usar sempre o padrão de componentes atômicos para o front (atomic design)
+- comentários e nomes de variáveis apenas em inglês
+- usar sempre lucide icons
+- usar apenas cores configuradas no tailwind.config.ts
