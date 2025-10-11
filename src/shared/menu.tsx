@@ -22,10 +22,10 @@ export function Menu() {
   ];
 
   return (
-    <header>
+    <header className='w-full'>
       {/* Top blue bar */}
-      <div className="bg-blue-gravel-mist text-white p-2">
-        <div className="container px-4 md:px-8 flex justify-between items-center text-sm">
+      <div className="bg-blue-gravel-mist text-white p-2 w-full">
+        <div className="container px-4 md:px-8 flex justify-between items-center text-sm w-full">
             <div className="hidden md:flex items-center gap-2">
               <MapPin className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-full bg-white' />
               <span>Rua São Paulo, 473 - Jardim Planalto, Registro/ SP</span>
@@ -51,7 +51,7 @@ export function Menu() {
       </div>
 
       {/* Main menu */}
-      <div className="container mx-auto px-4 md:px-20 py-2 md:py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 md:px-20 py-2 md:py-4 flex justify-between items-center w-full">
         <Image src={Logo} alt="Logo" className='h-10 md:h-16 w-auto' />
 
         <nav className="hidden md:flex items-center gap-8">

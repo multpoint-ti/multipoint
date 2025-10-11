@@ -75,11 +75,11 @@ export function Carousel() {
               <Image src={Arrow} alt="Arrow" className="h-4 md:h-6 w-auto" />
               {/* Text for larger screens */}
               <h1 className="hidden md:block text-6xl font-medium">
-                A maior empresa de <br /> <span className="text-red-500">válvulas injetoras</span> do <br /> Brasil
+                A maior empresa de <br /> <span className="text-red-amber-torque">válvulas injetoras</span> do <br /> Brasil
               </h1>
               {/* Text for smaller screens */}
               <h1 className="md:hidden text-5xl font-medium">
-                A maior empresa de <span className="text-red-500">válvulas injetoras</span> do Brasil
+                A maior empresa de <span className="text-red-amber-torque">válvulas injetoras</span> do Brasil
               </h1>
             </div>
             <div className="mt-4 gap-4 hidden md:flex">
@@ -112,7 +112,7 @@ export function Carousel() {
         {scrollSnaps.map((_, index) => (
           <button key={index} onClick={() => scrollTo(index)} className="p-0 bg-transparent border-none">
             <div
-              className={`w-2 h-2 rounded-full cursor-pointer transition duration-300 ${index === selectedIndex ? 'bg-red-500 w-6' : 'bg-gray-oxide-steel'
+              className={`w-2 h-2 rounded-full cursor-pointer transition duration-300 ${index === selectedIndex ? 'bg-red-amber-torque w-6' : 'bg-gray-oxide-steel'
                 }`}
             />
           </button>
