@@ -56,21 +56,21 @@ export function Carousel() {
   ]
 
   return (
-    <div className="overflow-hidden" ref={emblaRef}>
+    <div className="overflow-hidden flex flex-col items-center" ref={emblaRef}>
       <div className="flex">
         {/* Slide 1 */}
-        <div className="w-full flex-shrink-0 relative">
+        <div className="w-full flex-shrink-0 relative items-center">
           <Image
             src={CarrouselHome1}
             alt="Carousel Image 1"
-            className="w-full hidden md:flex h-[500px]"
+            className="w-full hidden md:flex h-[500px] object-cover"
           />
           <Image
             src={CarrouselHome1Mobile}
             alt="Carousel Image 1"
             className="w-full flex md:hidden"
           />
-          <div className="absolute inset-0 flex gap-4 flex-col items-start justify-center text-start text-white px-4 md:px-40">
+          <div className="absolute inset-0 flex gap-4 flex-col items-start justify-center text-start text-white px-4 md:px-40 max-w-[1500px] mx-auto">
             <div className='flex flex-col gap-2 items-start'>
               <Image src={Arrow} alt="Arrow" className="h-4 md:h-6 w-auto" />
               {/* Text for larger screens */}
@@ -108,11 +108,11 @@ export function Carousel() {
         ))}
       </div>
       {/* Dots for slide navigation */}
-      <div className="absolute bottom-40 md:bottom-20 left-1/2 transform -translate-x-1/2 flex gap-2">
+      <div className="flex gap-2 items-center py-4">
         {scrollSnaps.map((_, index) => (
           <button key={index} onClick={() => scrollTo(index)} className="p-0 bg-transparent border-none">
             <div
-              className={`w-2 h-2 rounded-full cursor-pointer transition duration-300 ${index === selectedIndex ? 'bg-red-amber-torque w-6' : 'bg-gray-oxide-steel'
+              className={`w-2 h-2 rounded-full cursor-pointer transition duration-300 ${index === selectedIndex ? 'bg-red-amber-torque w-6' : 'bg-gray-400'
                 }`}
             />
           </button>
