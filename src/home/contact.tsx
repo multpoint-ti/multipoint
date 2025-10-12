@@ -19,8 +19,8 @@ export default function Contact() {
     const [mensagem, setMensagem] = useState('');
 
     const contactInfo = [
-        { icon: Mail, text: 'Email: vendas@manchesterrep.com.br' },
-        { icon: Phone, text: 'Telefone: (18) 99795-5086' }
+        { icon: Mail, text: 'vendas@manchesterrep.com.br' },
+        { icon: Phone, text: '(18) 99795-5086' }
     ];
 
     const contactType = [
@@ -32,7 +32,7 @@ export default function Contact() {
     return (
         <section className="flex flex-col lg:flex-row gap-20 items-center justify-center bg-gray-soft w-full py-10 md:py-20 px-4">
 
-            <div className='flex flex-col lg:flex-row gap-12 md:gap-2 items-start max-w-7xl'>
+            <div className='flex flex-col lg:flex-row gap-8 md:gap-2 items-start max-w-7xl'>
                 <div className='flex flex-col gap-6 md:gap-10 items-center lg:items-start lg:w-1/2 text-center lg:text-start'>
                     <div className='flex flex-col gap-2 items-center lg:items-start text-center lg:text-start'>
                         <Image
@@ -44,7 +44,7 @@ export default function Contact() {
                             Entre em contato
                         </h1>
                         <p className="text-base md:text-lg">
-                            Tem uma dúvida ou precisa de um orçamento? <strong>Preencha o formulário</strong> ou entre em contato por um de nossos canais abaixo:
+                            Tem uma dúvida ou precisa de um orçamento? <strong>Preencha o formulário</strong> <span className='hidden md:block'>ou entre em contato por um de nossos canais</span> abaixo:
                         </p>
                     </div>
 
@@ -53,7 +53,7 @@ export default function Contact() {
                         <p>Atendimento de Segunda a Sexta das 08h às 18h</p>
                     </div>
 
-                    <div className='gap-2 flex flex-col text-base md:text-lg'>
+                    <div className='gap-2 hidden md:flex flex-col text-base md:text-lg'>
                         {contactInfo.map((info, index) => {
                             const Icon = info.icon;
                             return (
@@ -64,11 +64,10 @@ export default function Contact() {
                             );
                         })}
                     </div>
-
-                    <Button variant="default" className='text-white text-base md:text-lg px-6'>Conversar no WhatsApp</Button>
+                    <Button variant="default" className='hidden md:block text-white text-base md:text-lg md:px-6'>Conversar no WhatsApp</Button>
                 </div>
 
-                <div className="flex flex-col items-start w-full lg:w-1/2 px-10 gap-4 md:gap-6">
+                <div className="flex flex-col items-start w-full lg:w-1/2 md:px-10 gap-4 md:gap-6">
                     <SelectInput
                         id="contact-type"
                         className='bg-white w-full'
@@ -118,6 +117,25 @@ export default function Contact() {
                     />
                     <Button variant="default" className='text-white text-base md:text-lg px-6 bg-blue-gravel-mist w-full md:max-w-40'>Enviar</Button>
                 </div>
+
+                <div className='gap-6 flex md:hidden flex-col text-base md:text-lg pt-6'>
+                    <p className="text-center text-base md:text-lg">
+                        <strong>Ou</strong> entre em contato por um de nossos canais abaixo:
+                    </p>
+                    <div className='flex flex-col gap-2'>
+                        {contactInfo.map((info, index) => {
+                            const Icon = info.icon;
+                            return (
+                                <div key={index} className="flex items-center gap-2">
+                                    <Icon className='h-6 w-6 p-1 text-blue-gravel-mist rounded-full bg-white' />
+                                    <span>{info.text}</span>
+                                </div>
+                            );
+                        })}
+                    </div>
+                    <Button variant="default" className='text-white text-base md:text-lg md:px-6'>Conversar no WhatsApp</Button>
+                </div>
+
             </div>
         </section>
     )
