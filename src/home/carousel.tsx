@@ -1,14 +1,3 @@
-//criar componente de carrousel
-//o carrousel tera varias imagens cada uma redirecionando para um link direferente
-//exceto a primeira imagem, que sera public\imgs\carrousel-home\carrousel-home-1.png e tera um texto e botoes por cima dela
-//na primeira imagem, o tezto sera A maior empresa de válvulas injetoras do Brasil, sedo que válvulas injetoras destacadas em vermelho
-//logo abaixo do texto dois botes, um azul escrito Veja nossos Produtos e outro outlined escrito Baixe nosso Catálogo com icon de baixar
-//crie o componente de botao separado dai, com variantes, podendo ou nao receber icon, em src\shared\button.tsx
-//o carrousel tambem tera os pontos para passar de imagem, cada um com um circulo, e quando clicado, passara para a imagem correspondente, tanto em telas menores quanto maiores
-//nas telas menores, vai sumir os botoes e vai ficar apenas o texto, e a imagem deve mudar para public\imgs\carrousel-home\carrousel-home-mobile-1.png
-//todas as imagens vao ter a mesma altura e largura e o carrousel deve ter a mesma altura e largura que as imagens
-//alem disso, cada imagem vai ter a versao grande e mobile e vai se chamar carrousel-home-1.png e carrousel-home-mobile-1.png respectivamente
-
 "use client";
 
 import useEmblaCarousel from 'embla-carousel-react';
