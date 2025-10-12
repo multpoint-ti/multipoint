@@ -13,12 +13,12 @@ export function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '#', label: 'Home' },
-    { href: '#', label: 'Produtos' },
-    { href: '#', label: 'Empresa' },
-    { href: '#', label: 'Representantes' },
-    { href: '#', label: 'Catálogo' },
-    { href: '#', label: 'Contato' },
+    { href: '/', label: 'Home' },
+    { href: '/produtos', label: 'Produtos' },
+    { href: '/empresa', label: 'Empresa' },
+    { href: '/representantes', label: 'Representantes' },
+    { href: '/catalogo', label: 'Catálogo' },
+    { href: '/contato', label: 'Contato' },
   ];
 
   return (

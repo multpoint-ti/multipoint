@@ -28,7 +28,7 @@ const aboutItems = [
 const HomeAbout = () => {
     return (
         <section className="max-w-6xl flex flex-col items-center px-4 gap-4 md:gap-8">
-            <h1 className="text-3xl md:text-5xl font-medium text-center max-w-3xl">
+            <h1 className="text-3xl md:text-5xl font-medium text-center max-w-3xl leading-tight">
                 A maior empresa de <span className="text-red-amber-torque">válvulas injetoras</span> do Brasil
             </h1>
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8">
@@ -41,7 +41,7 @@ const HomeAbout = () => {
                 </div>
                 <div className="text-center md:text-start items-center md:items-start md:w-1/2 flex flex-col gap-4">
                     <SectionTagName text='Quem somos' />
-                    <h1 className="text-3xl md:text-5xl font-medium text-center md:text-start max-w-3xl">
+                    <h1 className="text-3xl md:text-5xl font-medium text-center md:text-start max-w-3xl leading-tight">
                         Somos uma empresa <span className="text-blue-gravel-mist font-bold">100% brasileira</span>
                     </h1>
                     <p className="text-base md:text-lg">

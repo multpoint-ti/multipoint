@@ -63,11 +63,11 @@ export function Carousel() {
             <div className='flex flex-col gap-2 items-start'>
               <Image src={Arrow} alt="Arrow" className="h-4 md:h-6 w-auto" />
               {/* Text for larger screens */}
-              <h1 className="hidden md:block text-6xl font-medium">
+              <h1 className="hidden md:block text-6xl font-medium leading-tight">
                 A maior empresa de <br /> <span className="text-red-amber-torque">válvulas injetoras</span> do <br /> Brasil
               </h1>
               {/* Text for smaller screens */}
-              <h1 className="md:hidden text-5xl font-medium">
+              <h1 className="md:hidden text-5xl font-medium leading-tight">
                 A maior empresa de <span className="text-red-amber-torque">válvulas injetoras</span> do Brasil
               </h1>
             </div>
