@@ -4,6 +4,7 @@ import SectionTagName from '@/shared/section-tag-name';
 import { Button } from '@/shared/button';
 import { ArrowRightIcon } from 'lucide-react';
 import ValueAbout from '@/shared/values-about';
+import Address from './address';
 
 const aboutItems = [
     {
@@ -68,6 +69,7 @@ const HomeAbout = () => {
                 </div>
             </div>
             <ValueAbout />
+            <Address />
         </section>
     );
 };

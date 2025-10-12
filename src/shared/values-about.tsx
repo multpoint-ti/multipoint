@@ -58,7 +58,7 @@ const ValuesSectionAbout = () => {
             <div className='flex flex-col items-center gap-4 md:gap-16'>
                 <div className='flex flex-col items-center gap-4'>
                     <SectionTagName text='Nossos Valores' />
-                    <h1 className="text-2xl md:text-3xl font-medium text-center md:text-start max-w-3xl leading-tight">
+                    <h1 className="text-3xl font-medium text-center md:text-start max-w-3xl leading-tight">
                         Mais do que peças. <span className="text-blue-gravel-mist font-bold">Entregamos Valor.</span>
                     </h1>
                 </div>
