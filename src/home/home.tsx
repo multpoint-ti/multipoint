@@ -7,8 +7,8 @@ export default function HomePageComponent() {
   return (
     <div className='flex flex-col items-center w-full'>
       <Menu />
+      <Carousel />
       <PageContainer>
-        <Carousel />
         <HomeAbout />
       </PageContainer>
     </div>
