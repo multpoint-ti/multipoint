@@ -171,7 +171,7 @@ export default function RepresentantsPageComponent() {
                             </div>
                             <div className='flex flex-col gap-2'>
                                 <p className="text-base md:text-lg">
-                                    Filtre por estado:
+                                    Filtre por Estado:
                                 </p>
                                 <SelectInput
                                     id="state-select"
@@ -199,7 +199,7 @@ export default function RepresentantsPageComponent() {
                                 <RepresentantsCard key={index} representant={representant} />
                             ))
                         ) : (
-                            <p>Nenhum representante encontrado para este estado.</p>
+                            <p>Nenhum representante encontrado para este Estado.</p>
                         )}
                     </div>
                 </div>
