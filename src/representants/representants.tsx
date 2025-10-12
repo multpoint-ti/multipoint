@@ -8,6 +8,7 @@ import PageContainer from '@/shared/page-container';
 import Image from 'next/image';
 import Arrow from '../../public/imgs/arrow.svg';
 import { Representant, RepresentantsCard } from './representants-card';
+import { Footer } from '@/shared/footer';
 
 export default function RepresentantsPageComponent() {
     const states = [
@@ -204,6 +205,7 @@ export default function RepresentantsPageComponent() {
                     </div>
                 </div>
             </PageContainer>
+            <Footer />
         </div>
     );
 }

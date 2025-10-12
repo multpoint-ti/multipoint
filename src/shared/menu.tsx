@@ -39,7 +39,7 @@ export function Menu() {
         <div className="container px-4 md:px-8 flex justify-between items-center text-sm w-full">
             <div className="hidden md:flex items-center gap-2">
               <MapPin className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-full bg-white' />
-              <span>Rua São Paulo, 473 - Jardim Planalto, Registro/ SP</span>
+              <span>Rua São Paulo, 473 - Jardim Planalto, Registro/SP</span>
             </div>
             <div className="hidden md:flex items-center gap-2">
               <Mail className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-full bg-white' />

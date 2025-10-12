@@ -2,6 +2,7 @@ import PageContainer from '@/shared/page-container';
 import { Menu } from '../shared/menu';
 import { Carousel } from './carousel';
 import HomeAbout from './home-about';
+import { Footer } from '@/shared/footer';
 
 export default function HomePageComponent() {
   return (
@@ -11,6 +12,7 @@ export default function HomePageComponent() {
       <PageContainer>
         <HomeAbout />
       </PageContainer>
+      <Footer />
     </div>
   );
 }

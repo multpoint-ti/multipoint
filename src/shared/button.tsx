@@ -13,6 +13,8 @@ const buttonVariants = cva(
           'bg-blue-gravel-mist rounded-full text-primary-foreground hover:bg-primary/90 transition duration-300 hover:cursor-pointer hover:brightness-95',
         outline:
           'border border-input rounded-full transition duration-300 hover:cursor-pointer hover:brightness-95',
+        white:
+          'bg-white text-blue-ignition rounded-full transition duration-300 hover:cursor-pointer hover:brightness-95',
       },
       size: {
         default: 'h-10 px-4 py-2',
