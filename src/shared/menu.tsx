@@ -1,16 +1,27 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Mail, MapPin, Phone, X, Facebook, Instagram } from 'lucide-react';
 import { SearchBar } from './search-bar';
 import Image from 'next/image';
 
-// Assuming you have a logo file in public/images/logo.png
 import Logo from '../../public/imgs/logo-complete.png';
 import MenuIcon from '../../public/imgs/burguer-menu-icon.svg';
 
 export function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [isMenuOpen]);
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -56,7 +67,7 @@ export function Menu() {
 
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="text-blue-ignition hover:text-red-amber-torque hover:underline duration-200 transition uppercase">
+            <a key={link.href} href={link.href} className="text-blue-ignition text-sm hover:text-red-amber-torque hover:underline duration-200 transition uppercase">
               {link.label}
             </a>
           ))}
@@ -68,7 +79,7 @@ export function Menu() {
 
         <div className="md:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className='h-4 w-auto' /> : <Image src={MenuIcon} alt="MenuIcon" className='h-3 w-auto' />}
+            {isMenuOpen ? <X className='h-6 w-auto text-blue-ignition' /> : <Image src={MenuIcon} alt="MenuIcon" className='h-3 w-auto' />}
           </button>
         </div>
       </div>
@@ -79,19 +90,13 @@ export function Menu() {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-white z-50">
-          <div className="container mx-auto p-4 flex justify-between items-center">
-            <Image src={Logo} alt="Logo" width={150} height={40} />
-            <button onClick={() => setIsMenuOpen(false)}>
-              <X size={24} />
-            </button>
-          </div>
-          <nav className="flex flex-col items-center justify-center h-full gap-8 text-xl">
+        <div className="md:hidden bg-white h-full min-h-[calc(100vh-64px)]">
+          <nav className="container mx-auto flex flex-col items-center py-4 gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="hover:text-blue-600"
+                className="text-blue-ignition uppercase text-lg font-normal hover:text-red-amber-torque duration-200 transition"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}

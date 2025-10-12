@@ -1,5 +1,3 @@
-//titulo centralizado
-//div dividindo a tela em 2. primeira parte é uma imgem. segunda parte é um texto (quem somos, embaixo titulo, embaixo texto). no mobile, deve vir a imgem em cima e o texto embaixo
 import Image from 'next/image';
 import HomeAboutImage from '../../public/imgs/about/home-about.png';
 import SectionTagName from '@/shared/section-tag-name';
@@ -27,7 +25,7 @@ const aboutItems = [
 
 const HomeAbout = () => {
     return (
-        <section className="max-w-6xl flex flex-col items-center px-4 gap-4 md:gap-8">
+        <section className="max-w-6xl flex flex-col items-center gap-4 md:gap-8">
             <h1 className="text-3xl md:text-5xl font-medium text-center max-w-3xl leading-tight">
                 A maior empresa de <span className="text-red-amber-torque">válvulas injetoras</span> do Brasil
             </h1>

@@ -155,7 +155,7 @@ export default function RepresentantsPageComponent() {
             <PageContainer>
                 <div>
                     <div className='flex flex-row w-full'>
-                        <div className='flex flex-col items-start w-1/2 gap-8'>
+                        <div className='flex flex-col items-start w-full lg:w-1/2 gap-8'>
                             <div className='flex flex-col items-start gap-3'>
                                 <Image
                                     src={Arrow}
@@ -180,7 +180,7 @@ export default function RepresentantsPageComponent() {
                                 />
                             </div>
                         </div>
-                        <div className='flex flex-col items-start w-1/2'>
+                        <div className='hidden lg:flex flex-col items-start lg:w-1/2'>
                             <MapBrazil
                                 onChange={(state: string) => setSelectedState(state.toLowerCase())}
                                 width={700}

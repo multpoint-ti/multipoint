@@ -35,7 +35,6 @@ export function Carousel() {
     emblaApi.on('reInit', onSelect);
   }, [emblaApi, onSelect]);
 
-  //criar array com as imagens do carroussel aqui e renderizar um slide para cada uma delas, para tamanho mobile e normal
   const carouselImages = [
     {
       id: 2,
