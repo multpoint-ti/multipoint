@@ -3,6 +3,8 @@ import { Menu } from '../shared/menu';
 import { Carousel } from './carousel';
 import HomeAbout from './home-about';
 import { Footer } from '@/shared/footer';
+import Address from './address';
+import Contact from './contact';
 
 export default function HomePageComponent() {
   return (
@@ -11,6 +13,10 @@ export default function HomePageComponent() {
       <Carousel />
       <PageContainer>
         <HomeAbout />
+      </PageContainer>
+      <Contact />
+      <PageContainer>
+        <Address />
       </PageContainer>
       <Footer />
     </div>

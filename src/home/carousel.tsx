@@ -66,7 +66,7 @@ export function Carousel() {
                 A maior empresa de <br /> <span className="text-red-amber-torque">válvulas injetoras</span> do <br /> Brasil
               </h1>
               {/* Text for smaller screens */}
-              <h1 className="md:hidden text-5xl font-medium leading-tight">
+              <h1 className="md:hidden text-[40px] font-medium leading-tight">
                 A maior empresa de <span className="text-red-amber-torque">válvulas injetoras</span> do Brasil
               </h1>
             </div>

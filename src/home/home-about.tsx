@@ -4,7 +4,6 @@ import SectionTagName from '@/shared/section-tag-name';
 import { Button } from '@/shared/button';
 import { ArrowRightIcon } from 'lucide-react';
 import ValueAbout from '@/shared/values-about';
-import Address from './address';
 
 const aboutItems = [
     {
@@ -26,7 +25,7 @@ const aboutItems = [
 
 const HomeAbout = () => {
     return (
-        <section className="max-w-6xl flex flex-col items-center gap-20 md:gap-20">
+        <section className="max-w-6xl flex flex-col items-center gap-20">
             <div className='flex flex-col items-center gap-4 md:gap-8'>
                 <h1 className="text-3xl md:text-5xl font-medium text-center max-w-3xl leading-tight">
                     A maior empresa de <span className="text-red-amber-torque">válvulas injetoras</span> do Brasil
@@ -69,7 +68,6 @@ const HomeAbout = () => {
                 </div>
             </div>
             <ValueAbout />
-            <Address />
         </section>
     );
 };

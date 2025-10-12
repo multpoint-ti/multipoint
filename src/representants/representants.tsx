@@ -10,37 +10,39 @@ import Arrow from '../../public/imgs/arrow.svg';
 import { Representant, RepresentantsCard } from './representants-card';
 import { Footer } from '@/shared/footer';
 
+export const states = [
+    { value: 'ac', label: 'Acre' },
+    { value: 'al', label: 'Alagoas' },
+    { value: 'ap', label: 'Amapá' },
+    { value: 'am', label: 'Amazonas' },
+    { value: 'ba', label: 'Bahia' },
+    { value: 'ce', label: 'Ceará' },
+    { value: 'df', label: 'Distrito Federal' },
+    { value: 'es', label: 'Espírito Santo' },
+    { value: 'go', label: 'Goiás' },
+    { value: 'ma', label: 'Maranhão' },
+    { value: 'mt', label: 'Mato Grosso' },
+    { value: 'ms', label: 'Mato Grosso do Sul' },
+    { value: 'mg', label: 'Minas Gerais' },
+    { value: 'pa', label: 'Pará' },
+    { value: 'pb', label: 'Paraíba' },
+    { value: 'pr', label: 'Paraná' },
+    { value: 'pe', label: 'Pernambuco' },
+    { value: 'pi', label: 'Piauí' },
+    { value: 'rj', label: 'Rio de Janeiro' },
+    { value: 'rn', label: 'Rio Grande do Norte' },
+    { value: 'rs', label: 'Rio Grande do Sul' },
+    { value: 'ro', label: 'Rondônia' },
+    { value: 'rr', label: 'Roraima' },
+    { value: 'sc', label: 'Santa Catarina' },
+    { value: 'sp', label: 'São Paulo' },
+    { value: 'se', label: 'Sergipe' },
+    { value: 'to', label: 'Tocantins' },
+    { value: 'all', label: 'Todos' },
+];
+
 export default function RepresentantsPageComponent() {
-    const states = [
-        { value: 'ac', label: 'Acre' },
-        { value: 'al', label: 'Alagoas' },
-        { value: 'ap', label: 'Amapá' },
-        { value: 'am', label: 'Amazonas' },
-        { value: 'ba', label: 'Bahia' },
-        { value: 'ce', label: 'Ceará' },
-        { value: 'df', label: 'Distrito Federal' },
-        { value: 'es', label: 'Espírito Santo' },
-        { value: 'go', label: 'Goiás' },
-        { value: 'ma', label: 'Maranhão' },
-        { value: 'mt', label: 'Mato Grosso' },
-        { value: 'ms', label: 'Mato Grosso do Sul' },
-        { value: 'mg', label: 'Minas Gerais' },
-        { value: 'pa', label: 'Pará' },
-        { value: 'pb', label: 'Paraíba' },
-        { value: 'pr', label: 'Paraná' },
-        { value: 'pe', label: 'Pernambuco' },
-        { value: 'pi', label: 'Piauí' },
-        { value: 'rj', label: 'Rio de Janeiro' },
-        { value: 'rn', label: 'Rio Grande do Norte' },
-        { value: 'rs', label: 'Rio Grande do Sul' },
-        { value: 'ro', label: 'Rondônia' },
-        { value: 'rr', label: 'Roraima' },
-        { value: 'sc', label: 'Santa Catarina' },
-        { value: 'sp', label: 'São Paulo' },
-        { value: 'se', label: 'Sergipe' },
-        { value: 'to', label: 'Tocantins' },
-        { value: 'all', label: 'Todos' },
-    ].sort((a, b) => a.label.localeCompare(b.label));
+    states.sort((a, b) => a.label.localeCompare(b.label));
 
     const representants: { [key: string]: Representant[] } = {
         pa: [{

@@ -35,16 +35,16 @@ export function Menu() {
   return (
     <header className='w-full'>
       {/* Top blue bar */}
-      <div className="bg-blue-gravel-mist text-white p-2 w-full">
+      <div className="bg-blue-gravel-mist text-white p-2 w-full items-center justify-center flex">
         <div className="container px-4 md:px-8 flex justify-between items-center text-sm w-full">
-            <div className="hidden md:flex items-center gap-2">
-              <MapPin className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-full bg-white' />
-              <span>Rua São Paulo, 473 - Jardim Planalto, Registro/SP</span>
-            </div>
-            <div className="hidden md:flex items-center gap-2">
-              <Mail className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-full bg-white' />
-              <span>vendas@manchesterrep.com.br</span>
-            </div>
+          <div className="hidden md:flex items-center gap-2">
+            <MapPin className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-full bg-white' />
+            <span>Rua São Paulo, 473 - Jardim Planalto, Registro/SP</span>
+          </div>
+          <div className="hidden md:flex items-center gap-2">
+            <Mail className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-full bg-white' />
+            <span>vendas@manchesterrep.com.br</span>
+          </div>
           <div className="flex items-center gap-2">
             <Phone className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-full bg-white' />
             <span>(18) 99795-5086</span>
@@ -52,10 +52,10 @@ export function Menu() {
           <div className="flex items-center gap-2">
             {/* Add social icons here */}
             <a href="">
-                <Facebook className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-sm bg-white' />
+              <Facebook className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-sm bg-white' />
             </a>
             <a href="">
-                <Instagram className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-sm bg-white' />
+              <Instagram className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-sm bg-white' />
             </a>
           </div>
         </div>

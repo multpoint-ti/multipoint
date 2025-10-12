@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from 'react';
 import { Mail, MapPin, Phone, X, Facebook, Instagram, Clock, Download } from 'lucide-react';
 import Image from 'next/image';
 
