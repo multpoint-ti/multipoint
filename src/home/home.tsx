@@ -15,6 +15,7 @@ export default function HomePageComponent() {
         <HomeAbout />
       </PageContainer>
       <Contact />
+      <span className='py-6 md:py-0'></span>
       <PageContainer>
         <Address />
       </PageContainer>

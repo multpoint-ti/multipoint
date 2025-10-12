@@ -39,7 +39,7 @@ const HomeAbout = () => {
                         />
                     </div>
                     <div className="text-center md:text-start items-center md:items-start md:w-1/2 flex flex-col gap-4">
-                        <SectionTagName text='Quem somos'  />
+                        <SectionTagName text='Quem somos' />
                         <h1 className="text-3xl md:text-5xl font-medium text-center md:text-start max-w-3xl leading-tight">
                             Somos uma empresa <span className="text-blue-gravel-mist font-bold">100% brasileira</span>
                         </h1>
@@ -68,6 +68,7 @@ const HomeAbout = () => {
                 </div>
             </div>
             <ValueAbout />
+            <span></span>
         </section>
     );
 };
