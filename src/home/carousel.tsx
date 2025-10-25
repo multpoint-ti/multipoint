@@ -95,8 +95,9 @@ export function Carousel() {
           </div>
         ))}
       </div>
+
       {/* Dots for slide navigation */}
-      <div className="flex gap-2 items-center py-4">
+      <div className="flex gap-2 items-center pt-2 pb-4 lg:mt-[-30px] lg:relative lg:z-3">
         {scrollSnaps.map((_, index) => (
           <button key={index} onClick={() => scrollTo(index)} className="p-0 bg-transparent border-none">
             <div
@@ -106,6 +107,7 @@ export function Carousel() {
           </button>
         ))}
       </div>
+
       <div className="p-4 gap-2 flex md:hidden text-blue-ignition">
         <Button variant="outline" className='gap-2 border-gray-400'>
           <Download className="h-5 w-5" />

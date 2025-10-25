@@ -27,8 +27,8 @@ const HomeAbout = () => {
     return (
         <section className="max-w-6xl flex flex-col items-center gap-20">
             <div className='flex flex-col items-center gap-4 md:gap-8'>
-                <h1 className="text-3xl md:text-5xl font-medium text-center max-w-3xl leading-tight">
-                    A maior empresa de <span className="text-red-amber-torque">válvulas injetoras</span> do Brasil
+                <h1 className="text-3xl md:text-5xl font-medium text-center max-w-3xl leading-tight md:pb-8">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 </h1>
                 <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8">
                     <div className="md:w-1/2 mb-8 md:mb-0">
