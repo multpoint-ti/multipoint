@@ -5,6 +5,7 @@ import { Footer } from '@/shared/footer';
 import { Menu } from '@/shared/menu';
 import { useEffect, useState } from 'react';
 import { Product } from '@/shared/types/product-types';
+import Image from 'next/image';
 
 interface ApiResponse {
   products: Product[];
@@ -52,6 +53,7 @@ export default function ProductsListPageComponent() {
             <ul>
               {data.products.map(product => (
                 <li key={product.id} className='mb-2 border-b pb-2'>
+                  <Image src={product.images[0].path} alt={product.multpointCode} width={100} height={100} />
                   <p className='font-semibold'>{product.multpointCode}</p>
                   <p>{product.shortCode}</p>
                 </li>
