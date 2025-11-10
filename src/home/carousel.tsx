@@ -11,7 +11,6 @@ import CarrouselHome2Mobile from '../../public/imgs/carrousel-home/carrousel-hom
 import Arrow from '../../public/imgs/arrow.svg'
 import { useCallback, useEffect, useState } from 'react';
 
-
 export function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);

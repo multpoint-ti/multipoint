@@ -1,11 +1,3 @@
-// <SectionTagName text='LINHAS DE PRODUTOS' />
-// bg gray-soft
-// carrossel de componentes
-// componente - retangulo vertical com imagem e texto. bg-white, no topo do retangulo, uma linha vertical decorativa blue-gravel-mist, com o nome da linha em uppercase + npme da montadora logo abaixo. text-blue-gravel-mist
-// abaixo do texto vem a imagem
-// hover: aparecer um overlay por todo o retangulo (bg-blue-gravel-mist opacity-50) e em cima da imagem, o texto e linha decorativa ficam branco
-// ainda hover: aparece escrito PRODUTOS -> na parte debaixo do retangulo, em branco, logo depois da imagem
-
 "use client";
 
 import useEmblaCarousel from 'embla-carousel-react';
