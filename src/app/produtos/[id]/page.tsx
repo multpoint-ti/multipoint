@@ -1,7 +1,8 @@
 import ProductDetailComponent from '@/products/product-detail';
 
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
-  const productId = parseInt(params.id, 10);
+export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const productId = parseInt(id, 10);
 
   if (isNaN(productId)) {
     return (

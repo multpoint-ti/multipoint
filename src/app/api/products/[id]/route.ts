@@ -3,9 +3,10 @@ import { NextRequest } from 'next/server';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const id = parseInt(params.id, 10);
+  const { id: paramId } = await params;
+  const id = parseInt(paramId, 10);
 
   if (isNaN(id)) {
     return Response.json({ error: 'Invalid product ID' }, { status: 400 });

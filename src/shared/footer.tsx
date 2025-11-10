@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, MapPin, Phone, X, Facebook, Instagram, Clock, Download } from 'lucide-react';
+import { Mail, MapPin, Phone, Facebook, Instagram, Clock, Download } from 'lucide-react';
 import Image from 'next/image';
 
 import Logo from '../../public/imgs/logo-complete-dark.png';
