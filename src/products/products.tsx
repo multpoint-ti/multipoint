@@ -31,10 +31,28 @@ export default function ProductsListPageComponent() {
   const [page, setPage] = useState(1);
   const limit = 12;
 
+  // Resetar página quando filtros mudarem
+  useEffect(() => {
+    setPage(1);
+  }, [search, productLine, automaker, year]);
+
   useEffect(() => {
     const fetchProducts = () => {
       setLoading(true);
-      fetch(`/api/products?page=${page}&limit=${limit}`)
+
+      // Construir query string com filtros
+      const params = new URLSearchParams({
+        page: page.toString(),
+        limit: limit.toString(),
+      });
+
+      if (search) params.append('search', search);
+      if (productLine) params.append('productLine', productLine);
+      if (automaker) params.append('automaker', automaker);
+      if (year) params.append('year', year);
+      if (sortBy) params.append('sortBy', sortBy);
+
+      fetch(`/api/products?${params.toString()}`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -52,36 +70,10 @@ export default function ProductsListPageComponent() {
     };
 
     fetchProducts();
-  }, [page]);
+  }, [page, search, productLine, automaker, year, sortBy]);
 
-  // Filtrar produtos localmente
-  const filteredProducts = data?.products.filter(product => {
-    const matchesSearch = search === '' ||
-      product.multpointCode.toLowerCase().includes(search.toLowerCase()) ||
-      product.automakerCode.some(code => code.toLowerCase().includes(search.toLowerCase()));
-
-    const matchesProductLine = productLine === '' || product.productLine === productLine;
-    const matchesAutomaker = automaker === '' || product.automakers.some(a => a.name === automaker);
-    const matchesYear = year === '' || product.years.includes(year);
-
-    return matchesSearch && matchesProductLine && matchesAutomaker && matchesYear;
-  }) || [];
-
-  // Ordenar produtos
-  const sortedProducts = [...filteredProducts].sort((a, b) => {
-    switch (sortBy) {
-      case 'code_asc':
-        return a.multpointCode.localeCompare(b.multpointCode);
-      case 'code_desc':
-        return b.multpointCode.localeCompare(a.multpointCode);
-      case 'newest':
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-      case 'oldest':
-        return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
-      default:
-        return 0;
-    }
-  });
+  // Produtos já vêm filtrados e ordenados da API
+  const products = data?.products || [];
 
   return (
     <div className='flex flex-col items-center w-full'>
@@ -107,7 +99,7 @@ export default function ProductsListPageComponent() {
               {/* Barra de controles */}
               <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6'>
                 <div className=''>
-                  <span className='font-semibold'>{sortedProducts.length}</span> {sortedProducts.length === 1 ? 'produto encontrado' : 'produtos encontrados'}
+                  <span className='font-semibold'>{data?.total || 0}</span> {(data?.total || 0) === 1 ? 'produto encontrado' : 'produtos encontrados'}
                 </div>
 
                 <div className='flex items-center gap-2'>
@@ -144,15 +136,15 @@ export default function ProductsListPageComponent() {
                 </div>
               )}
 
-              {!loading && !error && sortedProducts.length === 0 && (
+              {!loading && !error && products.length === 0 && (
                 <div className='text-center py-12'>
                   <p className='text-gray-500'>Nenhum produto encontrado.</p>
                 </div>
               )}
 
-              {!loading && !error && sortedProducts.length > 0 && (
+              {!loading && !error && products.length > 0 && (
                 <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6'>
-                  {sortedProducts.map(product => (
+                  {products.map(product => (
                     <ProductCard key={product.id} product={product} />
                   ))}
                 </div>

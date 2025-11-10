@@ -10,9 +10,8 @@ interface ProductCardProps {
 export function getProductLineName(productLine: string, code: string): string {
   const productLineNames: { [key: string]: string } = {
     'VALVULAS_INJETORAS': 'Válvula Injetora',
-    'BOMBAS': 'Bomba',
-    'SENSORES': 'Sensor',
-    'ATUADORES': 'Atuador',
+    'KITS_PARA_BICO_INJETOR': 'Kit para Bico Injetor',
+    'OUTROS': 'Produto',
   };
 
   const name = productLineNames[productLine] || productLine;

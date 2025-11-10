@@ -60,9 +60,8 @@ export function ProductsFilters({
               >
                 <option value="">Todas</option>
                 <option value="VALVULAS_INJETORAS">Válvulas Injetoras</option>
-                <option value="BOMBAS">Bombas</option>
-                <option value="SENSORES">Sensores</option>
-                <option value="ATUADORES">Atuadores</option>
+                <option value="KITS_PARA_BICO_INJETOR">Kits para Bico Injetor</option>
+                <option value="OUTROS">Outros</option>
               </select>
             </div>
 
@@ -75,11 +74,31 @@ export function ProductsFilters({
                 defaultValue=""
               >
                 <option value="">Todas</option>
-                <option value="FIAT">Fiat</option>
-                <option value="VOLKSWAGEN">Volkswagen</option>
-                <option value="FORD">Ford</option>
-                <option value="CHEVROLET">Chevrolet</option>
-                <option value="RENAULT">Renault</option>
+                <option value="Audi">Audi</option>
+                <option value="Bosch">Bosch</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Citroen">Citroen</option>
+                <option value="Citroën">Citroën</option>
+                <option value="Deka">Deka</option>
+                <option value="Delphi">Delphi</option>
+                <option value="Denso">Denso</option>
+                <option value="Evoque">Evoque</option>
+                <option value="Fiat">Fiat</option>
+                <option value="Ford">Ford</option>
+                <option value="GM">GM</option>
+                <option value="Harley-Davidson">Harley-Davidson</option>
+                <option value="Honda">Honda</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Magneti Marelli">Magneti Marelli</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Peugeot">Peugeot</option>
+                <option value="Range Rover">Range Rover</option>
+                <option value="Renault">Renault</option>
+                <option value="Rochester">Rochester</option>
+                <option value="Toyota">Toyota</option>
+                <option value="VW">VW</option>
+                <option value="VolksWagen">VolksWagen</option>
+                <option value="WV">WV</option>
               </select>
             </div>
 
