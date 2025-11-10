@@ -20,6 +20,7 @@ export const productService = {
         const searchLower = filters.search.toLowerCase();
         products = products.filter(product =>
           product.multpointCode.toLowerCase().includes(searchLower) ||
+          product.shortCode.toLowerCase().includes(searchLower) ||
           product.automakerCode.some(code => code.toLowerCase().includes(searchLower))
         );
       }
