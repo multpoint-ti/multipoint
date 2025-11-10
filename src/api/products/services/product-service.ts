@@ -10,6 +10,12 @@ interface ProductFilters {
 }
 
 export const productService = {
+  async getProductById(id: number): Promise<Product | null> {
+    const products = await productRepository.getAll();
+    const product = products.find(p => p.id === id);
+    return product || null;
+  },
+
   async getProducts(page: number, limit: number, filters?: ProductFilters) {
     let products = await productRepository.getAll();
 
