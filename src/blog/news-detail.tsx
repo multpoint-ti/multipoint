@@ -9,7 +9,8 @@ import { Footer } from '@/shared/footer';
 import PageContainer from '@/shared/page-container';
 import { Breadcrumb } from '@/shared/breadcrumb';
 import { ArrowLeft, Calendar } from 'lucide-react';
-import { formatDate, getTypeLabel } from './blog-card';
+import { formatDate, } from './blog-card';
+import SectionTagName from '@/shared/section-tag-name';
 
 interface NewsDetailProps {
   slug: string;
@@ -17,21 +18,29 @@ interface NewsDetailProps {
 
 export default function NewsDetailComponent({ slug }: NewsDetailProps) {
   const [news, setNews] = useState<News | null>(null);
+  const [otherNews, setOtherNews] = useState<News[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchNews = () => {
       setLoading(true);
-      fetch(`/api/blog/${slug}`)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Notícia não encontrada');
-          }
-          return response.json();
-        })
-        .then(data => {
-          setNews(data);
+
+      // Fetch current news and all news in parallel
+      Promise.all([
+        fetch(`/api/blog/${slug}`).then(res => {
+          if (!res.ok) throw new Error('Notícia não encontrada');
+          return res.json();
+        }),
+        fetch('/api/blog').then(res => res.json())
+      ])
+        .then(([currentNews, allNewsResponse]) => {
+          setNews(currentNews);
+          // Filter out current news and get 3 most recent
+          const filtered = (allNewsResponse.news || [])
+            .filter((n: News) => n.slug !== slug)
+            .slice(0, 3); // Already sorted by newest from API
+          setOtherNews(filtered);
           setLoading(false);
         })
         .catch(error => {
@@ -67,8 +76,8 @@ export default function NewsDetailComponent({ slug }: NewsDetailProps) {
         <Menu />
         <PageContainer>
           <div className='py-12 text-center'>
-            <p className='text-red-600 mb-4'>Erro: {error}</p>
-            <Link href='/blog' className='text-blue-600 hover:underline'>
+            <p className='text-red-amber-torque mb-4'>Erro: {error}</p>
+            <Link href='/blog' className='text-blue-gravel-mist hover:underline'>
               Voltar para o blog
             </Link>
           </div>
@@ -211,7 +220,7 @@ export default function NewsDetailComponent({ slug }: NewsDetailProps) {
             <div className='border-t border-gray-200 mt-12 pt-8'>
               <Link
                 href='/blog'
-                className='inline-flex items-center gap-2 text-blue-600 hover:underline'
+                className='inline-flex items-center gap-2 text-blue-gravel-mist hover:underline'
               >
                 <ArrowLeft className='w-4 h-4' />
                 Ver todas as notícias
@@ -219,12 +228,25 @@ export default function NewsDetailComponent({ slug }: NewsDetailProps) {
             </div>
           </div>
 
-          <div className='w-full lg:w-1/4'>
-            <p className=''></p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
+          <div className='hidden lg:block w-full lg:w-1/4'>
+            <div className='sticky top-8 space-y-8'>
+              <SectionTagName text='Mais Notícias' />
+              <div className='space-y-4'>
+                {otherNews.map((item) => (
+                  <div key={item.id}>
+                    <Link
+                      href={`/blog/${item.slug}`}
+                      className='block group'
+                    >
+                      <h4 className='group-hover:text-blue-gravel-mist transition-colors'>
+                        {item.title}
+                      </h4>
+                    </Link>
+                    <div className='border-b border-gray-oxide-steel mt-4'></div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </PageContainer>
