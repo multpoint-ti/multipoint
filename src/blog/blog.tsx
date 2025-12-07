@@ -140,7 +140,7 @@ export default function BlogListPageComponent() {
 
           {error && (
             <div className='text-center py-12'>
-              <p className='text-red-600'>Erro ao carregar notícias: {error}</p>
+              <p className='text-red-amber-torque'>Erro ao carregar notícias: {error}</p>
             </div>
           )}
 

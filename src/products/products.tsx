@@ -132,7 +132,7 @@ export default function ProductsListPageComponent() {
 
               {error && (
                 <div className='text-center py-12'>
-                  <p className='text-red-600'>Erro ao carregar produtos: {error}</p>
+                  <p className='text-red-amber-torque'>Erro ao carregar produtos: {error}</p>
                 </div>
               )}
 

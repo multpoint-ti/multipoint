@@ -72,7 +72,7 @@ export default function ProductDetailComponent({ productId }: ProductDetailProps
         <Menu />
         <PageContainer>
           <div className='py-12 text-center'>
-            <p className='text-red-600'>Erro ao carregar produto: {error}</p>
+            <p className='text-red-amber-torque'>Erro ao carregar produto: {error}</p>
           </div>
         </PageContainer>
         <Footer />

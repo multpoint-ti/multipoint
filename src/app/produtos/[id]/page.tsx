@@ -7,7 +7,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   if (isNaN(productId)) {
     return (
       <div className='flex items-center justify-center min-h-screen'>
-        <p className='text-red-600'>ID de produto inválido</p>
+        <p className='text-red-amber-torque'>ID de produto inválido</p>
       </div>
     );
   }
