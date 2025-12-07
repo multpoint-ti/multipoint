@@ -152,88 +152,79 @@ export default function NewsDetailComponent({ slug }: NewsDetailProps) {
       <Menu />
 
       <PageContainer>
-        <div className='py-8 max-w-4xl mx-auto'>
-          {/* Breadcrumb */}
-          <Breadcrumb
-            items={[
-              { label: 'Blog', href: '/blog' },
-              { label: news.title },
-            ]}
-          />
+        <div className='flex max-w-7xl space-x-16'>
 
-          {/* Botão Voltar */}
-          <Link
-            href='/blog'
-            className='inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mt-4 mb-6'
-          >
-            <ArrowLeft className='w-4 h-4' />
-            Voltar para o blog
-          </Link>
-
-          {/* Cabeçalho */}
-          <div className='mb-8'>
-            {/* Tipo */}
-            <span className='inline-block text-sm text-red-amber-torque font-medium uppercase mb-3'>
-              {getTypeLabel(news.type)}
-            </span>
-
-            {/* Título */}
-            <h1 className='text-3xl md:text-4xl font-bold mb-4'>
-              {news.title}
-            </h1>
-
-            {/* Data */}
-            <div className='flex items-center gap-2 text-gray-500'>
-              <Calendar className='w-4 h-4' />
-              <span>{formatDate(news.createdAt)}</span>
+          <div className='space-y-8 w-full lg:w-3/4'>
+            {/* Breadcrumb */}
+            <Breadcrumb
+              items={[
+                { label: 'Blog', href: '/blog' },
+                { label: news.title },
+              ]}
+            />
+            {/* Cabeçalho */}
+            <div className=''>
+              {/* Título */}
+              <h1 className='text-3xl md:text-4xl font-bold mb-4'>
+                {news.title}
+              </h1>
+              {/* Data */}
+              <div className='flex items-center gap-2 text-gray-500 text-sm'>
+                <Calendar className='w-3 h-3' />
+                <span>{formatDate(news.createdAt)}</span>
+              </div>
+            </div>
+            {/* Imagem Principal */}
+            {news.imagePath && (
+              <div className='relative w-full h-64 md:h-[500px] overflow-hidden'>
+                <Image
+                  src={news.imagePath}
+                  alt={news.title}
+                  fill
+                  className='object-cover'
+                />
+              </div>
+            )}
+            {/* Conteúdo */}
+            <article className='prose prose-lg max-w-none'>
+              {formatText(news.text)}
+            </article>
+            {/* Galeria de Imagens */}
+            {news.galleryImagesPaths && news.galleryImagesPaths.length > 0 && (
+              <div className='mt-12'>
+                <h3 className='text-xl font-semibold mb-4'>Galeria</h3>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+                  {news.galleryImagesPaths.map((image) => (
+                    <div key={image.id} className='relative h-48 rounded-lg overflow-hidden'>
+                      <Image
+                        src={image.path}
+                        alt='Imagem da galeria'
+                        fill
+                        className='object-cover hover:scale-105 transition-transform duration-300'
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {/* Divisor */}
+            <div className='border-t border-gray-200 mt-12 pt-8'>
+              <Link
+                href='/blog'
+                className='inline-flex items-center gap-2 text-blue-600 hover:underline'
+              >
+                <ArrowLeft className='w-4 h-4' />
+                Ver todas as notícias
+              </Link>
             </div>
           </div>
 
-          {/* Imagem Principal */}
-          {news.imagePath && (
-            <div className='relative w-full h-64 md:h-96 mb-8 rounded-lg overflow-hidden'>
-              <Image
-                src={news.imagePath}
-                alt={news.title}
-                fill
-                className='object-cover'
-              />
-            </div>
-          )}
-
-          {/* Conteúdo */}
-          <article className='prose prose-lg max-w-none'>
-            {formatText(news.text)}
-          </article>
-
-          {/* Galeria de Imagens */}
-          {news.galleryImagesPaths && news.galleryImagesPaths.length > 0 && (
-            <div className='mt-12'>
-              <h3 className='text-xl font-semibold mb-4'>Galeria</h3>
-              <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
-                {news.galleryImagesPaths.map((image) => (
-                  <div key={image.id} className='relative h-48 rounded-lg overflow-hidden'>
-                    <Image
-                      src={image.path}
-                      alt='Imagem da galeria'
-                      fill
-                      className='object-cover hover:scale-105 transition-transform duration-300'
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Divisor */}
-          <div className='border-t border-gray-200 mt-12 pt-8'>
-            <Link
-              href='/blog'
-              className='inline-flex items-center gap-2 text-blue-600 hover:underline'
-            >
-              <ArrowLeft className='w-4 h-4' />
-              Ver todas as notícias
-            </Link>
+          <div className='w-full lg:w-1/4'>
+            <p className=''></p>
+            <p>a</p>
+            <p>a</p>
+            <p>a</p>
+            <p>a</p>
           </div>
         </div>
       </PageContainer>

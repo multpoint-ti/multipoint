@@ -23,10 +23,10 @@ export function BlogBanner() {
           <div className='flex flex-col gap-2 items-start'>
             <Image src={Arrow} alt="Arrow" className="h-4 md:h-6 w-auto" />
             <h1 className="hidden md:block text-6xl font-medium leading-tight">
-              Blog <span className="text-red-amber-torque">Multipoint</span>
+              Blog <span className="text-red-amber-torque">Mult Point</span>
             </h1>
             <h1 className="md:hidden text-[40px] font-medium leading-tight">
-              Blog <span className="text-red-amber-torque">Multipoint</span>
+              Blog <span className="text-red-amber-torque">Mult Point</span>
             </h1>
           </div>
         </div>

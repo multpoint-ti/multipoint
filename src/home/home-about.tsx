@@ -44,7 +44,7 @@ const HomeAbout = () => {
                             Somos uma empresa <span className="text-blue-gravel-mist font-bold">100% brasileira</span>
                         </h1>
                         <p className="text-base md:text-lg">
-                            A MULTPOINT é uma empresa especializada na fabricação de Válvulas Injetoras. Localizada no município de Registro – SP á 190 Km da Capital, a MULTPOINT é uma empresa 100% brasileira.
+                            A MULT POINT é uma empresa especializada na fabricação de Válvulas Injetoras. Localizada no município de Registro – SP á 190 Km da Capital, a MULT POINT é uma empresa 100% brasileira.
                         </p>
                         <div className='hidden md:block'>
                             <div className="flex gap-4">
