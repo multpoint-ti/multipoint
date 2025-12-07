@@ -238,7 +238,7 @@ export default function NewsDetailComponent({ slug }: NewsDetailProps) {
                       href={`/blog/${item.slug}`}
                       className='block group'
                     >
-                      <h4 className='group-hover:text-blue-gravel-mist transition-colors'>
+                      <h4 className='group-hover:underline transition-colors'>
                         {item.title}
                       </h4>
                     </Link>

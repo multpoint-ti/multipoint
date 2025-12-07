@@ -23,7 +23,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
               {item.label}
             </Link>
           ) : (
-            <span className="text-red-amber-torque font-medium hover:underline">{item.label}</span>
+            <span className="hover:cursor-default">{item.label}</span>
           )}
           {index < items.length - 1 && (
             <ChevronRight className="w-4 h-4 text-gray-400" />

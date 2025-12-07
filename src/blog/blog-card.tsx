@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { NewsListItem } from '@/shared/types/blog-types';
+import SectionTagName from '@/shared/section-tag-name';
+import { ArrowRight } from 'lucide-react';
 
 interface BlogCardProps {
   news: NewsListItem;
@@ -26,48 +28,39 @@ export function BlogCard({ news }: BlogCardProps) {
   const excerpt = news.text.length > 150 ? news.text.substring(0, 150) + '...' : news.text;
 
   return (
-    <Link href={`/blog/${news.slug}`} className="block">
-      <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden flex flex-col hover:cursor-pointer hover:border-gray-400 transition-all duration-300">
+    <Link href={`/blog/${news.slug}`} className="block h-full">
+      <div className="overflow-hidden flex flex-col h-full hover:cursor-pointer">
         {/* Imagem do Post */}
-        <div className="relative w-full h-48 bg-gray-200">
+        <div className="relative w-full h-64 rounded-xl bg-gray-200 flex-shrink-0">
           {news.imagePath ? (
             <Image
               src={news.imagePath}
               alt={news.title}
               fill
-              className="object-cover"
+              className="object-cover rounded-xl"
             />
           ) : (
-            <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400 text-sm">
+            <div className="w-full h-full bg-gray-200 rounded-xl flex items-center justify-center text-gray-400 text-sm">
               Sem imagem
             </div>
           )}
         </div>
 
         {/* Conteúdo do Card */}
-        <div className="p-4 flex flex-col gap-3">
+        <div className="py-4 flex flex-col gap-3 flex-grow">
           {/* Tipo (Evento ou Notícia) */}
-          <span className="text-sm text-red-amber-torque font-medium uppercase">
-            {getTypeLabel(news.type)}
-          </span>
+          <SectionTagName text="notícias" />
 
           {/* Título do Post */}
-          <h3 className="text-lg font-medium line-clamp-2">
+          <h3 className="text-lg font-medium flex-grow">
             {news.title}
           </h3>
 
-          {/* Resumo */}
-          <p className="text-gray-600 text-sm line-clamp-3">
-            {excerpt}
-          </p>
+          <a href={`/blog/${news.slug}`} className='flex gap-1 items-center mt-auto'>
+            <ArrowRight className="w-4 h-4 text-red-amber-torque" />
+            <p className='text-sm'>Ler mais</p>
+          </a>
 
-          {/* Divisor */}
-          <div className="border-t border-gray-200"></div>
-
-          {/* Data */}
-          <div className="flex items-center justify-between text-sm text-gray-500">
-            <span>{formatDate(news.createdAt)}</span>
-          </div>
         </div>
       </div>
     </Link>

@@ -5,9 +5,10 @@ import { Footer } from '@/shared/footer';
 import { Menu } from '@/shared/menu';
 import { useEffect, useState } from 'react';
 import { NewsListItem, NewsType } from '@/shared/types/blog-types';
-import { BlogBanner } from './blog-banner';
 import { BlogCard } from './blog-card';
 import { BlogCardSkeleton } from './blog-card-skeleton';
+import Image from 'next/image';
+import Arrow from '../../public/imgs/arrow.svg';
 
 interface ApiResponse {
   news: NewsListItem[];
@@ -69,69 +70,22 @@ export default function BlogListPageComponent() {
   return (
     <div className='flex flex-col items-center w-full'>
       <Menu />
-      <BlogBanner />
-
       <PageContainer>
-        <div className='py-8'>
-          {/* Barra de controles */}
-          <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 w-full max-w-7xl'>
-            {/* Busca */}
-            <div className='w-full sm:w-auto'>
-              <input
-                type='text'
-                placeholder='Buscar notícias...'
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                className='w-full sm:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400'
-              />
-            </div>
-
-            <div className='flex flex-col sm:flex-row items-start sm:items-center gap-4'>
-              {/* Filtro por tipo */}
-              <div className='flex items-center gap-2'>
-                <label htmlFor='type' className='text-normal whitespace-nowrap'>
-                  Tipo:
-                </label>
-                <select
-                  id='type'
-                  className='py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent bg-white'
-                  value={type}
-                  onChange={(e) => setType(e.target.value as NewsType | '')}
-                >
-                  <option value=''>Todos</option>
-                  <option value='NOTICIA'>Notícias</option>
-                  <option value='EVENTO'>Eventos</option>
-                </select>
-              </div>
-
-              {/* Contagem */}
-              <div className=''>
-                <span className='font-semibold'>{data?.count || 0}</span> {(data?.count || 0) === 1 ? 'resultado encontrado' : 'resultados encontrados'}
-              </div>
-
-              {/* Ordenação */}
-              <div className='flex items-center gap-2'>
-                <label htmlFor='sort' className='text-normal whitespace-nowrap'>
-                  Ordenar por:
-                </label>
-                <select
-                  id='sort'
-                  className='py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent bg-white'
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                >
-                  <option value=''>Mais recentes</option>
-                  <option value='oldest'>Mais antigos</option>
-                  <option value='title_asc'>Título (A-Z)</option>
-                  <option value='title_desc'>Título (Z-A)</option>
-                </select>
-              </div>
-            </div>
+        <div className='max-w-7xl space-y-8 w-full'>
+          <div className='flex flex-col items-start gap-3'>
+            <Image
+              src={Arrow}
+              alt="Arrow"
+              className='hidden md:block'
+            />
+            <h1 className="text-4xl md:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
+              Notícias
+            </h1>
           </div>
 
           {/* Grid de Posts */}
           {loading && (
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full'>
               {Array.from({ length: limit }).map((_, index) => (
                 <BlogCardSkeleton key={index} />
               ))}

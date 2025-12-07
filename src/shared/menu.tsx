@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { Mail, MapPin, Phone, X, Facebook, Instagram } from 'lucide-react';
+import { Mail, MapPin, Phone, X, Facebook, Instagram, Link } from 'lucide-react';
 import { SearchBar } from './search-bar';
 import Image from 'next/image';
 
@@ -63,7 +63,9 @@ export function Menu() {
 
       {/* Main menu */}
       <div className="container mx-auto px-4 md:px-20 py-2 md:py-4 flex justify-between items-center w-full">
-        <Image src={Logo} alt="Logo" className='h-10 md:h-16 w-auto' />
+        <a href="/home">
+          <Image src={Logo} alt="Logo" className='h-10 md:h-16 w-auto' />
+        </a>
 
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
