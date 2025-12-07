@@ -19,7 +19,7 @@
     "type": "NOTICIA",
     "createdAt": "2024-12-01T14:30:00.000Z",
     "updatedAt": "2024-12-01T14:30:00.000Z",
-    "imagePath": "/imgs/news/original-vs-reposicao.jpg",
+    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
     "videoPath": null,
     "galleryImagesPaths": []
   },
@@ -31,7 +31,7 @@
     "type": "NOTICIA",
     "createdAt": "2024-11-25T09:15:00.000Z",
     "updatedAt": "2024-11-25T09:15:00.000Z",
-    "imagePath": "/imgs/news/injecao-eletronica.jpg",
+    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
     "videoPath": null,
     "galleryImagesPaths": []
   },
@@ -43,7 +43,7 @@
     "type": "NOTICIA",
     "createdAt": "2024-11-18T16:00:00.000Z",
     "updatedAt": "2024-11-18T16:00:00.000Z",
-    "imagePath": "/imgs/news/limpeza-bicos.jpg",
+    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
     "videoPath": null,
     "galleryImagesPaths": []
   },
@@ -55,7 +55,7 @@
     "type": "NOTICIA",
     "createdAt": "2024-11-10T11:45:00.000Z",
     "updatedAt": "2024-11-10T11:45:00.000Z",
-    "imagePath": "/imgs/news/veiculos-flex.jpg",
+    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
     "videoPath": null,
     "galleryImagesPaths": []
   },
@@ -67,12 +67,12 @@
     "type": "EVENTO",
     "createdAt": "2024-10-15T08:30:00.000Z",
     "updatedAt": "2024-10-15T08:30:00.000Z",
-    "imagePath": "/imgs/news/automec-2024.jpg",
+    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
     "videoPath": null,
     "galleryImagesPaths": [
-      { "id": "img-006", "path": "/imgs/news/automec-2024-1.jpg" },
-      { "id": "img-007", "path": "/imgs/news/automec-2024-2.jpg" },
-      { "id": "img-008", "path": "/imgs/news/automec-2024-3.jpg" }
+      { "id": "img-006", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" },
+      { "id": "img-007", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" },
+      { "id": "img-008", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" }
     ]
   },
   {
@@ -83,11 +83,71 @@
     "type": "EVENTO",
     "createdAt": "2024-09-28T14:00:00.000Z",
     "updatedAt": "2024-09-28T14:00:00.000Z",
-    "imagePath": "/imgs/news/workshop-mecanicos.jpg",
+    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
     "videoPath": null,
     "galleryImagesPaths": [
-      { "id": "img-010", "path": "/imgs/news/workshop-1.jpg" },
-      { "id": "img-011", "path": "/imgs/news/workshop-2.jpg" }
+      { "id": "img-010", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" },
+      { "id": "img-011", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" }
+    ]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440008",
+    "slug": "workshop-tecnico-mecanicos-capacitacao-sistemas-injecao",
+    "title": "Workshop técnico para mecânicos: capacitação em sistemas de injeção",
+    "text": "A Mult Point realizou mais uma edição do Workshop Técnico voltado para profissionais da área automotiva. O evento, realizado em nossa sede em Registro-SP, capacitou dezenas de mecânicos sobre diagnóstico e manutenção de sistemas de injeção eletrônica.\n\nOs participantes tiveram a oportunidade de:\n\n- Conhecer o processo de fabricação das válvulas injetoras\n- Aprender técnicas de diagnóstico de falhas\n- Entender os procedimentos corretos de instalação\n- Tirar dúvidas diretamente com nossa equipe técnica\n\nO workshop faz parte do programa de relacionamento da Mult Point com a rede de mecânicos e oficinas parceiras, reforçando nosso compromisso com a qualificação profissional do setor.\n\nEm breve divulgaremos as datas das próximas edições. Fique atento às nossas redes sociais!",
+    "type": "EVENTO",
+    "createdAt": "2024-09-28T14:00:00.000Z",
+    "updatedAt": "2024-09-28T14:00:00.000Z",
+    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
+    "videoPath": null,
+    "galleryImagesPaths": [
+      { "id": "img-010", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" },
+      { "id": "img-011", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" }
+    ]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440009",
+    "slug": "workshop-tecnico-mecanicos-capacitacao-sistemas-injecao",
+    "title": "Workshop técnico para mecânicos: capacitação em sistemas de injeção",
+    "text": "A Mult Point realizou mais uma edição do Workshop Técnico voltado para profissionais da área automotiva. O evento, realizado em nossa sede em Registro-SP, capacitou dezenas de mecânicos sobre diagnóstico e manutenção de sistemas de injeção eletrônica.\n\nOs participantes tiveram a oportunidade de:\n\n- Conhecer o processo de fabricação das válvulas injetoras\n- Aprender técnicas de diagnóstico de falhas\n- Entender os procedimentos corretos de instalação\n- Tirar dúvidas diretamente com nossa equipe técnica\n\nO workshop faz parte do programa de relacionamento da Mult Point com a rede de mecânicos e oficinas parceiras, reforçando nosso compromisso com a qualificação profissional do setor.\n\nEm breve divulgaremos as datas das próximas edições. Fique atento às nossas redes sociais!",
+    "type": "EVENTO",
+    "createdAt": "2024-09-28T14:00:00.000Z",
+    "updatedAt": "2024-09-28T14:00:00.000Z",
+    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
+    "videoPath": null,
+    "galleryImagesPaths": [
+      { "id": "img-010", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" },
+      { "id": "img-011", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" }
+    ]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440010",
+    "slug": "workshop-tecnico-mecanicos-capacitacao-sistemas-injecao",
+    "title": "Workshop técnico para mecânicos: capacitação em sistemas de injeção",
+    "text": "A Mult Point realizou mais uma edição do Workshop Técnico voltado para profissionais da área automotiva. O evento, realizado em nossa sede em Registro-SP, capacitou dezenas de mecânicos sobre diagnóstico e manutenção de sistemas de injeção eletrônica.\n\nOs participantes tiveram a oportunidade de:\n\n- Conhecer o processo de fabricação das válvulas injetoras\n- Aprender técnicas de diagnóstico de falhas\n- Entender os procedimentos corretos de instalação\n- Tirar dúvidas diretamente com nossa equipe técnica\n\nO workshop faz parte do programa de relacionamento da Mult Point com a rede de mecânicos e oficinas parceiras, reforçando nosso compromisso com a qualificação profissional do setor.\n\nEm breve divulgaremos as datas das próximas edições. Fique atento às nossas redes sociais!",
+    "type": "EVENTO",
+    "createdAt": "2024-09-28T14:00:00.000Z",
+    "updatedAt": "2024-09-28T14:00:00.000Z",
+    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
+    "videoPath": null,
+    "galleryImagesPaths": [
+      { "id": "img-010", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" },
+      { "id": "img-011", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" }
+    ]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440011",
+    "slug": "workshop-tecnico-mecanicos-capacitacao-sistemas-injecao",
+    "title": "Workshop técnico para mecânicos: capacitação em sistemas de injeção",
+    "text": "A Mult Point realizou mais uma edição do Workshop Técnico voltado para profissionais da área automotiva. O evento, realizado em nossa sede em Registro-SP, capacitou dezenas de mecânicos sobre diagnóstico e manutenção de sistemas de injeção eletrônica.\n\nOs participantes tiveram a oportunidade de:\n\n- Conhecer o processo de fabricação das válvulas injetoras\n- Aprender técnicas de diagnóstico de falhas\n- Entender os procedimentos corretos de instalação\n- Tirar dúvidas diretamente com nossa equipe técnica\n\nO workshop faz parte do programa de relacionamento da Mult Point com a rede de mecânicos e oficinas parceiras, reforçando nosso compromisso com a qualificação profissional do setor.\n\nEm breve divulgaremos as datas das próximas edições. Fique atento às nossas redes sociais!",
+    "type": "EVENTO",
+    "createdAt": "2024-09-28T14:00:00.000Z",
+    "updatedAt": "2024-09-28T14:00:00.000Z",
+    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
+    "videoPath": null,
+    "galleryImagesPaths": [
+      { "id": "img-010", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" },
+      { "id": "img-011", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" }
     ]
   }
 ]

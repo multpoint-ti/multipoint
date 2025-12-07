@@ -56,10 +56,10 @@ export function BlogCard({ news }: BlogCardProps) {
             {news.title}
           </h3>
 
-          <a href={`/blog/${news.slug}`} className='flex gap-1 items-center mt-auto'>
+          <div className='flex gap-1 items-center mt-auto'>
             <ArrowRight className="w-4 h-4 text-red-amber-torque" />
             <p className='text-sm'>Ler mais</p>
-          </a>
+          </div>
 
         </div>
       </div>

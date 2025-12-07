@@ -6,6 +6,7 @@ import { Menu } from '@/shared/menu';
 import { useEffect, useState } from 'react';
 import { NewsListItem, NewsType } from '@/shared/types/blog-types';
 import { BlogCard } from './blog-card';
+import { BlogCardFeatured } from './blog-card-featured';
 import { BlogCardSkeleton } from './blog-card-skeleton';
 import Image from 'next/image';
 import Arrow from '../../public/imgs/arrow.svg';
@@ -105,10 +106,46 @@ export default function BlogListPageComponent() {
           )}
 
           {!loading && !error && news.length > 0 && (
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-              {news.map(item => (
-                <BlogCard key={item.id} news={item} />
-              ))}
+            <div>
+              {/* Layout de destaque apenas na primeira página */}
+              {page === 1 && news.length >= 1 && (
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
+                  {/* Coluna esquerda - Card grande */}
+                  <BlogCardFeatured news={news[0]} size="large" />
+
+                  {/* Coluna direita - Dois cards pequenos (escondidos no mobile) */}
+                  {news.length >= 3 && (
+                    <div className='hidden lg:flex flex-col gap-6'>
+                      <BlogCardFeatured news={news[1]} size="small" />
+                      <BlogCardFeatured news={news[2]} size="small" />
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Cards normais */}
+              {page === 1 && news.length > 1 && (
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16'>
+                  {/* No mobile: mostra a partir do índice 1, no desktop: a partir do índice 3 */}
+                  {news.slice(1).map((item, index) => (
+                    <div
+                      key={item.id}
+                      className={index < 2 ? 'lg:hidden' : ''}
+                    >
+                      <BlogCard news={item} />
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Páginas subsequentes - layout normal */}
+              {page > 1 && (
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+                  {news.map(item => (
+                    <BlogCard key={item.id} news={item} />
+                  ))}
+                </div>
+              )}
             </div>
           )}
 

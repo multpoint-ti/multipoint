@@ -161,7 +161,7 @@ export default function NewsDetailComponent({ slug }: NewsDetailProps) {
       <Menu />
 
       <PageContainer>
-        <div className='flex max-w-7xl space-x-16'>
+        <div className='flex max-w-7xl lg:space-x-16'>
 
           <div className='space-y-8 w-full lg:w-3/4'>
             {/* Breadcrumb */}
