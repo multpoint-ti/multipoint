@@ -13,6 +13,15 @@ import { Button } from '@/shared/button';
 import { ArrowRight, Download, Info } from 'lucide-react';
 import { ProductDetailSkeleton } from './product-detail-skeleton';
 
+const handleDownloadCatalog = () => {
+  const link = document.createElement('a');
+  link.href = '/data/MP_CATALOGO_2025.pdf';
+  link.download = 'MP_CATALOGO_2025.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 interface ProductDetailProps {
   productId: number;
 }
@@ -128,7 +137,7 @@ export default function ProductDetailComponent({ productId }: ProductDetailProps
                   Encontre um representante
                   <ArrowRight className='w-4 h-4' />
                 </Button>
-                <Button variant='outline' className='flex items-center gap-2'>
+                <Button variant='outline' className='flex items-center gap-2' onClick={handleDownloadCatalog}>
                   <Download className='w-4 h-4' />
                   Baixe nosso catálogo
                 </Button>

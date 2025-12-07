@@ -6,6 +6,15 @@ import Image from 'next/image';
 import Logo from '../../public/imgs/logo-complete-dark.png';
 import { Button } from './button';
 
+const handleDownloadCatalog = () => {
+  const link = document.createElement('a');
+  link.href = '/data/MP_CATALOGO_2025.pdf';
+  link.download = 'MP_CATALOGO_2025.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 export function Footer() {
 
   const navLinks = [
@@ -82,7 +91,7 @@ export function Footer() {
           <h3 className=''>
             Baixe o nosso catálogo e tenha acesso a todos os produtos e especificações
           </h3>
-          <Button variant="white" className='max-w-96 text-base lg:text-lg'>
+          <Button variant="white" className='max-w-96 text-base lg:text-lg' onClick={handleDownloadCatalog}>
             <Download className="mr-2 h-5 w-5" />
             Baixe nosso Catálogo
           </Button>

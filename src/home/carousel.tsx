@@ -11,6 +11,15 @@ import CarrouselHome2Mobile from '../../public/imgs/carrousel-home/carrousel-hom
 import Arrow from '../../public/imgs/arrow.svg'
 import { useCallback, useEffect, useState } from 'react';
 
+const handleDownloadCatalog = () => {
+  const link = document.createElement('a');
+  link.href = '/data/MP_CATALOGO_2025.pdf';
+  link.download = 'MP_CATALOGO_2025.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 export function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
@@ -71,7 +80,7 @@ export function Carousel() {
             </div>
             <div className="mt-4 gap-4 hidden md:flex">
               <Button variant="default">Veja nossos Produtos</Button>
-              <Button variant="outline">
+              <Button variant="outline" onClick={handleDownloadCatalog}>
                 <Download className="mr-2 h-4 w-4" />
                 Baixe nosso Catálogo
               </Button>
@@ -108,7 +117,7 @@ export function Carousel() {
       </div>
 
       <div className="p-4 gap-2 flex md:hidden text-blue-ignition">
-        <Button variant="outline" className='gap-2 border-gray-400'>
+        <Button variant="outline" className='gap-2 border-gray-400' onClick={handleDownloadCatalog}>
           <Download className="h-5 w-5" />
           Baixar Catálogo
         </Button>
