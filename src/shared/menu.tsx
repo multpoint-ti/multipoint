@@ -28,7 +28,7 @@ export function Menu() {
     { href: '/produtos', label: 'Produtos' },
     { href: '/empresa', label: 'Empresa' },
     { href: '/representantes', label: 'Representantes' },
-    { href: '/catalogo', label: 'Catálogo' },
+    { href: '/blog', label: 'Blog' },
     { href: '/contato', label: 'Contato' },
   ];
 
