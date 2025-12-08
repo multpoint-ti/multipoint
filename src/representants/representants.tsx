@@ -2,13 +2,27 @@
 
 import SelectInput from '@/shared/select-input';
 import { Menu } from '../shared/menu';
-import { MapBrazil } from 'react-brazil-map';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import PageContainer from '@/shared/page-container';
 import Image from 'next/image';
+
+const MapBrazil = dynamic<{
+    onChange?: (state: string) => void;
+    width?: number;
+    height?: number;
+    fill?: string;
+    colorStroke?: string;
+    bg?: string;
+    colorLabel?: string;
+}>(
+    () => import('react-brazil-map').then(mod => mod.MapBrazil),
+    { ssr: false }
+);
 import Arrow from '../../public/imgs/arrow.svg';
 import { Representant, RepresentantsCard } from './representants-card';
 import { Footer } from '@/shared/footer';
+import representantsData from '@/data/representants.json';
 
 export const states = [
     { value: 'ac', label: 'Acre' },
@@ -44,102 +58,7 @@ export const states = [
 export default function RepresentantsPageComponent() {
     states.sort((a, b) => a.label.localeCompare(b.label));
 
-    const representants: { [key: string]: Representant[] } = {
-        pa: [{
-            nome: "Jorge Luiz Xavier Hage-ME",
-            fones: [{ fone: "(91) 3244-7967" }, { fone: "(91) 99259-4104" }],
-            emails: [{ email: "mohage2@yahoo.com.br" }]
-        }],
-        ma: [{
-            nome: "Moita Representação de Peças e Acessórios para Veículos Ltda",
-            fones: [{ fone: "(86) 4141-8581" }, { fone: "(86) 99919-0316" }],
-            emails: [{ email: "moitarepresentacao2@outlook.com" }, { email: "lameckmoita@hotmail.com" }]
-        }],
-        pi: [{
-            nome: "Moita Representação de Peças e Acessórios para Veículos Ltda",
-            fones: [{ fone: "(86) 4141-8581" }, { fone: "(86) 99919-0316" }],
-            emails: [{ email: "moitarepresentacao2@outlook.com" }, { email: "lameckmoita@hotmail.com" }]
-        }],
-        pe: [{
-            nome: "IG Prestação de Serviços de Marketing Direto e Promoção de Vendas Ltda",
-            fones: [{ fone: "(81) 3325-3365" }],
-            emails: [{ email: "escritorio.igrepresentacoes@gmail.com" }]
-        }],
-        se: [{
-            nome: "Elmo Freire Lobo",
-            fones: [{ fone: "(79) 99847-0990" }],
-            emails: [{ email: "lobos-representacoes@hotmail.com" }]
-        }],
-        mt: [{
-            nome: "Manchester Representações S/S Ltda",
-            fones: [{ fone: "(18) 3908-7766" }, { fone: "(18) 99795-5086" }],
-            emails: [{ email: "vendas@manchesterrep.com.br" }]
-        }],
-        ba: [{
-            nome: "Jorge Soledade Nascimento",
-            fones: [{ fone: "(71) 3313-8230" }, { fone: "(71) 99989-0722" }],
-            emails: [{ email: "rogina.ba@gmail.com" }]
-        }],
-        go: [{
-            nome: "C.A.R. Faria Representações Ltda",
-            fones: [{ fone: "(62) 3296-4216" }],
-            emails: [{ email: "carfaria@gmail.com" }]
-        }],
-        df: [{
-            nome: "C.A.R. Faria Representações Ltda",
-            fones: [{ fone: "(62) 3296-4216" }],
-            emails: [{ email: "carfaria@gmail.com" }]
-        }],
-        ms: [{
-            nome: "Manchester Representações S/S Ltda",
-            fones: [{ fone: "(18) 3908-7766" }, { fone: "(18) 99795-5086" }],
-            emails: [{ email: "vendas@manchesterrep.com.br" }]
-        }],
-        mg: [{
-            nome: "ACP Representações Promoções e Eventos Ltda",
-            fones: [{ fone: "(31) 3442-8834" }],
-            emails: [{ email: "penna_rep@hotmail.com" }]
-        }],
-        sp: [
-            {
-                nome: "A.R. Holtz Comércio e Representação Ltda",
-                fones: [{ fone: "(15) 3238-6657" }, { fone: "(15) 99740-3597" }],
-                emails: [{ email: "antonioholtz@hotmail.com" }],
-                obs: "Atende no Interior de São Paulo"
-            },
-            {
-                nome: "GHS Representações Comerciais SC Ltda",
-                fones: [{ fone: "(11) 94891-0150" }],
-                emails: [{ email: "antonioghissardi@hotmail.com" }],
-                obs: "Atende na Capital de São Paulo"
-            }
-        ],
-        es: [{
-            nome: "Krecel Com. e Representações Ltda",
-            fones: [{ fone: "(21) 99966-0570" }],
-            emails: [{ email: "krecelrepresentacoes@yahoo.com.br" }]
-        }],
-        rj: [{
-            nome: "Krecel Com. e Representações Ltda",
-            fones: [{ fone: "(21) 99966-0570" }],
-            emails: [{ email: "krecelrepresentacoes@yahoo.com.br" }]
-        }],
-        pr: [{
-            nome: "Marcelo Fossati Representações",
-            fones: [{ fone: "(41) 3349-2238" }, { fone: "(41) 99943-2238" }],
-            emails: [{ email: "marcelofossati@bol.com.br" }]
-        }],
-        sc: [{
-            nome: "VR7 Representações Comerciais Ltda",
-            fones: [{ fone: "(47) 9288-9176" }],
-            emails: [{ email: "comercial@vr7representacoes.com.br" }]
-        }],
-        rs: [{
-            nome: "Adelino Ricardo Dias Madeira & Cia Ltda",
-            fones: [{ fone: "(53) 3225-2167" }, { fone: "(53) 98115-5415" }],
-            emails: [{ email: "anacristina.ardm@terra.com.br" }]
-        }]
-    };
+    const representants = representantsData as { [key: string]: Representant[] };
 
     const [selectedState, setSelectedState] = useState('all');
 
