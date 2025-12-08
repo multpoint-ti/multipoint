@@ -3,7 +3,8 @@
     "allow": [
       "Bash(node extract-automakers.js:*)",
       "Bash(node extract-product-lines.js:*)",
-      "Bash(del:*)"
+      "Bash(del:*)",
+      "Bash(npm install:*)"
     ],
     "deny": [],
     "ask": []
