@@ -8,8 +8,11 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Portal de Notícias",
-  description: "Site corporativo com Next.js + Tailwind",
+  title: "Mult Point Indústria",
+  description: "Válvulas Injetoras e Kits para Bico Injetor",
+  icons: {
+    icon: "/imgs/icon.ico",
+  },
 }
 
 export default function RootLayout({
