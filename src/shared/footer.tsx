@@ -19,7 +19,7 @@ export function Footer() {
 
   const navLinks = [
     { href: '/produtos', label: 'Produtos' },
-    { href: '/empresa', label: 'Sobre Nós' },
+    { href: '/sobre-nos', label: 'Sobre Nós' },
     { href: '/representantes', label: 'Eventos' },
     { href: '/catalogo', label: 'Blog' },
     { href: '/contato', label: 'Contato' },

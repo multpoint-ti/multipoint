@@ -26,7 +26,7 @@ export function Menu() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/produtos', label: 'Produtos' },
-    { href: '/empresa', label: 'Empresa' },
+    { href: '/sobre-nos', label: 'Sobre Nós' },
     { href: '/representantes', label: 'Representantes' },
     { href: '/blog', label: 'Blog' },
     { href: '/contato', label: 'Contato' },
