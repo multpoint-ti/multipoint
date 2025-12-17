@@ -24,8 +24,8 @@ export function ProductCard({ product }: ProductCardProps) {
   const automakers = product.automakers.map(a => a.name).join(', ');
 
   return (
-    <Link href={`/produtos/${product.id}`}>
-      <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden flex flex-col py-4 hover:cursor-pointer hover:border-gray-400 transition-all duration-300">
+    <Link href={`/produtos/${product.id}`} className="h-full">
+      <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden flex flex-col py-4 hover:cursor-pointer hover:border-gray-400 transition-all duration-300 h-full">
         {/* Imagem do Produto */}
         <div className="relative w-full h-54 flex items-center justify-center">
           {product.images && product.images.length > 0 ? (
@@ -44,7 +44,7 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Conteúdo do Card */}
         <div className="p-4 flex flex-col gap-3">
           {/* Nome do Produto */}
-          <h3 className="text-lg font-normal uppercase line-clamp-2 text-center">
+          <h3 className="text-lg font-normal uppercase line-clamp-2 text-center flex-grow">
             {productName}
           </h3>
 
