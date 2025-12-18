@@ -62,14 +62,14 @@ export function Menu() {
       </div>
 
       {/* Main menu */}
-      <div className="container mx-auto px-4 md:px-20 py-2 md:py-4 flex justify-between items-center w-full">
+      <div className="container mx-auto px-4 xl:px-20 py-2 md:py-4 flex justify-between items-center w-full">
         <a href="/home">
-          <Image src={Logo} alt="Logo" className='h-10 md:h-16 w-auto' />
+          <Image src={Logo} alt="Logo" className='h-10 md:h-12 xl:h-16 w-auto' />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="text-blue-ignition text-sm hover:text-red-amber-torque hover:underline duration-200 transition uppercase">
+            <a key={link.href} href={link.href} className="text-blue-ignition text-sm md:text-xs xl:text-sm hover:text-red-amber-torque hover:underline duration-200 transition uppercase">
               {link.label}
             </a>
           ))}

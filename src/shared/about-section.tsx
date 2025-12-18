@@ -70,14 +70,14 @@ export default function AboutSection({
                                         </div>
                                     ))}
                                 </div>
-                                <a href="" className='hidden md:flex flex-row pt-8 justify-start items-center w-fit font-medium text-red-amber-torque'>
+                                <a href="" className='hidden md:flex flex-row pt-8 justify-start items-center w-fit font-medium text-blue-ignition'>
                                     Saiba mais sobre nós
-                                    <ArrowRightIcon className="h-4 text-red-amber-torque" />
+                                    <ArrowRightIcon className="h-4 text-blue-ignition" />
                                 </a>
                             </div>
                             <Button variant='outline' size='default' className='flex md:hidden'>
                                 Saiba mais sobre nós
-                                <ArrowRightIcon className="h-4 text-red-amber-torque" />
+                                <ArrowRightIcon className="h-4 text-blue-ignition" />
                             </Button>
                         </>
                     )}
