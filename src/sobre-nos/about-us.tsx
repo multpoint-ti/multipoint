@@ -4,6 +4,7 @@ import HomeAbout from '@/home/home-about';
 import { Footer } from '@/shared/footer';
 import AboutSection from '@/shared/about-section';
 import ValuesSectionAbout from '@/shared/values-about';
+import BrandsCarousel from '@/shared/brands-carousel';
 
 export default function SobreNosPageComponent() {
   return (
@@ -11,6 +12,7 @@ export default function SobreNosPageComponent() {
       <Menu />
       <PageContainer>
         <AboutSection hideExtras />
+        <BrandsCarousel />
         <ValuesSectionAbout />
       </PageContainer>
       <Footer />

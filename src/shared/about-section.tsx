@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import HomeAboutImage from '../../public/imgs/about/home-about.png';
+import HomeAboutImage from '../../public/imgs/man-with-a-car.png';
 import SectionTagName from '@/shared/section-tag-name';
 import { Button } from '@/shared/button';
 import { ArrowRightIcon } from 'lucide-react';
@@ -28,13 +28,13 @@ interface AboutSectionProps {
 
 export default function AboutSection({ hideExtras = false }: AboutSectionProps) {
     return (
-        <div className='flex flex-col items-center'>
-            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8">
+        <div className='flex flex-col items-center w-full max-w-7xl'>
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-12 w-full">
                 <div className="md:w-1/2 mb-8 md:mb-0">
                     <Image
                         src={HomeAboutImage}
                         alt="Quem Somos"
-                        className="rounded-lg w-full"
+                        className="rounded-lg w-full p-10"
                     />
                 </div>
                 <div className="text-center md:text-start items-center md:items-start md:w-1/2 flex flex-col gap-4">
