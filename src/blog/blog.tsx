@@ -10,6 +10,7 @@ import { BlogCard } from './blog-card';
 import { BlogCardFeatured } from './blog-card-featured';
 import { BlogCardSkeleton } from './blog-card-skeleton';
 import { EventsCarousel } from './events-carousel';
+import { EventCardSkeleton } from './event-card-skeleton';
 import Image from 'next/image';
 import Arrow from '../../public/imgs/arrow.svg';
 import Pagination from '@/shared/pagination';
@@ -26,6 +27,7 @@ export default function BlogListPageComponent() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [events, setEvents] = useState<EventListItem[]>([]);
+  const [eventsLoading, setEventsLoading] = useState(true);
 
   const [search, setSearch] = useState('');
   const [type, setType] = useState<NewsType | ''>('');
@@ -39,10 +41,17 @@ export default function BlogListPageComponent() {
 
   // Fetch eventos
   useEffect(() => {
+    setEventsLoading(true);
     fetch('/api/events?limit=10')
       .then(response => response.json())
-      .then(data => setEvents(data.events || []))
-      .catch(() => setEvents([]));
+      .then(data => {
+        setEvents(data.events || []);
+        setEventsLoading(false);
+      })
+      .catch(() => {
+        setEvents([]);
+        setEventsLoading(false);
+      });
   }, []);
 
   useEffect(() => {
@@ -186,7 +195,15 @@ export default function BlogListPageComponent() {
             </h1>
           </div>
 
-          <EventsCarousel events={events} />
+          {eventsLoading ? (
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+              {Array.from({ length: 3 }).map((_, index) => (
+                <EventCardSkeleton key={index} />
+              ))}
+            </div>
+          ) : (
+            <EventsCarousel events={events} />
+          )}
         </div>
       </PageContainer>
 
