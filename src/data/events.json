@@ -1,11 +1,11 @@
 [
   {
     "id": "evt-001",
-    "slug": "automec-2025",
-    "name": "Automec 2025",
-    "date": "2025-04-22T09:00:00.000Z",
+    "slug": "automec-2026",
+    "name": "Automec 2026",
+    "date": "2026-04-22T09:00:00.000Z",
     "local": "São Paulo Expo - São Paulo, SP",
-    "text": "A Mult Point estará presente na Automec 2025, a maior feira de autopeças da América Latina. Venha conhecer nossas novidades em válvulas injetoras e conversar com nossa equipe técnica.\n\n## O que você vai encontrar\n\n- Lançamentos da linha de válvulas injetoras\n- Demonstrações técnicas ao vivo\n- Equipe especializada para tirar suas dúvidas\n- Condições especiais para pedidos na feira\n\n## Nosso estande\n\nEstaremos no Pavilhão Verde, estande V-123. Aguardamos sua visita!",
+    "text": "A Mult Point estará presente na Automec 2026, a maior feira de autopeças da América Latina. Venha conhecer nossas novidades em válvulas injetoras e conversar com nossa equipe técnica.\n\n## O que você vai encontrar\n\n- Lançamentos da linha de válvulas injetoras\n- Demonstrações técnicas ao vivo\n- Equipe especializada para tirar suas dúvidas\n- Condições especiais para pedidos na feira\n\n## Nosso estande\n\nEstaremos no Pavilhão Verde, estande V-123. Aguardamos sua visita!",
     "type": "FEIRA",
     "createdAt": "2025-01-15T10:00:00.000Z",
     "updatedAt": "2025-01-15T10:00:00.000Z",
@@ -17,7 +17,7 @@
     "id": "evt-002",
     "slug": "workshop-tecnico-diagnostico-sistemas-injecao",
     "name": "Workshop Técnico - Diagnóstico de Sistemas de Injeção",
-    "date": "2025-03-15T14:00:00.000Z",
+    "date": "2026-02-15T14:00:00.000Z",
     "local": "Sede Mult Point - Registro, SP",
     "text": "Participe do nosso workshop técnico exclusivo para mecânicos e profissionais do setor automotivo. Aprenda técnicas avançadas de diagnóstico e manutenção de sistemas de injeção eletrônica.\n\n## Programação\n\n- 14h00 - Abertura e apresentação\n- 14h30 - Funcionamento do sistema de injeção eletrônica\n- 15h30 - Coffee break\n- 16h00 - Diagnóstico de falhas em válvulas injetoras\n- 17h00 - Demonstração prática\n- 18h00 - Encerramento e certificados\n\n## Inscrições\n\nVagas limitadas! Entre em contato pelo WhatsApp para garantir sua vaga.",
     "type": "WORKSHOP",
@@ -45,7 +45,7 @@
     "id": "evt-004",
     "slug": "palestra-futuro-injecao-eletronica",
     "name": "Palestra: O Futuro da Injeção Eletrônica",
-    "date": "2025-06-20T19:00:00.000Z",
+    "date": "2026-01-20T19:00:00.000Z",
     "local": "SENAI - Santos, SP",
     "text": "Nosso diretor técnico apresentará uma palestra sobre as tendências e o futuro dos sistemas de injeção eletrônica, incluindo os desafios da eletrificação veicular.\n\n## Temas abordados\n\n- Evolução dos sistemas de injeção\n- Tecnologias emergentes\n- Impacto dos veículos híbridos e elétricos\n- O papel do aftermarket no novo cenário\n\nEvento gratuito e aberto ao público. Vagas limitadas!",
     "type": "PALESTRA",
@@ -77,6 +77,39 @@
     "slug": "workshop-capacitacao-turma-12",
     "name": "Workshop de Capacitação - Turma 12",
     "date": "2024-09-28T14:00:00.000Z",
+    "local": "Sede Mult Point - Registro, SP",
+    "text": "Mais uma turma formada no nosso programa de capacitação técnica! Parabéns a todos os participantes que concluíram o workshop.\n\nO programa de workshops da Mult Point já capacitou mais de 500 profissionais em todo o Brasil.",
+    "type": "WORKSHOP",
+    "createdAt": "2024-09-30T08:00:00.000Z",
+    "updatedAt": "2024-09-30T08:00:00.000Z",
+    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
+    "videoPath": null,
+    "galleryImagesPaths": [
+      { "id": "gal-003", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" }
+    ]
+  },
+  {
+    "id": "evt-007",
+    "slug": "automec-2024",
+    "name": "Automec 2024",
+    "date": "2024-04-23T09:00:00.000Z",
+    "local": "São Paulo Expo - São Paulo, SP",
+    "text": "A Mult Point participou da Automec 2024 com grande sucesso! Nosso estande recebeu centenas de visitantes interessados em conhecer nossas válvulas injetoras.\n\nAgradecemos a todos que nos visitaram e fecharam parcerias conosco.",
+    "type": "FEIRA",
+    "createdAt": "2024-04-25T10:00:00.000Z",
+    "updatedAt": "2024-04-25T10:00:00.000Z",
+    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
+    "videoPath": null,
+    "galleryImagesPaths": [
+      { "id": "gal-001", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" },
+      { "id": "gal-002", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" }
+    ]
+  },
+  {
+    "id": "evt-008",
+    "slug": "workshop-capacitacao-turma-12",
+    "name": "Workshop de Capacitação - Turma 12",
+    "date": "2026-09-28T14:00:00.000Z",
     "local": "Sede Mult Point - Registro, SP",
     "text": "Mais uma turma formada no nosso programa de capacitação técnica! Parabéns a todos os participantes que concluíram o workshop.\n\nO programa de workshops da Mult Point já capacitou mais de 500 profissionais em todo o Brasil.",
     "type": "WORKSHOP",

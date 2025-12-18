@@ -11,6 +11,8 @@ import { BlogCardFeatured } from './blog-card-featured';
 import { BlogCardSkeleton } from './blog-card-skeleton';
 import { EventsCarousel } from './events-carousel';
 import { EventCardSkeleton } from './event-card-skeleton';
+import { NextEventsCarousel } from './next-events-carousel';
+import { NextEventCardSkeleton } from './next-event-card-skeleton';
 import Image from 'next/image';
 import Arrow from '../../public/imgs/arrow.svg';
 import Pagination from '@/shared/pagination';
@@ -28,6 +30,8 @@ export default function BlogListPageComponent() {
   const [error, setError] = useState<string | null>(null);
   const [events, setEvents] = useState<EventListItem[]>([]);
   const [eventsLoading, setEventsLoading] = useState(true);
+  const [upcomingEvents, setUpcomingEvents] = useState<EventListItem[]>([]);
+  const [upcomingEventsLoading, setUpcomingEventsLoading] = useState(true);
 
   const [search, setSearch] = useState('');
   const [type, setType] = useState<NewsType | ''>('');
@@ -39,10 +43,10 @@ export default function BlogListPageComponent() {
     setPage(1);
   }, [search, type]);
 
-  // Fetch eventos
+  // Fetch eventos passados
   useEffect(() => {
     setEventsLoading(true);
-    fetch('/api/events?limit=10')
+    fetch('/api/events?limit=10&upcoming=false')
       .then(response => response.json())
       .then(data => {
         setEvents(data.events || []);
@@ -51,6 +55,21 @@ export default function BlogListPageComponent() {
       .catch(() => {
         setEvents([]);
         setEventsLoading(false);
+      });
+  }, []);
+
+  // Fetch próximos eventos (futuros)
+  useEffect(() => {
+    setUpcomingEventsLoading(true);
+    fetch('/api/events?limit=10&upcoming=true')
+      .then(response => response.json())
+      .then(data => {
+        setUpcomingEvents(data.events || []);
+        setUpcomingEventsLoading(false);
+      })
+      .catch(() => {
+        setUpcomingEvents([]);
+        setUpcomingEventsLoading(false);
       });
   }, []);
 
@@ -95,82 +114,77 @@ export default function BlogListPageComponent() {
       <PageContainer>
 
         {/** News */}
-        <div className='max-w-7xl space-y-8 w-full'>
-          <div className='flex flex-col items-start gap-3'>
-            <Image
-              src={Arrow}
-              alt="Arrow"
-              className='hidden md:block'
-            />
-            <h1 className="text-4xl md:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
-              Notícias
-            </h1>
+        <div className='max-w-7xl space-y-8 w-full items-start mb-12'>
+          <div className='w-full items-center'>
+            <div className='flex flex-col items-start gap-3'>
+              <Image
+                src={Arrow}
+                alt="Arrow"
+                className='hidden md:block'
+              />
+              <h1 className="text-4xl md:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
+                Notícias
+              </h1>
+            </div>
+            {/* Grid de Posts */}
+            {loading && (
+              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full'>
+                {Array.from({ length: limit }).map((_, index) => (
+                  <BlogCardSkeleton key={index} />
+                ))}
+              </div>
+            )}
+            {error && (
+              <div className='text-center py-12'>
+                <p className='text-red-amber-torque'>Erro ao carregar notícias: {error}</p>
+              </div>
+            )}
+            {!loading && !error && news.length === 0 && (
+              <div className='text-center py-12'>
+                <p className='text-gray-500'>Nenhuma notícia encontrada.</p>
+              </div>
+            )}
+            {!loading && !error && news.length > 0 && (
+              <div>
+                {/* Layout de destaque apenas na primeira página */}
+                {page === 1 && news.length >= 1 && (
+                  <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
+                    {/* Coluna esquerda - Card grande */}
+                    <BlogCardFeatured news={news[0]} size="large" />
+                    {/* Coluna direita - Dois cards pequenos (escondidos no mobile) */}
+                    {news.length >= 3 && (
+                      <div className='hidden lg:flex flex-col gap-6'>
+                        <BlogCardFeatured news={news[1]} size="small" />
+                        <BlogCardFeatured news={news[2]} size="small" />
+                      </div>
+                    )}
+                  </div>
+                )}
+                {/* Cards normais */}
+                {page === 1 && news.length > 1 && (
+                  <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16'>
+                    {/* No mobile: mostra a partir do índice 1, no desktop: a partir do índice 3 */}
+                    {news.slice(1).map((item, index) => (
+                      <div
+                        key={item.id}
+                        className={index < 2 ? 'lg:hidden' : ''}
+                      >
+                        <BlogCard news={item} />
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {/* Páginas subsequentes - layout normal */}
+                {page > 1 && (
+                  <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+                    {news.map(item => (
+                      <BlogCard key={item.id} news={item} />
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
-
-          {/* Grid de Posts */}
-          {loading && (
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full'>
-              {Array.from({ length: limit }).map((_, index) => (
-                <BlogCardSkeleton key={index} />
-              ))}
-            </div>
-          )}
-
-          {error && (
-            <div className='text-center py-12'>
-              <p className='text-red-amber-torque'>Erro ao carregar notícias: {error}</p>
-            </div>
-          )}
-
-          {!loading && !error && news.length === 0 && (
-            <div className='text-center py-12'>
-              <p className='text-gray-500'>Nenhuma notícia encontrada.</p>
-            </div>
-          )}
-
-          {!loading && !error && news.length > 0 && (
-            <div>
-              {/* Layout de destaque apenas na primeira página */}
-              {page === 1 && news.length >= 1 && (
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-                  {/* Coluna esquerda - Card grande */}
-                  <BlogCardFeatured news={news[0]} size="large" />
-
-                  {/* Coluna direita - Dois cards pequenos (escondidos no mobile) */}
-                  {news.length >= 3 && (
-                    <div className='hidden lg:flex flex-col gap-6'>
-                      <BlogCardFeatured news={news[1]} size="small" />
-                      <BlogCardFeatured news={news[2]} size="small" />
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Cards normais */}
-              {page === 1 && news.length > 1 && (
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16'>
-                  {/* No mobile: mostra a partir do índice 1, no desktop: a partir do índice 3 */}
-                  {news.slice(1).map((item, index) => (
-                    <div
-                      key={item.id}
-                      className={index < 2 ? 'lg:hidden' : ''}
-                    >
-                      <BlogCard news={item} />
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {/* Páginas subsequentes - layout normal */}
-              {page > 1 && (
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-                  {news.map(item => (
-                    <BlogCard key={item.id} news={item} />
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
 
           {/* Paginação */}
           <Pagination
@@ -203,6 +217,28 @@ export default function BlogListPageComponent() {
             </div>
           ) : (
             <EventsCarousel events={events} />
+          )}
+
+          {/* Próximos Eventos - só mostra se tiver eventos ou estiver carregando */}
+          {(upcomingEventsLoading || upcomingEvents.length > 0) && (
+            <>
+              {/* Divisor - Próximos Eventos */}
+              <div className='flex items-center gap-4 pt-8'>
+                <span className='uppercase font-semibold text-lg text-blue-ignition'>Próximos Eventos</span>
+                <div className='flex-grow border-t border-blue-ignition'></div>
+              </div>
+
+              {/* Carousel de Próximos Eventos */}
+              {upcomingEventsLoading ? (
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+                  {Array.from({ length: 3 }).map((_, index) => (
+                    <NextEventCardSkeleton key={index} />
+                  ))}
+                </div>
+              ) : (
+                <NextEventsCarousel events={upcomingEvents} />
+              )}
+            </>
           )}
         </div>
       </PageContainer>
