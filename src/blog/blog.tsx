@@ -5,9 +5,11 @@ import { Footer } from '@/shared/footer';
 import { Menu } from '@/shared/menu';
 import { useEffect, useState } from 'react';
 import { NewsListItem, NewsType } from '@/shared/types/blog-types';
+import { EventListItem } from '@/shared/types/event-types';
 import { BlogCard } from './blog-card';
 import { BlogCardFeatured } from './blog-card-featured';
 import { BlogCardSkeleton } from './blog-card-skeleton';
+import { EventsCarousel } from './events-carousel';
 import Image from 'next/image';
 import Arrow from '../../public/imgs/arrow.svg';
 import Pagination from '@/shared/pagination';
@@ -23,6 +25,7 @@ export default function BlogListPageComponent() {
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [events, setEvents] = useState<EventListItem[]>([]);
 
   const [search, setSearch] = useState('');
   const [type, setType] = useState<NewsType | ''>('');
@@ -33,6 +36,14 @@ export default function BlogListPageComponent() {
   useEffect(() => {
     setPage(1);
   }, [search, type]);
+
+  // Fetch eventos
+  useEffect(() => {
+    fetch('/api/events?limit=10')
+      .then(response => response.json())
+      .then(data => setEvents(data.events || []))
+      .catch(() => setEvents([]));
+  }, []);
 
   useEffect(() => {
     const fetchNews = () => {
@@ -73,6 +84,8 @@ export default function BlogListPageComponent() {
     <div className='flex flex-col items-center w-full'>
       <Menu />
       <PageContainer>
+
+        {/** News */}
         <div className='max-w-7xl space-y-8 w-full'>
           <div className='flex flex-col items-start gap-3'>
             <Image
@@ -157,6 +170,23 @@ export default function BlogListPageComponent() {
             onPageChange={setPage}
             disabled={loading}
           />
+        </div>
+
+        {/** Events */}
+        <div className='max-w-7xl space-y-8 w-full'>
+
+          <div className='flex flex-col items-start gap-3'>
+            <Image
+              src={Arrow}
+              alt="Arrow"
+              className='hidden md:block'
+            />
+            <h1 className="text-4xl md:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
+              Eventos
+            </h1>
+          </div>
+
+          <EventsCarousel events={events} />
         </div>
       </PageContainer>
 

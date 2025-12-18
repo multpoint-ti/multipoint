@@ -34,7 +34,7 @@ export function BlogCardFeatured({ news, size = 'large' }: BlogCardFeaturedProps
 
         {/* Conteúdo por cima */}
         <div className={`absolute inset-0 flex flex-col justify-end ${isLarge ? 'p-8' : 'p-5'}`}>
-          <h3 className={`text-white font-medium mt-3 ${isLarge ? 'text-2xl md:text-3xl' : 'text-base md:text-lg'}`}>
+          <h3 className={`text-white font-medium mt-3 ${isLarge ? 'text-2xl md:text-3xl' : 'text-lg md:text-xl'}`}>
             {news.title}
           </h3>
 
