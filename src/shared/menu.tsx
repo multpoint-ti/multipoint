@@ -29,7 +29,7 @@ export function Menu() {
     { href: '/sobre-nos', label: 'Sobre Nós' },
     { href: '/representantes', label: 'Representantes' },
     { href: '/blog', label: 'Blog' },
-    { href: '/contato', label: 'Contato' },
+    { href: '/#contato', label: 'Contato' },
   ];
 
   return (

@@ -30,7 +30,7 @@ export default function Contact() {
     ];
 
     return (
-        <section className="flex flex-col lg:flex-row gap-20 items-center justify-center bg-gray-soft w-full py-10 md:py-20 px-4">
+        <section id="contato" className="flex flex-col lg:flex-row gap-20 items-center justify-center bg-gray-soft w-full py-10 md:py-20 px-4">
 
             <div className='flex flex-col lg:flex-row gap-8 md:gap-2 items-start max-w-7xl'>
                 <div className='flex flex-col gap-6 md:gap-10 items-center lg:items-start lg:w-1/2 text-center lg:text-start'>

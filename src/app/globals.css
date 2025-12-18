@@ -19,3 +19,22 @@ body {
   font-family: "Montserrat", sans-serif;
   color: var(--color-blue-ignition);
 }
+
+@keyframes whatsapp-bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  20% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.animate-whatsapp-bounce {
+  animation: whatsapp-bounce 3s ease-in-out infinite;
+}

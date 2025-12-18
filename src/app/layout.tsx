@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Montserrat } from "next/font/google"
 import "./globals.css"
+import { WhatsAppButton } from "@/shared/whatsapp-button"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -22,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={montserrat.variable}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   )
 }

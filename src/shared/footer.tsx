@@ -22,7 +22,7 @@ export function Footer() {
     { href: '/sobre-nos', label: 'Sobre Nós' },
     { href: '/representantes', label: 'Eventos' },
     { href: '/catalogo', label: 'Blog' },
-    { href: '/contato', label: 'Contato' },
+    { href: '/#contato', label: 'Contato' },
   ];
 
   const contactInfo = [
