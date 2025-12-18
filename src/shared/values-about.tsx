@@ -59,7 +59,7 @@ const ValuesSectionAbout = () => {
                 <div className='flex flex-col items-center gap-4'>
                     <SectionTagName text='Nossos Valores' />
                     <h1 className="text-3xl font-medium text-center md:text-start max-w-3xl leading-tight">
-                        Mais do que peças. <span className="text-blue-gravel-mist font-medium">Entregamos Valor.</span>
+                        Mais do que peças. <span className="text-blue-ignition font-bold">Entregamos Valor.</span>
                     </h1>
                 </div>
                 <div className="hidden lg:flex flex-col md:flex-row items-center gap-2 md:gap-8">
@@ -68,7 +68,7 @@ const ValuesSectionAbout = () => {
                             <Image
                                 src={item.image}
                                 alt={item.title}
-                                className="rounded-lg h-12 w-12 bg-blue-gravel-mist p-2 mb-2"
+                                className="rounded-lg h-12 w-12 bg-blue-ignition p-2 mb-2"
                             />
                             <h3 className="text-base md:text-lg font-semibold">
                                 {item.title}

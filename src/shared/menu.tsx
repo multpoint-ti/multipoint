@@ -33,7 +33,7 @@ export function Menu() {
   ];
 
   return (
-    <header className='w-full'>
+    <header className='w-full border-b border-gray-oxide-steel'>
       {/* Top blue bar */}
       <div className="bg-blue-gravel-mist text-white p-2 w-full items-center justify-center flex">
         <div className="container px-4 md:px-8 flex justify-between items-center text-sm w-full">
