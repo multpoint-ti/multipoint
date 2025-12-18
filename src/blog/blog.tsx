@@ -10,6 +10,7 @@ import { BlogCardFeatured } from './blog-card-featured';
 import { BlogCardSkeleton } from './blog-card-skeleton';
 import Image from 'next/image';
 import Arrow from '../../public/imgs/arrow.svg';
+import Pagination from '@/shared/pagination';
 
 interface ApiResponse {
   news: NewsListItem[];
@@ -125,7 +126,7 @@ export default function BlogListPageComponent() {
 
               {/* Cards normais */}
               {page === 1 && news.length > 1 && (
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16'>
                   {/* No mobile: mostra a partir do índice 1, no desktop: a partir do índice 3 */}
                   {news.slice(1).map((item, index) => (
                     <div
@@ -150,27 +151,12 @@ export default function BlogListPageComponent() {
           )}
 
           {/* Paginação */}
-          {data && data.totalPages > 1 && (
-            <div className='flex justify-center gap-2 mt-8'>
-              <button
-                onClick={() => setPage(p => Math.max(1, p - 1))}
-                disabled={page === 1 || loading}
-                className='px-4 py-2 border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50'
-              >
-                Anterior
-              </button>
-              <span className='px-4 py-2'>
-                Página {page} de {data.totalPages}
-              </span>
-              <button
-                onClick={() => setPage(p => Math.min(data.totalPages, p + 1))}
-                disabled={page === data.totalPages || loading}
-                className='px-4 py-2 border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50'
-              >
-                Próxima
-              </button>
-            </div>
-          )}
+          <Pagination
+            currentPage={page}
+            totalPages={data?.totalPages || 0}
+            onPageChange={setPage}
+            disabled={loading}
+          />
         </div>
       </PageContainer>
 

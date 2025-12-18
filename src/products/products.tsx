@@ -9,6 +9,7 @@ import { ProductsBanner } from './products-banner';
 import { ProductsFilters } from './products-filters';
 import { ProductCard } from './product-card';
 import { ProductCardSkeleton } from './product-card-skeleton';
+import Pagination from '@/shared/pagination';
 
 interface ApiResponse {
   products: Product[];
@@ -151,27 +152,12 @@ export default function ProductsListPageComponent() {
               )}
 
               {/* Paginação */}
-              {data && data.totalPages > 1 && (
-                <div className='flex justify-center gap-2 mt-8'>
-                  <button
-                    onClick={() => setPage(p => Math.max(1, p - 1))}
-                    disabled={page === 1}
-                    className='px-4 py-2 border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50'
-                  >
-                    Anterior
-                  </button>
-                  <span className='px-4 py-2'>
-                    Página {page} de {data.totalPages}
-                  </span>
-                  <button
-                    onClick={() => setPage(p => Math.min(data.totalPages, p + 1))}
-                    disabled={page === data.totalPages}
-                    className='px-4 py-2 border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50'
-                  >
-                    Próxima
-                  </button>
-                </div>
-              )}
+              <Pagination
+                currentPage={page}
+                totalPages={data?.totalPages || 0}
+                onPageChange={setPage}
+                disabled={loading}
+              />
             </div>
           </div>
         </div>
