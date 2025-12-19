@@ -16,7 +16,7 @@ export type Event = {
   createdAt: string;
   updatedAt: string;
   imagePath: string;
-  videoPath?: string;
+  videoPath?: string | null;
   galleryImagesPaths: GalleryImage[];
 };
 
