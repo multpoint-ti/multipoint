@@ -11,6 +11,7 @@ import { Breadcrumb } from '@/shared/breadcrumb';
 import { ArrowLeft, Calendar } from 'lucide-react';
 import { formatDate, } from './blog-card';
 import SectionTagName from '@/shared/section-tag-name';
+import { ImageGallery } from '@/shared/image-gallery';
 
 interface NewsDetailProps {
   slug: string;
@@ -200,21 +201,7 @@ export default function NewsDetailComponent({ slug }: NewsDetailProps) {
             </article>
             {/* Galeria de Imagens */}
             {news.galleryImagesPaths && news.galleryImagesPaths.length > 0 && (
-              <div className='mt-12'>
-                <h3 className='text-xl font-semibold mb-4'>Galeria</h3>
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
-                  {news.galleryImagesPaths.map((image) => (
-                    <div key={image.id} className='relative h-48 rounded-lg overflow-hidden'>
-                      <Image
-                        src={image.path}
-                        alt='Imagem da galeria'
-                        fill
-                        className='object-cover hover:scale-105 transition-transform duration-300'
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <ImageGallery images={news.galleryImagesPaths} />
             )}
             {/* Divisor */}
             <div className='border-t border-gray-200 mt-12 pt-8'>

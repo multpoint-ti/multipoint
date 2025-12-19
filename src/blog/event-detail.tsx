@@ -10,6 +10,7 @@ import PageContainer from '@/shared/page-container';
 import { Breadcrumb } from '@/shared/breadcrumb';
 import { ArrowLeft, Calendar, MapPin } from 'lucide-react';
 import SectionTagName from '@/shared/section-tag-name';
+import { ImageGallery } from '@/shared/image-gallery';
 
 interface EventDetailProps {
   slug: string;
@@ -223,21 +224,7 @@ export default function EventDetailComponent({ slug }: EventDetailProps) {
             </article>
             {/* Galeria de Imagens */}
             {event.galleryImagesPaths && event.galleryImagesPaths.length > 0 && (
-              <div className='mt-12'>
-                <h3 className='text-xl font-semibold mb-4'>Galeria</h3>
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
-                  {event.galleryImagesPaths.map((image) => (
-                    <div key={image.id} className='relative h-48 rounded-lg overflow-hidden'>
-                      <Image
-                        src={image.path}
-                        alt='Imagem da galeria'
-                        fill
-                        className='object-cover hover:scale-105 transition-transform duration-300'
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <ImageGallery images={event.galleryImagesPaths} />
             )}
             {/* Divisor */}
             <div className='border-t border-gray-200 mt-12 pt-8'>
