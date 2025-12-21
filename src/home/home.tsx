@@ -6,6 +6,8 @@ import { Footer } from '@/shared/footer';
 import Address from './address';
 import Contact from './contact';
 import ProductsLineCarousel from './products-line-carousel';
+import { CategoriesSection } from './categories-section';
+import { CatalogSection } from './catalog-section';
 
 export default function HomePageComponent() {
   return (
@@ -16,7 +18,9 @@ export default function HomePageComponent() {
       <PageContainer>
         <HomeAbout />
       </PageContainer>
+      <CategoriesSection />
       <Contact />
+      <CatalogSection />
       <PageContainer>
         <Address />
       </PageContainer>
