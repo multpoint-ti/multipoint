@@ -8,6 +8,7 @@ import Contact from './contact';
 import ProductsLineCarousel from './products-line-carousel';
 import { CategoriesSection } from './categories-section';
 import { CatalogSection } from './catalog-section';
+import { CtaBanner } from './cta-banner';
 
 export default function HomePageComponent() {
   return (
@@ -24,6 +25,7 @@ export default function HomePageComponent() {
       <PageContainer>
         <Address />
       </PageContainer>
+      <CtaBanner />
       <Footer />
     </div>
   );
