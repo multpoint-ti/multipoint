@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Arrow from '../../public/imgs/arrow.svg';
 import { Button } from '@/shared/button';
-import { Clock, Mail, Phone } from 'lucide-react';
+import { ArrowRight, CheckCircle, Clock, Mail, Phone, XCircle } from 'lucide-react';
 import SelectInput from '@/shared/select-input';
 import Input from '@/shared/input';
 import { states } from '@/representants/representants';
@@ -144,84 +144,118 @@ export default function Contact() {
                 </div>
 
                 <div className="flex flex-col items-start w-full lg:w-1/2 md:px-10 gap-4 md:gap-6">
-                    <div className="w-full">
-                        <SelectInput
-                            id="contact-type"
-                            className={`bg-white w-full ${errors.assunto ? 'border-red-500 border-1' : ''}`}
-                            options={contactType}
-                            onSelect={(value) => setAssunto(value)}
-                            value={assunto}
-                        />
-                        {errors.assunto && <p className="text-red-500 text-xs mt-1">{errors.assunto}</p>}
-                    </div>
-                    <div className="w-full">
-                        <Input
-                            id="contact-name"
-                            className={`bg-white w-full ${errors.nome ? 'border-red-500 border-1' : ''}`}
-                            placeholder='Nome'
-                            value={nome}
-                            onChange={(e) => setNome(e.target.value)}
-                            type="text"
-                        />
-                        {errors.nome && <p className="text-red-500 text-xs mt-1">{errors.nome}</p>}
-                    </div>
-                    <div className="w-full">
-                        <Input
-                            id="contact-email"
-                            className={`bg-white w-full ${errors.email ? 'border-red-500 border-1' : ''}`}
-                            placeholder='Email'
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            type="email"
-                        />
-                        {errors.email && <p className="text-red-500 text-xs mt-1">Ex: exemplo@email.com</p>}
-                    </div>
-                    <div className='flex flex-row gap-4 w-full'>
-                        <div className="w-full">
-                            <input
-                                id="contact-phone"
-                                className={`bg-white w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-gravel-mist ${errors.telefone ? 'border-red-500 border-1' : 'border-gray-200'}`}
-                                placeholder='Telefone'
-                                type="text"
-                                value={telefone}
-                                onChange={(e) => setTelefone(formatPhone(e.target.value))}
-                            />
-                            {errors.telefone && <p className="text-red-500 text-xs mt-1">Ex: (11) 99999-9999</p>}
+                    {status === 'success' ? (
+                        <div className="w-full flex flex-col gap-4">
+                            <div className="bg-white rounded-lg p-6 flex items-center gap-4">
+                                <CheckCircle className="h-10 w-10 text-blue-gravel-mist flex-shrink-0" />
+                                <div>
+                                    <p className="font-medium text-lg">Email enviado!</p>
+                                    <p className="text-gray-600">Logo nosso time entrará em contato.</p>
+                                </div>
+                            </div>
+                            <Button
+                                variant="default"
+                                className="w-full md:max-w-48 text-white gap-2"
+                                onClick={() => setStatus('idle')}
+                            >
+                                Enviar outro email
+                                <ArrowRight className='text-white h-5 w-5' />
+                            </Button>
                         </div>
-                        <div className="w-full">
-                            <SelectInput
-                                id="contact-state"
-                                className={`bg-white w-full ${errors.estado ? 'border-red-500 border-1' : ''}`}
-                                options={states}
-                                onSelect={(value) => setEstado(value)}
-                                value={estado}
-                            />
-                            {errors.estado && <p className="text-red-500 text-xs mt-1">{errors.estado}</p>}
-                        </div>
-                    </div>
-                    <div className="w-full">
-                        <InputTextArea
-                            id="contact-message"
-                            className={`bg-white w-full ${errors.mensagem ? 'border-red-500 border-1' : ''}`}
-                            placeholder='Mensagem'
-                            value={mensagem}
-                            onChange={(e) => setMensagem(e.target.value)}
-                        />
-                        {errors.mensagem && <p className="text-red-500 text-xs mt-1">Mínimo 10 caracteres</p>}
-                    </div>
-                    <Button
-                        variant="default"
-                        className='text-white text-base md:text-lg px-6 bg-blue-gravel-mist w-full md:max-w-40 disabled:opacity-50'
-                        onClick={handleSubmit}
-                        disabled={loading}
-                    >
-                        {loading ? 'Enviando...' : 'Enviar'}
-                    </Button>
-                    {status === 'success' && (
-                        <p className='text-green-600 text-sm'>Mensagem enviada com sucesso!</p>
-                    )}
-                    {status === 'error' && (
-                        <p className='text-red-600 text-sm'>Erro ao enviar. Tente novamente.</p>
+                    ) : (
+                        <>
+                            <div className="w-full">
+                                <SelectInput
+                                    id="contact-type"
+                                    className={`bg-white w-full ${errors.assunto ? 'border-red-500 border-1' : ''}`}
+                                    options={contactType}
+                                    onSelect={(value) => setAssunto(value)}
+                                    value={assunto}
+                                />
+                                {errors.assunto && <p className="text-red-500 text-xs mt-1">{errors.assunto}</p>}
+                            </div>
+                            <div className="w-full">
+                                <Input
+                                    id="contact-name"
+                                    className={`bg-white w-full ${errors.nome ? 'border-red-500 border-1' : ''}`}
+                                    placeholder='Nome'
+                                    value={nome}
+                                    onChange={(e) => setNome(e.target.value)}
+                                    type="text"
+                                />
+                                {errors.nome && <p className="text-red-500 text-xs mt-1">{errors.nome}</p>}
+                            </div>
+                            <div className="w-full">
+                                <Input
+                                    id="contact-email"
+                                    className={`bg-white w-full ${errors.email ? 'border-red-500 border-1' : ''}`}
+                                    placeholder='Email'
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    type="email"
+                                />
+                                {errors.email && <p className="text-red-500 text-xs mt-1">Ex: exemplo@email.com</p>}
+                            </div>
+                            <div className='flex flex-row gap-4 w-full'>
+                                <div className="w-full">
+                                    <input
+                                        id="contact-phone"
+                                        className={`bg-white w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-gravel-mist ${errors.telefone ? 'border-red-500 border-1' : 'border-gray-200'}`}
+                                        placeholder='Telefone'
+                                        type="text"
+                                        value={telefone}
+                                        onChange={(e) => setTelefone(formatPhone(e.target.value))}
+                                    />
+                                    {errors.telefone && <p className="text-red-500 text-xs mt-1">Ex: (11) 99999-9999</p>}
+                                </div>
+                                <div className="w-full">
+                                    <SelectInput
+                                        id="contact-state"
+                                        className={`bg-white w-full ${errors.estado ? 'border-red-500 border-1' : ''}`}
+                                        options={states}
+                                        onSelect={(value) => setEstado(value)}
+                                        value={estado}
+                                    />
+                                    {errors.estado && <p className="text-red-500 text-xs mt-1">{errors.estado}</p>}
+                                </div>
+                            </div>
+                            <div className="w-full">
+                                <InputTextArea
+                                    id="contact-message"
+                                    className={`bg-white w-full ${errors.mensagem ? 'border-red-500 border-1' : ''}`}
+                                    placeholder='Mensagem'
+                                    value={mensagem}
+                                    onChange={(e) => setMensagem(e.target.value)}
+                                />
+                                {errors.mensagem && <p className="text-red-500 text-xs mt-1">Mínimo 10 caracteres</p>}
+                            </div>
+                            <Button
+                                variant="default"
+                                className='text-white text-base md:text-lg px-6 bg-blue-gravel-mist w-full md:max-w-40 disabled:opacity-50'
+                                onClick={handleSubmit}
+                                disabled={loading}
+                            >
+                                {loading ? 'Enviando...' : 'Enviar'}
+                            </Button>
+                            {status === 'error' && (
+                                <div className="w-full flex flex-col gap-4">
+                                    <div className="bg-white rounded-lg p-6 flex items-center gap-4">
+                                        <XCircle className="h-10 w-10 text-red-500 flex-shrink-0" />
+                                        <div>
+                                            <p className="font-bold text-lg">Erro ao enviar email</p>
+                                            <p className="text-gray-600">Tente novamente mais tarde.</p>
+                                        </div>
+                                    </div>
+                                    <Button
+                                        variant="outline"
+                                        className="w-full md:max-w-48"
+                                        onClick={() => setStatus('idle')}
+                                    >
+                                        Tentar novamente
+                                    </Button>
+                                </div>
+                            )}
+                        </>
                     )}
                 </div>
 
