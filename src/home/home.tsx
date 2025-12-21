@@ -21,10 +21,10 @@ export default function HomePageComponent() {
       </PageContainer>
       <CategoriesSection />
       <Contact />
-      <CatalogSection />
       <PageContainer>
         <Address />
       </PageContainer>
+      <CatalogSection />
       <CtaBanner />
       <Footer />
     </div>

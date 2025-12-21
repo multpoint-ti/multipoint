@@ -119,8 +119,11 @@ export default function Contact() {
                         <h1 className="text-3xl md:text-5xl font-medium text-start md:text-start max-w-3xl leading-tight">
                             Entre em contato
                         </h1>
-                        <p className="text-base md:text-lg">
-                            Tem uma dúvida ou precisa de um orçamento? <strong>Preencha o formulário</strong> <span className='hidden md:block'>ou entre em contato por um de nossos canais</span> abaixo:
+                        <p className="text-base md:text-lg hidden md:block">
+                            Tem uma dúvida ou precisa de um orçamento? <br /> Preencha o formulário ou entre em contato por um de nossos canais abaixo:
+                        </p>
+                        <p className="text-base md:text-lg block md:hidden">
+                            Tem uma dúvida ou precisa de um orçamento? Preencha o formulário abaixo:
                         </p>
                     </div>
 
@@ -155,7 +158,7 @@ export default function Contact() {
                             </div>
                             <Button
                                 variant="default"
-                                className="w-full md:max-w-48 text-white gap-2"
+                                className="w-full md:max-w-60 text-white gap-2 text-lg"
                                 onClick={() => setStatus('idle')}
                             >
                                 Enviar outro email

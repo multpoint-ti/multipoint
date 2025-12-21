@@ -97,7 +97,7 @@ export function CategoriesSection() {
   // Desktop: 3 columns grid
   if (!isMobile) {
     return (
-      <section className="w-full max-w-7xl mx-auto px-4 py-12">
+      <section className="w-full max-w-7xl mx-auto px-4 pt-12 pb-20">
         <div className="grid grid-cols-3">
           {categories.map((item) => (
             <CategoryCard key={item.title} item={item} />
