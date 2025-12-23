@@ -4,7 +4,10 @@
       "Bash(node extract-automakers.js:*)",
       "Bash(node extract-product-lines.js:*)",
       "Bash(del:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(cat:*)",
+      "Bash(node -e:*)",
+      "Bash(npx tsc:*)"
     ],
     "deny": [],
     "ask": []
