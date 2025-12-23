@@ -12,6 +12,9 @@ import { getProductLineName } from './product-card';
 import { Button } from '@/shared/button';
 import { ArrowRight, Download, Info } from 'lucide-react';
 import { ProductDetailSkeleton } from './product-detail-skeleton';
+import { ProductRecommendations } from './product-recommendations';
+import Link from 'next/link';
+import SectionTagName from '@/shared/section-tag-name';
 
 const handleDownloadCatalog = () => {
   const link = document.createElement('a');
@@ -93,7 +96,7 @@ export default function ProductDetailComponent({ productId }: ProductDetailProps
       <Menu />
 
       <PageContainer>
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col gap-2 w-full min-w-0 overflow-x-hidden'>
           {/* Breadcrumb */}
           <Breadcrumb
             items={[
@@ -133,10 +136,12 @@ export default function ProductDetailComponent({ productId }: ProductDetailProps
 
               {/* Botões */}
               <div className='flex flex-col sm:flex-row gap-4 mt-4'>
-                <Button variant='default' className='flex items-center gap-2 text-white'>
-                  Encontre um representante
-                  <ArrowRight className='w-4 h-4' />
-                </Button>
+                <Link href={`/representantes`}>
+                  <Button variant='default' className='flex items-center gap-2 text-white'>
+                    Encontre um representante
+                    <ArrowRight className='w-4 h-4' />
+                  </Button>
+                </Link>
                 <Button variant='outline' className='flex items-center gap-2' onClick={handleDownloadCatalog}>
                   <Download className='w-4 h-4' />
                   Baixe nosso catálogo
@@ -166,6 +171,17 @@ export default function ProductDetailComponent({ productId }: ProductDetailProps
                 duráveis e confiáveis.
               </p>
             </div>
+          </div>
+
+          {/* Divisor */}
+          <div className="border-t border-gray-200 mt-12 mb-8"></div>
+
+          {/* Seção Recomendações */}
+          <div className='mb-8'>
+            <ProductRecommendations
+              currentProductId={product.id}
+              productLine={product.productLine}
+            />
           </div>
         </div>
       </PageContainer>

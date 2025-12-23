@@ -10,6 +10,7 @@ import CarrouselHome2 from '../../public/imgs/carrousel-home/carrousel-home-2.pn
 import CarrouselHome2Mobile from '../../public/imgs/carrousel-home/carrousel-home-mobile-2.png'
 import Arrow from '../../public/imgs/arrow.svg'
 import { useCallback, useEffect, useState } from 'react';
+import Link from 'next/link';
 
 const handleDownloadCatalog = () => {
   const link = document.createElement('a');
@@ -79,7 +80,9 @@ export function Carousel() {
               </h1>
             </div>
             <div className="mt-4 gap-4 hidden md:flex">
-              <Button variant="default">Veja nossos Produtos</Button>
+              <Link href={`/produtos`}>
+                <Button variant="default">Veja nossos Produtos</Button>
+              </Link>
               <Button variant="outline" onClick={handleDownloadCatalog}>
                 <Download className="mr-2 h-4 w-4" />
                 Baixe nosso Catálogo

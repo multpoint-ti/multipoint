@@ -158,7 +158,7 @@ export default function Contact() {
                             </div>
                             <Button
                                 variant="default"
-                                className="w-full md:max-w-60 text-white gap-2 text-lg"
+                                className="w-full md:max-w-60 text-white gap-2"
                                 onClick={() => setStatus('idle')}
                             >
                                 Enviar outro email
