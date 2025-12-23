@@ -11,6 +11,8 @@ const buttonVariants = cva(
       variant: {
         default: 
           'bg-blue-gravel-mist rounded-full text-primary-foreground hover:bg-primary/90 transition duration-300 hover:cursor-pointer hover:brightness-95',
+        ignition: 
+          'bg-blue-ignition rounded-full text-primary-foreground hover:bg-primary/90 transition duration-300 hover:cursor-pointer hover:brightness-95',
         outline:
           'border border-input rounded-full transition duration-300 hover:cursor-pointer hover:brightness-95',
         white:
