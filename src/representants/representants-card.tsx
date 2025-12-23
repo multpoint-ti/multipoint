@@ -13,7 +13,7 @@ export type Representant = {
 
 export const RepresentantsCard = ({ representant }: { representant: Representant }) => {
     return (
-        <div className='flex flex-col w-full h-full max-w-[400px] p-6 gap-4 border border-gray-oxide-steel rounded-xl hover:bg-gray-100'>
+        <div className='flex flex-col h-full p-6 gap-4 border border-gray-oxide-steel rounded-xl hover:bg-gray-100'>
             <div className='text-lg font-bold uppercase'>{representant.nome}</div>
             {representant.fones.map((fone, index) => (
                 <div className='flex flex-row items-center justify-start w-full gap-2' key={index}>

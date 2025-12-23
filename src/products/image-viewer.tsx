@@ -23,14 +23,14 @@ export function ImageViewer({ images, alt }: ImageViewerProps) {
   }
 
   return (
-    <div className="flex gap-4">
-      {/* Miniaturas - Lado Esquerdo */}
-      <div className="flex flex-col gap-2 overflow-y-auto max-h-[600px]">
+    <div className="flex flex-col-reverse md:flex-row gap-4">
+      {/* Miniaturas - Abaixo no mobile, Lado Esquerdo no desktop */}
+      <div className="flex flex-row md:flex-col gap-2 overflow-x-auto md:overflow-y-auto md:max-h-[600px]">
         {images.map((image, index) => (
           <button
             key={image.id}
             onClick={() => setSelectedIndex(index)}
-            className={`flex-shrink-0 w-20 h-20 rounded-t-lg border border-gray-200 border-b-3 overflow-hidden transition-all ${
+            className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-t-lg border border-gray-200 border-b-3 overflow-hidden transition-all ${
               index === selectedIndex
                 ? 'border-b-blue-gravel-mist'
                 : 'border-gray-200 hover:border-gray-300'
@@ -47,8 +47,8 @@ export function ImageViewer({ images, alt }: ImageViewerProps) {
         ))}
       </div>
 
-      {/* Imagem Principal - Lado Direito */}
-      <div className="flex-1 aspect-square rounded-lg border border-gray-200 flex items-center justify-center p-8">
+      {/* Imagem Principal - Acima no mobile, Lado Direito no desktop */}
+      <div className="flex-1 aspect-square rounded-lg border border-gray-200 flex items-center justify-center p-4 md:p-8">
         <Image
           src={images[selectedIndex].path}
           alt={alt}

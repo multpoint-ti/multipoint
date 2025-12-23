@@ -12,6 +12,7 @@ import { ArrowLeft, Calendar } from 'lucide-react';
 import { formatDate, } from './blog-card';
 import SectionTagName from '@/shared/section-tag-name';
 import { ImageGallery } from '@/shared/image-gallery';
+import { BlogRecommendations } from './blog-recommendations';
 
 interface NewsDetailProps {
   slug: string;
@@ -212,6 +213,11 @@ export default function NewsDetailComponent({ slug }: NewsDetailProps) {
                 <ArrowLeft className='w-4 h-4' />
                 Ver todas as notícias
               </Link>
+            </div>
+
+            {/* Recomendações */}
+            <div className='mt-12'>
+              <BlogRecommendations currentSlug={slug} type="NOTICIA" />
             </div>
           </div>
 

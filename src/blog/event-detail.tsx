@@ -11,6 +11,7 @@ import { Breadcrumb } from '@/shared/breadcrumb';
 import { ArrowLeft, Calendar, MapPin } from 'lucide-react';
 import SectionTagName from '@/shared/section-tag-name';
 import { ImageGallery } from '@/shared/image-gallery';
+import { EventRecommendations } from './event-recommendations';
 
 interface EventDetailProps {
   slug: string;
@@ -185,10 +186,6 @@ export default function EventDetailComponent({ slug }: EventDetailProps) {
             />
             {/* Cabeçalho */}
             <div className=''>
-              {/* Tag do tipo de evento */}
-              <div className='mb-4'>
-                <SectionTagName text={getEventTypeLabel(event.type)} />
-              </div>
               {/* Título */}
               <h1 className='text-3xl md:text-4xl font-bold mb-4'>
                 {event.name}
@@ -235,6 +232,11 @@ export default function EventDetailComponent({ slug }: EventDetailProps) {
                 <ArrowLeft className='w-4 h-4' />
                 Ver todos os eventos
               </Link>
+            </div>
+
+            {/* Recomendações */}
+            <div className='mt-12'>
+              <EventRecommendations currentSlug={slug} />
             </div>
           </div>
 

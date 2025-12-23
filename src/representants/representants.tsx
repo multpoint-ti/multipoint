@@ -115,7 +115,7 @@ export default function RepresentantsPageComponent() {
                             />
                         </div>
                     </div>
-                    <div className='flex flex-wrap items-start h-full w-full pt-10 gap-4'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full pt-10 gap-4'>
                         {filteredRepresentants.length > 0 ? (
                             filteredRepresentants.map((representant, index) => (
                                 <RepresentantsCard key={index} representant={representant} />
