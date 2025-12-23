@@ -4,6 +4,7 @@ import PageContainer from '@/shared/page-container';
 import { Footer } from '@/shared/footer';
 import { Menu } from '@/shared/menu';
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Product } from '@/shared/types/product-types';
 import { ProductsBanner } from './products-banner';
 import { ProductsFilters } from './products-filters';
@@ -19,11 +20,14 @@ interface ApiResponse {
 }
 
 export default function ProductsListPageComponent() {
+  const searchParams = useSearchParams();
+
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [initialized, setInitialized] = useState(false);
 
-  // Estados para filtros
+  // Estados para filtros - inicializados com valores da URL
   const [search, setSearch] = useState('');
   const [productLine, setProductLine] = useState('');
   const [automaker, setAutomaker] = useState('');
@@ -32,12 +36,28 @@ export default function ProductsListPageComponent() {
   const [page, setPage] = useState(1);
   const limit = 12;
 
+  // Inicializar filtros com parâmetros da URL
+  useEffect(() => {
+    const urlProductLine = searchParams.get('productLine') || '';
+    const urlAutomaker = searchParams.get('automaker') || '';
+    const urlSearch = searchParams.get('search') || '';
+    const urlYear = searchParams.get('year') || '';
+
+    setProductLine(urlProductLine);
+    setAutomaker(urlAutomaker);
+    setSearch(urlSearch);
+    setYear(urlYear);
+    setInitialized(true);
+  }, [searchParams]);
+
   // Resetar página quando filtros mudarem
   useEffect(() => {
     setPage(1);
   }, [search, productLine, automaker, year]);
 
   useEffect(() => {
+    if (!initialized) return;
+
     const fetchProducts = () => {
       setLoading(true);
 
@@ -71,7 +91,7 @@ export default function ProductsListPageComponent() {
     };
 
     fetchProducts();
-  }, [page, search, productLine, automaker, year, sortBy]);
+  }, [page, search, productLine, automaker, year, sortBy, initialized]);
 
   // Produtos já vêm filtrados e ordenados da API
   const products = data?.products || [];
@@ -92,6 +112,10 @@ export default function ProductsListPageComponent() {
                 onAutomakerChange={setAutomaker}
                 onModelChange={() => { }}
                 onYearChange={setYear}
+                searchValue={search}
+                productLineValue={productLine}
+                automakerValue={automaker}
+                yearValue={year}
               />
             </div>
 

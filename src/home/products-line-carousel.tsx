@@ -5,44 +5,59 @@ import Image from 'next/image';
 import SectionTagName from '@/shared/section-tag-name';
 import { useCallback, useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import productsData from '@/data/product.json';
 
-const products = [
-    {
-        id: 1,
-        line: 'Linha Leve',
-        manufacturer: 'Montadora A',
-        image: '/imgs/products/image 36.png',
-        link: '/linha-leve',
-    },
-    {
-        id: 2,
-        line: 'Linha Pesada',
-        manufacturer: 'Montadora B',
-        image: '/imgs/products/image 36.png',
-        link: '/linha-pesada',
-    },
-    {
-        id: 3,
-        line: 'Linha Leve',
-        manufacturer: 'Montadora C',
-        image: '/imgs/products/image 36.png',
-        link: '/linha-leve',
-    },
-    {
-        id: 4,
-        line: 'Linha Pesada',
-        manufacturer: 'Montadora D',
-        image: '/imgs/products/image 36.png',
-        link: '/linha-pesada',
-    },
-    {
-        id: 5,
-        line: 'Linha Leve',
-        manufacturer: 'Montadora E',
-        image: '/imgs/products/image 36.png',
-        link: '/linha-leve',
-    },
-];
+type ProductCardData = {
+    id: number;
+    line: string;
+    lineKey: string;
+    automaker: string;
+    image: string;
+    count: number;
+};
+
+const formatProductLineName = (line: string): string => {
+    const names: { [key: string]: string } = {
+        'VALVULAS_INJETORAS': 'Válvulas Injetoras',
+        'KITS_PARA_BICO_INJETOR': 'Kits para Bico Injetor',
+        'OUTROS': 'Outros Produtos',
+    };
+    return names[line] || line;
+};
+
+const getProductCardsData = (): ProductCardData[] => {
+    const cards: ProductCardData[] = [];
+    let id = 1;
+
+    const lines = [...new Set(productsData.map((p: { productLine: string }) => p.productLine))];
+
+    lines.forEach((line) => {
+        const productsInLine = productsData.filter((p: { productLine: string }) => p.productLine === line);
+        const automakers = [...new Set(productsInLine.flatMap((p: { automakers: { name: string }[] }) =>
+            p.automakers.map(a => a.name)
+        ))];
+
+        automakers.forEach((automaker) => {
+            const productsForAutomaker = productsInLine.filter((p: { automakers: { name: string }[] }) =>
+                p.automakers.some(a => a.name === automaker)
+            );
+            const firstWithImage = productsForAutomaker.find((p: { images?: { path: string }[] }) => p.images && p.images.length > 0);
+
+            cards.push({
+                id: id++,
+                line: formatProductLineName(line),
+                lineKey: line,
+                automaker: automaker as string,
+                image: firstWithImage?.images?.[0]?.path || '/imgs/products/image 36.png',
+                count: productsForAutomaker.length,
+            });
+        });
+    });
+
+    return cards;
+};
+
+const productCards = getProductCardsData();
 
 const ProductsLineCarousel = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -99,19 +114,19 @@ const ProductsLineCarousel = () => {
                 {/** carousel */}
                 <div className="overflow-hidden w-full" ref={emblaRef}>
                     <div className="flex w-full gap-4 md:gap-6">
-                        {products.map((product) => (
-                            <a key={product.id} className="flex-shrink-0" href={product.link}>
+                        {productCards.map((card) => (
+                            <a key={card.id} className="flex-shrink-0" href={`/produtos?productLine=${card.lineKey}&automaker=${encodeURIComponent(card.automaker)}`}>
                                 <div className="bg-white w-full min-w-64 md:min-w-74 h-96 overflow-hidden relative group cursor-pointer flex flex-col items-center gap-12">
                                     <div className="relative z-10 px-6 w-full flex flex-col items-start">
                                         <div className="border-l-4 border-blue-gravel-mist group-hover:border-white pl-4 pt-12 transition-colors duration-300">
-                                            <h3 className="text-xs font-bold uppercase text-blue-gravel-mist group-hover:text-white transition-colors duration-300">{product.line}</h3>
-                                            <p className="text-lg md:text-2xl font-medium text-blue-gravel-mist group-hover:text-white transition-colors duration-300">{product.manufacturer}</p>
+                                            <h3 className="text-xs font-bold uppercase text-blue-gravel-mist group-hover:text-white transition-colors duration-300">{card.line}</h3>
+                                            <p className="text-lg md:text-2xl font-medium text-blue-gravel-mist group-hover:text-white transition-colors duration-300">{card.automaker}</p>
                                         </div>
                                     </div>
                                     <div className="relative">
                                         <Image
-                                            src={product.image}
-                                            alt={product.line}
+                                            src={card.image}
+                                            alt={`${card.line} - ${card.automaker}`}
                                             width={300}
                                             height={200}
                                             className="w-48 md:w-50 h-auto object-cover"

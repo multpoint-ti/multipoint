@@ -9,6 +9,10 @@ interface ProductsFiltersProps {
   onAutomakerChange: (automaker: string) => void;
   onModelChange: (model: string) => void;
   onYearChange: (year: string) => void;
+  searchValue?: string;
+  productLineValue?: string;
+  automakerValue?: string;
+  yearValue?: string;
 }
 
 export function ProductsFilters({
@@ -16,7 +20,11 @@ export function ProductsFilters({
   onProductLineChange,
   onAutomakerChange,
   onModelChange,
-  onYearChange
+  onYearChange,
+  searchValue = '',
+  productLineValue = '',
+  automakerValue = '',
+  yearValue = ''
 }: ProductsFiltersProps) {
   return (
     <div className="flex flex-col gap-8">
@@ -41,6 +49,7 @@ export function ProductsFilters({
             type="text"
             placeholder="Digite o código"
             className="w-full px-2 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent"
+            value={searchValue}
             onChange={(e) => onSearchChange(e.target.value)}
           />
         </div>
@@ -56,7 +65,7 @@ export function ProductsFilters({
               <select
                 className="w-full py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent bg-white"
                 onChange={(e) => onProductLineChange(e.target.value)}
-                defaultValue=""
+                value={productLineValue}
               >
                 <option value="">Todas</option>
                 <option value="VALVULAS_INJETORAS">Válvulas Injetoras</option>
@@ -71,7 +80,7 @@ export function ProductsFilters({
               <select
                 className="w-full py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent bg-white"
                 onChange={(e) => onAutomakerChange(e.target.value)}
-                defaultValue=""
+                value={automakerValue}
               >
                 <option value="">Todas</option>
                 <option value="Audi">Audi</option>
@@ -108,7 +117,6 @@ export function ProductsFilters({
               <select
                 className="w-full py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent bg-white"
                 onChange={(e) => onModelChange(e.target.value)}
-                defaultValue=""
               >
                 <option value="">Todos</option>
               </select>
@@ -120,7 +128,7 @@ export function ProductsFilters({
               <select
                 className="w-full py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent bg-white"
                 onChange={(e) => onYearChange(e.target.value)}
-                defaultValue=""
+                value={yearValue}
               >
                 <option value="">Todos</option>
                 {Array.from({ length: 30 }, (_, i) => new Date().getFullYear() - i).map(year => (
