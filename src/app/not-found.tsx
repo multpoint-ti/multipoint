@@ -15,7 +15,7 @@ export default function NotFound() {
             Página não encontrada
           </h2>
           <p className="text-gray-500 mt-2 text-center max-w-md">
-            A página que você está procurando não existe ou foi movida.
+            A página que você está procurando não existe ou foi removida.
           </p>
         </div>
         <Link
