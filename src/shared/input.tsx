@@ -12,7 +12,7 @@ interface InputProps {
 const Input: React.FC<InputProps> = ({ id, value, className, placeholder, onChange, type, }) => {
   return (
     <div className={`flex flex-col border border-gray-300 rounded-md ${className}`}>
-      <input type={type} id={id} className="p-2 w-full border-none focus:outline-none rounded-md" placeholder={placeholder} value={value} onChange={onChange} />
+      <input type={type} id={id} className="p-2 w-full border-none rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500" placeholder={placeholder} value={value} onChange={onChange} />
     </div>
   );
 };

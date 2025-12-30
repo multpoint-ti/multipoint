@@ -203,7 +203,7 @@ export default function Contact() {
                                 <div className="w-full">
                                     <input
                                         id="contact-phone"
-                                        className={`bg-white w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-gravel-mist ${errors.telefone ? 'border-red-500 border-1' : 'border-gray-200'}`}
+                                        className={`bg-white w-full px-4 py-2 border-1 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-600 ${errors.telefone ? 'border-red-500 border-1' : 'border-gray-300'}`}
                                         placeholder='Telefone'
                                         type="text"
                                         value={telefone}
