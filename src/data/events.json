@@ -1,124 +1,173 @@
 [
   {
-    "id": "evt-001",
-    "slug": "automec-2026",
-    "name": "Automec 2026",
-    "date": "2026-04-22T09:00:00.000Z",
-    "local": "São Paulo Expo - São Paulo, SP",
-    "text": "A Mult Point estará presente na Automec 2026, a maior feira de autopeças da América Latina. Venha conhecer nossas novidades em válvulas injetoras e conversar com nossa equipe técnica.\n\n## O que você vai encontrar\n\n- Lançamentos da linha de válvulas injetoras\n- Demonstrações técnicas ao vivo\n- Equipe especializada para tirar suas dúvidas\n- Condições especiais para pedidos na feira\n\n## Nosso estande\n\nEstaremos no Pavilhão Verde, estande V-123. Aguardamos sua visita!",
+    "id": "550e8400-e29b-41d4-a716-446655440002",
+    "slug": "multpoint-marca-presenca-automec-2025",
+    "name": "Automec 2025",
+    "date": "",
+    "local": "",
+    "text": "A MultPoint marcou presença na Automec 2025 e você confere agora os melhores momentos da nossa participação!\n\nEstivemos apresentando nossas soluções, produtos e inovações para o setor automotivo, reforçando nosso compromisso com qualidade, tecnologia e parceria com nossos clientes e fornecedores.\n\nA Automec é um ponto de encontro essencial para quem vive o setor, e para a MultPoint, é mais uma oportunidade de fortalecer conexões, apresentar soluções e olhar para o futuro do mercado com confiança.\n\nSiga a MultPoint e fique por dentro de tudo que movimenta o mundo automotivo!",
     "type": "FEIRA",
-    "createdAt": "2025-01-15T10:00:00.000Z",
-    "updatedAt": "2025-01-15T10:00:00.000Z",
-    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
-    "videoPath": null,
-    "galleryImagesPaths": []
-  },
-  {
-    "id": "evt-002",
-    "slug": "workshop-tecnico-diagnostico-sistemas-injecao",
-    "name": "Workshop Técnico - Diagnóstico de Sistemas de Injeção",
-    "date": "2026-02-15T14:00:00.000Z",
-    "local": "Sede Mult Point - Registro, SP",
-    "text": "Participe do nosso workshop técnico exclusivo para mecânicos e profissionais do setor automotivo. Aprenda técnicas avançadas de diagnóstico e manutenção de sistemas de injeção eletrônica.\n\n## Programação\n\n- 14h00 - Abertura e apresentação\n- 14h30 - Funcionamento do sistema de injeção eletrônica\n- 15h30 - Coffee break\n- 16h00 - Diagnóstico de falhas em válvulas injetoras\n- 17h00 - Demonstração prática\n- 18h00 - Encerramento e certificados\n\n## Inscrições\n\nVagas limitadas! Entre em contato pelo WhatsApp para garantir sua vaga.",
-    "type": "WORKSHOP",
-    "createdAt": "2025-01-10T08:00:00.000Z",
-    "updatedAt": "2025-01-10T08:00:00.000Z",
-    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
-    "videoPath": null,
-    "galleryImagesPaths": []
-  },
-  {
-    "id": "evt-003",
-    "slug": "feira-do-reparador-2025",
-    "name": "Feira do Reparador 2025",
-    "date": "2025-05-10T10:00:00.000Z",
-    "local": "Centro de Convenções - Campinas, SP",
-    "text": "A Mult Point marca presença na Feira do Reparador 2025. Um evento focado em oficinas mecânicas e profissionais da reparação automotiva.\n\n## Destaques do evento\n\n- Novidades em peças de reposição\n- Palestras técnicas\n- Networking com profissionais do setor\n- Promoções exclusivas\n\nNão perca a oportunidade de conhecer de perto a qualidade Mult Point!",
-    "type": "FEIRA",
-    "createdAt": "2025-01-20T09:00:00.000Z",
-    "updatedAt": "2025-01-20T09:00:00.000Z",
-    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
-    "videoPath": null,
-    "galleryImagesPaths": []
-  },
-  {
-    "id": "evt-004",
-    "slug": "palestra-futuro-injecao-eletronica",
-    "name": "Palestra: O Futuro da Injeção Eletrônica",
-    "date": "2026-01-20T19:00:00.000Z",
-    "local": "SENAI - Santos, SP",
-    "text": "Nosso diretor técnico apresentará uma palestra sobre as tendências e o futuro dos sistemas de injeção eletrônica, incluindo os desafios da eletrificação veicular.\n\n## Temas abordados\n\n- Evolução dos sistemas de injeção\n- Tecnologias emergentes\n- Impacto dos veículos híbridos e elétricos\n- O papel do aftermarket no novo cenário\n\nEvento gratuito e aberto ao público. Vagas limitadas!",
-    "type": "PALESTRA",
-    "createdAt": "2025-02-01T14:00:00.000Z",
-    "updatedAt": "2025-02-01T14:00:00.000Z",
-    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
-    "videoPath": null,
-    "galleryImagesPaths": []
-  },
-  {
-    "id": "evt-005",
-    "slug": "automec-2024",
-    "name": "Automec 2024",
-    "date": "2024-04-23T09:00:00.000Z",
-    "local": "São Paulo Expo - São Paulo, SP",
-    "text": "A Mult Point participou da Automec 2024 com grande sucesso! Nosso estande recebeu centenas de visitantes interessados em conhecer nossas válvulas injetoras.\n\nAgradecemos a todos que nos visitaram e fecharam parcerias conosco.",
-    "type": "FEIRA",
-    "createdAt": "2024-04-25T10:00:00.000Z",
-    "updatedAt": "2024-04-25T10:00:00.000Z",
-    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
+    "createdAt": "2025-01-08T14:00:00.000Z",
+    "updatedAt": "2025-01-08T14:00:00.000Z",
+    "imagePath": "/imgs/news/automec-2025.png",
     "videoPath": null,
     "galleryImagesPaths": [
-      { "id": "gal-001", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" },
-      { "id": "gal-002", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" }
+      {
+        "id": "automec2025-001",
+        "path": "/imgs/news/automec-2025/automec-2025-1.png"
+      },
+      {
+        "id": "automec2025-002",
+        "path": "/imgs/news/automec-2025/automec-2025-2.png"
+      },
+      {
+        "id": "automec2025-003",
+        "path": "/imgs/news/automec-2025/automec-2025-3.png"
+      },
+      {
+        "id": "automec2025-004",
+        "path": "/imgs/news/automec-2025/automec-2025-4.png"
+      },
+      {
+        "id": "automec2025-005",
+        "path": "/imgs/news/automec-2025/automec-2025-5.png"
+      },
+      {
+        "id": "automec2025-006",
+        "path": "/imgs/news/automec-2025/automec-2025-6.png"
+      },
+      {
+        "id": "automec2025-007",
+        "path": "/imgs/news/automec-2025/automec-2025-7.png"
+      },
+      {
+        "id": "automec2025-008",
+        "path": "/imgs/news/automec-2025/automec-2025-8.png"
+      }
     ]
   },
   {
-    "id": "evt-006",
-    "slug": "workshop-capacitacao-turma-12",
-    "name": "Workshop de Capacitação - Turma 12",
-    "date": "2024-09-28T14:00:00.000Z",
-    "local": "Sede Mult Point - Registro, SP",
-    "text": "Mais uma turma formada no nosso programa de capacitação técnica! Parabéns a todos os participantes que concluíram o workshop.\n\nO programa de workshops da Mult Point já capacitou mais de 500 profissionais em todo o Brasil.",
-    "type": "WORKSHOP",
-    "createdAt": "2024-09-30T08:00:00.000Z",
-    "updatedAt": "2024-09-30T08:00:00.000Z",
-    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
-    "videoPath": null,
-    "galleryImagesPaths": [
-      { "id": "gal-003", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" }
-    ]
-  },
-  {
-    "id": "evt-007",
-    "slug": "automec-2024",
-    "name": "Automec 2024",
-    "date": "2024-04-23T09:00:00.000Z",
-    "local": "São Paulo Expo - São Paulo, SP",
-    "text": "A Mult Point participou da Automec 2024 com grande sucesso! Nosso estande recebeu centenas de visitantes interessados em conhecer nossas válvulas injetoras.\n\nAgradecemos a todos que nos visitaram e fecharam parcerias conosco.",
+    "id": "550e8400-e29b-41d4-a716-446655440006",
+    "slug": "multpoint-na-automec-2023",
+    "name": "Automec 2023",
+    "date": "",
+    "local": "",
+    "text": "Agradecemos a todos os nossos clientes e representantes que conseguiram visitar nosso stand na Automec 2023!\n\nA Automec é a mais completa plataforma de conexão da comunidade de profissionais do Aftermarket Automotivo, e conta com as principais marcas de reposição, manutenção, reparação, acessórios e equipamentos automotivos para todos os tipos de veículos.\n\nO evento tem como objetivo fortalecer as conexões comerciais, inspirar profissionais com as novidades do setor, proporcionar um ambiente propício para aperfeiçoamento profissional e promover oportunidades para fechamento de novos negócios.\n\nAté a próxima!",
     "type": "FEIRA",
-    "createdAt": "2024-04-25T10:00:00.000Z",
-    "updatedAt": "2024-04-25T10:00:00.000Z",
-    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
+    "createdAt": "2023-04-15T14:00:00.000Z",
+    "updatedAt": "2023-04-15T14:00:00.000Z",
+    "imagePath": "/imgs/news/automec-2023/automec-2023-1.png",
     "videoPath": null,
     "galleryImagesPaths": [
-      { "id": "gal-001", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" },
-      { "id": "gal-002", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" }
+      {
+        "id": "automec2023-001",
+        "path": "/imgs/news/automec-2023/automec-2023-1.png"
+      },
+      {
+        "id": "automec2023-002",
+        "path": "/imgs/news/automec-2023/automec-2023-2.png"
+      },
+      {
+        "id": "automec2023-003",
+        "path": "/imgs/news/automec-2023/automec-2023-3.png"
+      },
+      {
+        "id": "automec2023-004",
+        "path": "/imgs/news/automec-2023/automec-2023-4.png"
+      }
     ]
   },
   {
-    "id": "evt-008",
-    "slug": "workshop-capacitacao-turma-12",
-    "name": "Workshop de Capacitação - Turma 12",
-    "date": "2026-09-28T14:00:00.000Z",
-    "local": "Sede Mult Point - Registro, SP",
-    "text": "Mais uma turma formada no nosso programa de capacitação técnica! Parabéns a todos os participantes que concluíram o workshop.\n\nO programa de workshops da Mult Point já capacitou mais de 500 profissionais em todo o Brasil.",
-    "type": "WORKSHOP",
-    "createdAt": "2024-09-30T08:00:00.000Z",
-    "updatedAt": "2024-09-30T08:00:00.000Z",
-    "imagePath": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg",
+    "id": "550e8400-e29b-41d4-a716-446655440007",
+    "slug": "multpoint-na-autonor-2023",
+    "name": "Autonor 2023",
+    "date": "",
+    "local": "",
+    "text": "A MultPoint marcou presença na Autonor 2023, a Feira Automotiva do Nordeste!\n\nA Autonor é uma feira e exposição comercial de produtos automotivos, da fabricação à comercialização de veículos e acessórios. É a vitrine ideal para os lançamentos em produtos, serviços e tecnologias de automóveis, fechar parcerias entre profissionais do setor e realizar negócios.\n\nAgradecemos a todos que nos visitaram!",
+    "type": "FEIRA",
+    "createdAt": "2023-06-10T14:00:00.000Z",
+    "updatedAt": "2023-06-10T14:00:00.000Z",
+    "imagePath": "/imgs/news/autonor-2023/autonor-2023-1.png",
     "videoPath": null,
     "galleryImagesPaths": [
-      { "id": "gal-003", "path": "/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg" }
+      {
+        "id": "autonor2023-001",
+        "path": "/imgs/news/autonor-2023/autonor-2023-1.png"
+      },
+      {
+        "id": "autonor2023-002",
+        "path": "/imgs/news/autonor-2023/autonor-2023-2.png"
+      },
+      {
+        "id": "autonor2023-003",
+        "path": "/imgs/news/autonor-2023/autonor-2023-3.png"
+      },
+      {
+        "id": "autonor2023-004",
+        "path": "/imgs/news/autonor-2023/autonor-2023-4.png"
+      }
+    ]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440008",
+    "slug": "multpoint-na-autopar-2022",
+    "name": "Autopar 2022",
+    "date": "",
+    "local": "",
+    "text": "Principal ponto de encontro da indústria de autopeças na América Latina, a Autopar impulsiona negócios, tendências e conexões em toda a cadeia automotiva.\n\nCom mais de duas décadas de trajetória, a feira consolidou-se como o ambiente estratégico para quem atua com reposição, manutenção e tecnologia automotiva. Além da exposição, o evento oferece palestras e workshops que ampliam o conhecimento técnico e antecipam as transformações que moldam o futuro do setor.\n\nA cada dois anos, o Expotrade Pinhais, em Curitiba, recebe a Autopar em 30 mil metros quadrados de área expositiva, reunindo milhares de profissionais em busca de atualização técnica, novos fornecedores e oportunidades concretas de expansão comercial.\n\nParticipar da Autopar é fazer parte da evolução do aftermarket e da indústria automotiva latino-americana, fortalecendo parcerias, ampliando visibilidade e acompanhando de perto as inovações que movem o mercado.",
+    "type": "FEIRA",
+    "createdAt": "2022-05-20T14:00:00.000Z",
+    "updatedAt": "2022-05-20T14:00:00.000Z",
+    "imagePath": "/imgs/news/autopar-2022/autopar-2022-1.png",
+    "videoPath": null,
+    "galleryImagesPaths": [
+      {
+        "id": "autopar2022-001",
+        "path": "/imgs/news/autopar-2022/autopar-2022-1.png"
+      },
+      {
+        "id": "autopar2022-002",
+        "path": "/imgs/news/autopar-2022/autopar-2022-2.png"
+      },
+      {
+        "id": "autopar2022-003",
+        "path": "/imgs/news/autopar-2022/autopar-2022-3.png"
+      },
+      {
+        "id": "autopar2022-004",
+        "path": "/imgs/news/autopar-2022/autopar-2022-4.png"
+      },
+      {
+        "id": "autopar2022-005",
+        "path": "/imgs/news/autopar-2022/autopar-2022-5.png"
+      }
+    ]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440004",
+    "slug": "multpoint-na-feira-minasparts-2025",
+    "name": "MinasParts 2025",
+    "date": "",
+    "local": "",
+    "text": "A MultPoint marcou presença na MinasParts 2025, a principal feira de autopeças e reparação automotiva de Minas Gerais!\n\nRealizada no Expominas, em Belo Horizonte, a feira reuniu fabricantes, distribuidores, lojistas e profissionais de toda a cadeia automotiva em um ambiente voltado a negócios, tecnologia e atualização profissional.\n\nCom a segunda maior frota de veículos do Brasil e um dos maiores polos de oficinas e serviços automotivos do país, Minas Gerais consolida-se como um território estratégico para a indústria da reposição. Esse cenário impulsiona a presença das principais marcas nacionais e internacionais e reforça o papel da feira como plataforma de expansão comercial e fortalecimento de marca.\n\nAo conectar indústria, varejo e serviços, a MinasParts se firma como um espaço de geração de negócios e conhecimento técnico, onde profissionais e empresas se preparam para as transformações que estão redefinindo o futuro da reparação e da reposição automotiva brasileira.\n\nConfira os melhores momentos da nossa participação na galeria!",
+    "type": "EVENTO",
+    "createdAt": "2025-01-12T14:00:00.000Z",
+    "updatedAt": "2025-01-12T14:00:00.000Z",
+    "imagePath": "/imgs/news/minasparts-2025.jpg",
+    "videoPath": null,
+    "galleryImagesPaths": [
+      {
+        "id": "minasparts-001",
+        "path": "/imgs/news/minasparts-2025/minasparts-1.jpg"
+      },
+      {
+        "id": "minasparts-002",
+        "path": "/imgs/news/minasparts-2025/minasparts-2.jpg"
+      },
+      {
+        "id": "minasparts-003",
+        "path": "/imgs/news/minasparts-2025/minasparts-3.jpg"
+      }
     ]
   }
 ]

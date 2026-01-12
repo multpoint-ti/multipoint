@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
             from: process.env.EMAIL_USER,
             to: process.env.EMAIL_TO || process.env.EMAIL_USER,
             replyTo: email,
-            subject: `[Mult Point] ${assuntoTexto} - ${nome}`,
+            subject: `[MultPoint] ${assuntoTexto} - ${nome}`,
             html: `
                 <h2>Novo contato via site</h2>
                 <p><strong>Assunto:</strong> ${assuntoTexto}</p>
