@@ -23,7 +23,7 @@ export function CatalogSection() {
             <div className="relative -mt-16 lg:-mt-20 w-64 h-80 lg:w-80 lg:h-96 ml-0 lg:ml-12">
               <Image
                 src="/imgs/phone-catalog.png"
-                alt="Catálogo Mult Point"
+                alt="Catálogo MultPoint"
                 fill
                 className="object-cover"
               />

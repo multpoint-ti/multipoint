@@ -1,7 +1,7 @@
 "use client";
 
 const WHATSAPP_NUMBER = "5518997955086";
-const WHATSAPP_MESSAGE = "Olá! Gostaria de mais informações sobre os produtos da Mult Point.";
+const WHATSAPP_MESSAGE = "Olá! Gostaria de mais informações sobre os produtos da MultPoint.";
 
 export function WhatsAppButton() {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;

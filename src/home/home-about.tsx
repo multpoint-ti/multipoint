@@ -13,7 +13,7 @@ const HomeAbout = () => {
                 imageAlt="Quem Somos"
                 tagName="Quem somos"
                 title={<>Somos uma empresa <span className="text-blue-gravel-mist font-bold">100% brasileira</span></>}
-                description="A MULT POINT é uma empresa especializada na fabricação de Válvulas Injetoras. Localizada no município de Registro – SP á 190 Km da Capital, a MULT POINT é uma empresa 100% brasileira."
+                description="A MultPoint é uma empresa especializada na fabricação de Válvulas Injetoras. Localizada no município de Registro – SP á 190 Km da Capital, a MultPoint é uma empresa 100% brasileira."
             />
             <ValueAbout />
         </section>

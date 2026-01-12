@@ -51,7 +51,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Divisor */}
           <div className="border-t border-gray-200"></div>
 
-          {/* Código Mult Point e Montadoras */}
+          {/* Código MultPoint e Montadoras */}
           <div className="flex flex-col gap-1 text-sm">
             <div className="flex items-start gap-1 text-red-amber-torque">
               <span className="whitespace-nowrap">Código MultPoint:</span>

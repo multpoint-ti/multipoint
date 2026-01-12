@@ -42,7 +42,7 @@ export function ProductsFilters({
           <div>
             <h3 className="text-lg font-medium ">Pesquisa Avançada</h3>
             <p className="text-xs text-gray-400">
-              Busque o produto com o Código Mult Point ou com o Código Original da peça
+              Busque o produto com o Código MultPoint ou com o Código Original da peça
             </p>
           </div>
           <input

@@ -5,7 +5,7 @@ import { Event } from '@/shared/types/event-types';
 
 // Configuração base do site
 export const siteConfig = {
-  name: 'Mult Point Indústria',
+  name: 'MultPoint Indústria',
   description: 'Válvulas Injetoras e Kits para Bico Injetor - Qualidade e tecnologia em peças automotivas',
   url: 'https://multpoint.com',
   ogImage: '/imgs/og-image.jpg',
@@ -27,7 +27,7 @@ export const baseMetadata: Metadata = {
     'kits para bico injetor',
     'peças automotivas',
     'injeção eletrônica',
-    'mult point',
+    'multpoint',
     'autopeças',
   ],
   authors: [{ name: siteConfig.name }],
@@ -103,7 +103,7 @@ export function generateProductMetadata(product: Product): Metadata {
       formatProductLine(product.productLine),
       ...product.categories,
       'peças automotivas',
-      'mult point',
+      'multpoint',
     ],
     alternates: {
       canonical: canonicalUrl,
@@ -146,7 +146,7 @@ export function generateNewsMetadata(news: News): Metadata {
     description,
     keywords: [
       isEvent ? 'evento' : 'notícia',
-      'mult point',
+      'multpoint',
       'automotivo',
       'injeção eletrônica',
     ],
@@ -199,7 +199,7 @@ export function generateEventMetadata(event: Event): Metadata {
     description,
     keywords: [
       eventTypeNames[event.type] || 'evento',
-      'mult point',
+      'multpoint',
       'evento automotivo',
       event.local,
     ],
@@ -259,11 +259,11 @@ export function generateProductJsonLd(product: Product) {
     image: product.images.map(img => img.path),
     brand: {
       '@type': 'Brand',
-      name: 'Mult Point',
+      name: 'MultPoint',
     },
     manufacturer: {
       '@type': 'Organization',
-      name: 'Mult Point Indústria',
+      name: 'MultPoint Indústria',
     },
     category: formatProductLine(product.productLine),
     isRelatedTo: product.automakers.map(automaker => ({
@@ -285,11 +285,11 @@ export function generateNewsJsonLd(news: News) {
     dateModified: news.updatedAt,
     author: {
       '@type': 'Organization',
-      name: 'Mult Point Indústria',
+      name: 'MultPoint Indústria',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Mult Point Indústria',
+      name: 'MultPoint Indústria',
       logo: {
         '@type': 'ImageObject',
         url: `${siteConfig.url}/imgs/logo.png`,
@@ -313,7 +313,7 @@ export function generateEventJsonLd(event: Event) {
     image: event.imagePath,
     organizer: {
       '@type': 'Organization',
-      name: 'Mult Point Indústria',
+      name: 'MultPoint Indústria',
     },
   };
 }
@@ -323,7 +323,7 @@ export function generateOrganizationJsonLd() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Mult Point Indústria',
+    name: 'MultPoint Indústria',
     url: siteConfig.url,
     logo: `${siteConfig.url}/imgs/logo.png`,
     description: siteConfig.description,

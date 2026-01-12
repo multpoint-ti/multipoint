@@ -55,7 +55,7 @@ export function ProductAccordion({
       <AccordionItem title="Códigos" defaultOpen={true}>
         <div className="flex flex-col gap-2 text-sm">
           <div>
-            <span className="">Código Mult Point: </span>
+            <span className="">Código MultPoint: </span>
             <span className="">{multpointCode}</span>
           </div>
           <div>
