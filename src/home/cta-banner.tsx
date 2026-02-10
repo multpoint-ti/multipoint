@@ -4,57 +4,50 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Facebook, Instagram } from 'lucide-react';
 import { Button } from '@/shared/button';
-import CarrouselHome1 from '../../public/imgs/man-close-with-lamp.png';
-import CarrouselHome1Mobile from '../../public/imgs/mobile-man-close-with-lamp.png';
-import Arrow from '../../public/imgs/arrow.svg';
+import SocialMedia from '../../public/imgs/socialMedia.svg';
+import SocialMediaMobile from '../../public/imgs/socialMedia-mobile.svg';
 
 export function CtaBanner() {
   return (
-    <section className="w-full relative mt-12 lg:mt-20">
-      {/* Desktop Image */}
+    <section className="w-full flex flex-col md:flex-row mt-6 lg:mt-26 md:max-h-96">
       <Image
-        src={CarrouselHome1}
-        alt="Banner"
-        className="w-full hidden md:block h-[500px] object-cover"
-      />
-      {/* Mobile Image */}
-      <Image
-        src={CarrouselHome1Mobile}
-        alt="Banner"
-        className="w-full block md:hidden"
+        src={SocialMediaMobile}
+        alt="Redes Sociais"
+        className="w-full h-auto block md:hidden"
       />
 
-      {/* Black overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      {/* Left side - bg extends full width */}
+      <div className="bg-gray-oxide-steel md:w-1/2 flex justify-end">
+        <div className="flex flex-col gap-4 justify-center items-center md:items-start text-center md:text-start text-blue-ignition px-8 py-12 w-full max-w-[640px]">
+          <h2 className="max-w-2xl text-3xl md:text-5xl font-medium leading-tight">
+            Siga as nossas <br /> redes sociais
+          </h2>
 
-      {/* Content overlay */}
-      <div className="absolute inset-0 flex gap-4 flex-col items-start justify-start pt-16 md:pt-0 md:justify-center text-start text-white px-8 md:px-40 max-w-[1500px] mx-auto">
-        <div className="flex flex-col gap-2 items-start">
-          <Image src={Arrow} alt="Arrow" className="h-4 md:h-6 w-auto" />
-          {/* Text for larger screens */}
-          <h2 className="hidden md:block text-5xl font-medium leading-tight">
-            Siga as nossas <br /> <span className="text-red-amber-torque"> redes sociais</span>
-          </h2>
-          {/* Text for smaller screens */}
-          <h2 className="md:hidden text-4xl font-medium leading-tight">
-            Siga as nossas <span className="text-red-amber-torque"><br />redes sociais</span>
-          </h2>
+          <div className="mt-4 flex gap-4 flex-row">
+            <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <Button variant="default" className="gap-2 bg-blue-ignition text-white">
+                <Facebook className="h-5 w-5" />
+                Facebook
+              </Button>
+            </Link>
+            <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <Button variant="default" className="gap-2 bg-blue-ignition text-white">
+                <Instagram className="h-5 w-5" />
+                Instagram
+              </Button>
+            </Link>
+          </div>
         </div>
+      </div>
 
-        {/* Social buttons - always visible */}
-        <div className="mt-4 flex gap-4 flex-row">
-          <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            <Button variant="default" className="gap-2">
-              <Facebook className="h-5 w-5" />
-              Facebook
-            </Button>
-          </Link>
-          <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <Button variant="white" className="gap-2">
-              <Instagram className="h-5 w-5" />
-              Instagram
-            </Button>
-          </Link>
+      {/* Right side - bg extends full width */}
+      <div className="bg-blue-ignition md:w-1/2 flex justify-start">
+        <div className="w-full max-w-[640px] flex items-center justify-center md:justify-start">
+          <Image
+            src={SocialMedia}
+            alt="Redes Sociais"
+            className="w-auto h-full hidden md:block"
+          />
         </div>
       </div>
     </section>

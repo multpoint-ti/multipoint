@@ -12,6 +12,9 @@ export function getProductLineName(productLine: string, code: string): string {
   const productLineNames: { [key: string]: string } = {
     'VALVULAS_INJETORAS': 'Válvula Injetora',
     'KITS_PARA_BICO_INJETOR': 'Kit para Bico Injetor',
+    'GUARNICOES': 'Guarnição',
+    'CONECTORES_E_TRAVAS': 'Conector/Trava',
+    'DELPHI': 'Válvula Injetora Delphi',
     'OUTROS': 'Produto',
   };
 

@@ -14,7 +14,6 @@ import { EventCardSkeleton } from './event-card-skeleton';
 import { NextEventsCarousel } from './next-events-carousel';
 import { NextEventCardSkeleton } from './next-event-card-skeleton';
 import Image from 'next/image';
-import Arrow from '../../public/imgs/arrow.svg';
 import Pagination from '@/shared/pagination';
 
 interface ApiResponse {
@@ -117,11 +116,6 @@ export default function BlogListPageComponent() {
         <div className='max-w-7xl space-y-8 w-full items-start mb-12'>
           <div className='w-full items-center'>
             <div className='flex flex-col items-start gap-3'>
-              <Image
-                src={Arrow}
-                alt="Arrow"
-                className='hidden md:block'
-              />
               <h1 className="text-4xl md:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
                 Notícias
               </h1>
@@ -199,11 +193,6 @@ export default function BlogListPageComponent() {
         <div className='max-w-7xl space-y-8 w-full'>
 
           <div className='flex flex-col items-start gap-3'>
-            <Image
-              src={Arrow}
-              alt="Arrow"
-              className='hidden md:block'
-            />
             <h1 className="text-4xl md:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
               Eventos
             </h1>

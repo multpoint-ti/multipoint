@@ -5,7 +5,6 @@ import { Menu } from '../shared/menu';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import PageContainer from '@/shared/page-container';
-import Image from 'next/image';
 
 const MapBrazil = dynamic<{
     onChange?: (state: string) => void;
@@ -19,7 +18,6 @@ const MapBrazil = dynamic<{
     () => import('react-brazil-map').then(mod => mod.MapBrazil),
     { ssr: false }
 );
-import Arrow from '../../public/imgs/arrow.svg';
 import { Representant, RepresentantsCard } from './representants-card';
 import { Footer } from '@/shared/footer';
 import representantsData from '@/data/representants.json';
@@ -79,11 +77,6 @@ export default function RepresentantsPageComponent() {
                     <div className='flex flex-row w-full'>
                         <div className='flex flex-col items-start w-full lg:w-1/2 gap-8'>
                             <div className='flex flex-col items-start gap-3'>
-                                <Image
-                                    src={Arrow}
-                                    alt="Arrow"
-                                    className='hidden md:block'
-                                />
                                 <h1 className="text-4xl md:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
                                     Encontre um <br /> <span className="text-blue-gravel-mist font-bold">representante</span>
                                 </h1>

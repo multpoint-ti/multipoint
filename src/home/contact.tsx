@@ -1,7 +1,5 @@
 "use client"
 
-import Image from 'next/image';
-import Arrow from '../../public/imgs/arrow.svg';
 import { Button } from '@/shared/button';
 import { ArrowRight, CheckCircle, Clock, Mail, Phone, XCircle } from 'lucide-react';
 import SelectInput from '@/shared/select-input';
@@ -111,11 +109,6 @@ export default function Contact() {
             <div className='flex flex-col lg:flex-row gap-8 md:gap-2 items-start max-w-7xl'>
                 <div className='flex flex-col gap-6 md:gap-10 items-center lg:items-start lg:w-1/2 text-center lg:text-start'>
                     <div className='flex flex-col gap-2 items-center lg:items-start text-center lg:text-start'>
-                        <Image
-                            src={Arrow}
-                            alt="Arrow"
-                            className='hidden md:block'
-                        />
                         <h1 className="text-3xl md:text-5xl font-medium text-start md:text-start max-w-3xl leading-tight">
                             Entre em contato
                         </h1>

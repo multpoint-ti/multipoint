@@ -1,16 +1,16 @@
 "use client";
 
-import useEmblaCarousel from 'embla-carousel-react';
 import { Download, ShoppingBasket } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/shared/button';
-import CarrouselHome1 from '../../public/imgs/carrousel-home/carrousel-home-1.png'
-import CarrouselHome1Mobile from '../../public/imgs/carrousel-home/carrousel-home-mobile-1.png'
-import CarrouselHome2 from '../../public/imgs/carrousel-home/carrousel-home-2.png'
-import CarrouselHome2Mobile from '../../public/imgs/carrousel-home/carrousel-home-mobile-2.png'
-import Arrow from '../../public/imgs/arrow.svg'
-import { useCallback, useEffect, useState } from 'react';
-import Link from 'next/link';
+import CarrouselHome1 from '../../public/imgs/carrousel-home/1.svg'
+import CarrouselHome2 from '../../public/imgs/carrousel-home/2.svg'
+import CarrouselHome3 from '../../public/imgs/carrousel-home/3.svg'
+import CarrouselHome1Mobile from '../../public/imgs/carrousel-home/1-mobile.svg'
+import CarrouselHome2Mobile from '../../public/imgs/carrousel-home/2-mobile.svg'
+import CarrouselHome3Mobile from '../../public/imgs/carrousel-home/3-mobile.svg'
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const handleDownloadCatalog = () => {
   const link = document.createElement('a');
@@ -21,99 +21,66 @@ const handleDownloadCatalog = () => {
   document.body.removeChild(link);
 };
 
+const carouselImages = [
+  { id: 1, image: CarrouselHome1, imageMobile: CarrouselHome1Mobile, action: 'navigate' as const, href: '/produtos' },
+  { id: 2, image: CarrouselHome2, imageMobile: CarrouselHome2Mobile, action: 'download' as const },
+  { id: 3, image: CarrouselHome3, imageMobile: CarrouselHome3Mobile, action: 'navigate' as const, href: '/sobre-nos' },
+];
+
 export function Carousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const router = useRouter();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const scrollTo = useCallback(
-    (index: number) => emblaApi && emblaApi.scrollTo(index),
-    [emblaApi]
-  );
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
+  const handleSlideClick = () => {
+    const slide = carouselImages[currentIndex];
+    if (slide.action === 'download') {
+      handleDownloadCatalog();
+    } else if (slide.href) {
+      router.push(slide.href);
+    }
+  };
 
   useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    setScrollSnaps(emblaApi.scrollSnapList());
-    emblaApi.on('select', onSelect);
-    emblaApi.on('reInit', onSelect);
-  }, [emblaApi, onSelect]);
-
-  const carouselImages = [
-    {
-      id: 2,
-      image: CarrouselHome2,
-      imageMobile: CarrouselHome2Mobile,
-    },
-  ]
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="overflow-hidden flex flex-col items-center" ref={emblaRef}>
-      <div className="flex">
-        {/* Slide 1 */}
-        <div className="w-full flex-shrink-0 relative items-center">
-          <Image
-            src={CarrouselHome1}
-            alt="Carousel Image 1"
-            className="w-full hidden md:flex h-[500px] object-cover"
-          />
-          <Image
-            src={CarrouselHome1Mobile}
-            alt="Carousel Image 1"
-            className="w-full flex md:hidden"
-          />
-          <div className="absolute inset-0 flex gap-4 flex-col items-start justify-center text-start text-white px-4 md:px-40 max-w-[1500px] mx-auto">
-            <div className='flex flex-col gap-2 items-start'>
-              <Image src={Arrow} alt="Arrow" className="h-4 md:h-6 w-auto" />
-              {/* Text for larger screens */}
-              <h1 className="hidden md:block text-6xl font-medium leading-tight">
-                A maior empresa de <br /> <span className="text-red-amber-torque">válvulas injetoras</span> do <br /> Brasil
-              </h1>
-              {/* Text for smaller screens */}
-              <h1 className="md:hidden text-[40px] font-medium leading-tight">
-                A maior empresa de <span className="text-red-amber-torque">válvulas injetoras</span> do Brasil
-              </h1>
+    <div className="flex flex-col items-center w-screen">
+      <div className="relative w-screen overflow-hidden">
+        <div
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {carouselImages.map((slide) => (
+            <div key={slide.id} className="w-screen flex-shrink-0 cursor-pointer" onClick={handleSlideClick}>
+              <Image
+                src={slide.image}
+                alt={`Carousel Image ${slide.id}`}
+                className="w-screen h-auto hidden md:block"
+              />
+              <Image
+                src={slide.imageMobile}
+                alt={`Carousel Image ${slide.id}`}
+                className="w-screen h-auto block md:hidden"
+              />
             </div>
-            <div className="mt-4 gap-4 hidden md:flex">
-              <Link href={`/produtos`}>
-                <Button variant="default">Veja nossos Produtos</Button>
-              </Link>
-              <Button variant="outline" onClick={handleDownloadCatalog}>
-                <Download className="mr-2 h-4 w-4" />
-                Baixe nosso Catálogo
-              </Button>
-            </div>
-          </div>
+          ))}
         </div>
-        {/** Other slides */}
-        {carouselImages.map((slide) => (
-          <div key={slide.id} className="w-full flex-shrink-0">
-            <Image
-              src={slide.image}
-              alt={`Carousel Image ${slide.id}`}
-              className="w-full hidden md:flex h-[500px]"
-            />
-            <Image
-              src={slide.imageMobile}
-              alt={`Carousel Image ${slide.id}`}
-              className="w-full flex md:hidden"
-            />
-          </div>
-        ))}
       </div>
 
-      {/* Dots for slide navigation */}
+      {/* Dots */}
       <div className="flex gap-2 items-center pt-2 pb-4 lg:mt-[-30px] lg:relative lg:z-3">
-        {scrollSnaps.map((_, index) => (
-          <button key={index} onClick={() => scrollTo(index)} className="p-0 bg-transparent border-none">
+        {carouselImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className="p-0 bg-transparent border-none"
+          >
             <div
-              className={`w-2 h-2 rounded-full cursor-pointer transition duration-300 ${index === selectedIndex ? 'bg-red-amber-torque w-6' : 'bg-gray-400'
-                }`}
+              className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${index === currentIndex ? 'bg-red-amber-torque w-6' : 'bg-gray-400 w-2'}`}
             />
           </button>
         ))}

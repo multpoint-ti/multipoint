@@ -20,6 +20,9 @@ const formatProductLineName = (line: string): string => {
     const names: { [key: string]: string } = {
         'VALVULAS_INJETORAS': 'Válvulas Injetoras',
         'KITS_PARA_BICO_INJETOR': 'Kits para Bico Injetor',
+        'GUARNICOES': 'Guarnições',
+        'CONECTORES_E_TRAVAS': 'Conectores e Travas',
+        'DELPHI': 'Delphi',
         'OUTROS': 'Outros Produtos',
     };
     return names[line] || line;

@@ -1,9 +1,8 @@
 "use client";
 
 import Image from 'next/image';
-import CarrouselHome1 from '../../public/imgs/carrousel-home/carrousel-home-1.png'
-import CarrouselHome1Mobile from '../../public/imgs/carrousel-home/carrousel-home-mobile-1.png'
-import Arrow from '../../public/imgs/arrow.svg'
+import CarrouselHome1 from '../../public/imgs/carrousel-home/1.svg'
+import CarrouselHome1Mobile from '../../public/imgs/carrousel-home/1-mobile.svg'
 
 export function BlogBanner() {
   return (
@@ -21,7 +20,6 @@ export function BlogBanner() {
         />
         <div className="absolute inset-0 flex gap-4 flex-col items-start justify-center text-start text-white px-4 md:px-40 max-w-[1500px] mx-auto">
           <div className='flex flex-col gap-2 items-start'>
-            <Image src={Arrow} alt="Arrow" className="h-4 md:h-6 w-auto" />
             <h1 className="hidden md:block text-6xl font-medium leading-tight">
               Blog <span className="text-red-amber-torque">MultPoint</span>
             </h1>

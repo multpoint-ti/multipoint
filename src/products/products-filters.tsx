@@ -1,8 +1,5 @@
 "use client";
 
-import Image from 'next/image';
-import Arrow from '../../public/imgs/arrow.svg'
-
 interface ProductsFiltersProps {
   onSearchChange: (search: string) => void;
   onProductLineChange: (line: string) => void;
@@ -28,9 +25,7 @@ export function ProductsFilters({
 }: ProductsFiltersProps) {
   return (
     <div className="flex flex-col gap-8">
-      {/* Flecha decorativa e título */}
       <div className="flex flex-col gap-2">
-        <Image src={Arrow} alt="Arrow" className="h-4" />
         <h1 className="text-4xl md:text-5xl font-medium text-start md:text-start max-w-3xl leading-tight">
           Produtos
         </h1>
@@ -70,6 +65,9 @@ export function ProductsFilters({
                 <option value="">Todas</option>
                 <option value="VALVULAS_INJETORAS">Válvulas Injetoras</option>
                 <option value="KITS_PARA_BICO_INJETOR">Kits para Bico Injetor</option>
+                <option value="GUARNICOES">Guarnições</option>
+                <option value="CONECTORES_E_TRAVAS">Conectores e Travas</option>
+                <option value="DELPHI">Delphi</option>
                 <option value="OUTROS">Outros</option>
               </select>
             </div>

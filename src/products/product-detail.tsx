@@ -84,12 +84,15 @@ export default function ProductDetailComponent({ productId }: ProductDetailProps
   }
 
   const productName = getProductLineName(product.productLine, product.multpointCode);
-  const productLineLabel =
-    product.productLine === 'VALVULAS_INJETORAS'
-      ? 'Válvulas Injetoras'
-      : product.productLine === 'KITS_PARA_BICO_INJETOR'
-        ? 'Kits para Bico Injetor'
-        : 'Outros';
+  const productLineLabels: { [key: string]: string } = {
+    'VALVULAS_INJETORAS': 'Válvulas Injetoras',
+    'KITS_PARA_BICO_INJETOR': 'Kits para Bico Injetor',
+    'GUARNICOES': 'Guarnições',
+    'CONECTORES_E_TRAVAS': 'Conectores e Travas',
+    'DELPHI': 'Delphi',
+    'OUTROS': 'Outros',
+  };
+  const productLineLabel = productLineLabels[product.productLine] || product.productLine;
 
   return (
     <div className='flex flex-col items-center w-full'>

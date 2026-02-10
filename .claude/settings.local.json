@@ -7,7 +7,11 @@
       "Bash(npm install:*)",
       "Bash(cat:*)",
       "Bash(node -e:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(findstr:*)",
+      "Bash(npx next build:*)"
     ],
     "deny": [],
     "ask": []

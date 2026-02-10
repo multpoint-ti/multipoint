@@ -102,7 +102,7 @@ export default function ProductsListPageComponent() {
       <ProductsBanner />
 
       <PageContainer>
-        <div className='py-8'>
+        <div className='py-4'>
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-18'>
             {/* Coluna de Filtros */}
             <div className='lg:col-span-1'>
@@ -120,7 +120,7 @@ export default function ProductsListPageComponent() {
             </div>
 
             {/* Coluna de Produtos */}
-            <div className='lg:col-span-3'>
+            <div className='lg:col-span-3 items-center'>
               {/* Barra de controles */}
               <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6'>
                 <div className=''>
