@@ -18,10 +18,11 @@ const handleDownloadCatalog = () => {
 export function Footer() {
 
   const navLinks = [
+    { href: '/', label: 'Home' },
     { href: '/produtos', label: 'Produtos' },
     { href: '/sobre-nos', label: 'Sobre Nós' },
-    { href: '/representantes', label: 'Eventos' },
-    { href: '/catalogo', label: 'Blog' },
+    { href: '/representantes', label: 'Representantes' },
+    { href: '/blog', label: 'Blog' },
     { href: '/#contato', label: 'Contato' },
   ];
 
