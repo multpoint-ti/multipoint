@@ -14,7 +14,6 @@ import { ArrowRight, Download, Info } from 'lucide-react';
 import { ProductDetailSkeleton } from './product-detail-skeleton';
 import { ProductRecommendations } from './product-recommendations';
 import Link from 'next/link';
-import SectionTagName from '@/shared/section-tag-name';
 
 const handleDownloadCatalog = () => {
   const link = document.createElement('a');
@@ -139,8 +138,8 @@ export default function ProductDetailComponent({ productId }: ProductDetailProps
 
               {/* Botões */}
               <div className='flex flex-col sm:flex-row gap-4 mt-4'>
-                <Link href={`/representantes`}>
-                  <Button variant='default' className='flex items-center gap-2 text-white'>
+                <Link href={`/representantes`} className='w-full'>
+                  <Button variant='default' className='w-full flex items-center gap-2 text-white'>
                     Encontre um representante
                     <ArrowRight className='w-4 h-4' />
                   </Button>
@@ -154,7 +153,7 @@ export default function ProductDetailComponent({ productId }: ProductDetailProps
           </div>
 
           {/* Divisor */}
-          <div className="border-t border-gray-200 mt-20 mb-4 "></div>
+          <div className="border-t border-gray-200 mt-10 lg:mt-20 mb-4 "></div>
 
           {/* Seção Mais Informações */}
           <div className=''>
