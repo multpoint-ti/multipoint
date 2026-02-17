@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { Mail, MapPin, Phone, X, Facebook, Instagram, Link } from 'lucide-react';
+import { Mail, MapPin, Phone, X, Facebook, Instagram, Link, Search } from 'lucide-react';
 import { SearchBar } from './search-bar';
 import Image from 'next/image';
 
@@ -10,6 +10,7 @@ import MenuIcon from '../../public/imgs/burguer-menu-icon.svg';
 
 export function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -79,15 +80,21 @@ export function Menu() {
           <SearchBar />
         </div>
 
-        <div className="lg:hidden">
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div className="lg:hidden flex items-center gap-4">
+          <button onClick={() => { setIsSearchOpen(!isSearchOpen); setIsMenuOpen(false); }}>
+            {isSearchOpen ? <X className='h-5 w-auto text-blue-ignition' /> : <Search className='h-5 w-auto text-blue-ignition' />}
+          </button>
+          <button onClick={() => { setIsMenuOpen(!isMenuOpen); setIsSearchOpen(false); }}>
             {isMenuOpen ? <X className='h-6 w-auto text-blue-ignition' /> : <Image src={MenuIcon} alt="MenuIcon" className='h-3 w-auto' />}
           </button>
         </div>
       </div>
-      <div className="lg:hidden container mx-auto px-4 pb-4">
-        <SearchBar />
-      </div>
+
+      {isSearchOpen && (
+        <div className="lg:hidden container mx-auto px-4 pb-4">
+          <SearchBar />
+        </div>
+      )}
 
 
       {/* Mobile Menu Overlay */}
