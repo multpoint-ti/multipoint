@@ -9,7 +9,7 @@
     "type": "FEIRA",
     "createdAt": "2025-01-08T14:00:00.000Z",
     "updatedAt": "2025-01-08T14:00:00.000Z",
-    "imagePath": "/imgs/news/automec-2025.png",
+    "imagePath": "/imgs/news/automec-2025/automec-2025.jpg",
     "videoPath": null,
     "galleryImagesPaths": [
       {
@@ -153,20 +153,20 @@
     "type": "EVENTO",
     "createdAt": "2025-01-12T14:00:00.000Z",
     "updatedAt": "2025-01-12T14:00:00.000Z",
-    "imagePath": "/imgs/news/minasparts-2025.jpg",
+    "imagePath": "/imgs/news/minasparts-2025/minasparts-2025-1.png",
     "videoPath": null,
     "galleryImagesPaths": [
       {
         "id": "minasparts-001",
-        "path": "/imgs/news/minasparts-2025/minasparts-1.jpg"
+        "path": "/imgs/news/minasparts-2025/minasparts-2025-1.png"
       },
       {
         "id": "minasparts-002",
-        "path": "/imgs/news/minasparts-2025/minasparts-2.jpg"
+        "path": "/imgs/news/minasparts-2025/minasparts-2025-2.png"
       },
       {
         "id": "minasparts-003",
-        "path": "/imgs/news/minasparts-2025/minasparts-3.jpg"
+        "path": "/imgs/news/minasparts-2025/minasparts-2025-3.png"
       }
     ]
   }

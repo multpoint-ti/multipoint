@@ -114,12 +114,11 @@ export default function BlogListPageComponent() {
 
         {/** News */}
         <div className='max-w-7xl space-y-8 w-full items-start mb-12'>
-          <div className='w-full items-center'>
-            <div className='flex flex-col items-start gap-3'>
-              <h1 className="text-4xl md:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
-                Notícias
-              </h1>
-            </div>
+          <div className='w-full items-start flex flex-col gap-3'>
+            <h1 className="text-4xl md:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
+              Notícias
+            </h1>
+
             {/* Grid de Posts */}
             {loading && (
               <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full'>

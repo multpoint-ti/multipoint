@@ -51,7 +51,7 @@ export function NextEventsCarousel({ events }: NextEventsCarouselProps) {
           {events.map((event) => (
             <div
               key={event.id}
-              className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] pl-2"
+              className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] md:pl-2"
             >
               <NextEventCard event={event} />
             </div>

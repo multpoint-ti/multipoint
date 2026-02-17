@@ -86,7 +86,7 @@ export function Carousel() {
         ))}
       </div>
 
-      <div className="p-4 gap-2 flex md:hidden text-blue-ignition">
+      <div className="p-4 gap-2 flex md:hidden text-blue-ignition pb-6">
         <Button variant="outline" className='gap-2 border-gray-400' onClick={handleDownloadCatalog}>
           <Download className="h-5 w-5" />
           Baixar Catálogo

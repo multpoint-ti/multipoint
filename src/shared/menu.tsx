@@ -36,12 +36,12 @@ export function Menu() {
     <header className='w-full border-b border-gray-oxide-steel'>
       {/* Top blue bar */}
       <div className="bg-blue-gravel-mist text-white p-2 w-full items-center justify-center flex">
-        <div className="container px-4 md:px-8 flex justify-between items-center text-sm w-full">
-          <div className="hidden md:flex items-center gap-2">
+        <div className="container px-4 lg:px-8 flex justify-between items-center text-sm w-full">
+          <div className="hidden lg:flex items-center gap-2">
             <MapPin className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-full bg-white' />
             <span>Rua São Paulo, 473 - Jardim Planalto, Registro/SP</span>
           </div>
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2">
             <Mail className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-full bg-white' />
             <span>vendas@manchesterrep.com.br</span>
           </div>
@@ -62,37 +62,37 @@ export function Menu() {
       </div>
 
       {/* Main menu */}
-      <div className="container mx-auto px-4 xl:px-20 py-2 md:py-4 flex justify-between items-center w-full">
+      <div className="container mx-auto px-4 xl:px-20 py-2 lg:py-4 flex justify-between items-center w-full">
         <a href="/home">
-          <Image src={Logo} alt="Logo" className='h-10 md:h-12 xl:h-16 w-auto' />
+          <Image src={Logo} alt="Logo" className='h-10 lg:h-12 xl:h-16 w-auto' />
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="text-blue-ignition text-sm md:text-xs xl:text-sm hover:text-red-amber-torque hover:underline duration-200 transition uppercase">
+            <a key={link.href} href={link.href} className="text-blue-ignition text-sm lg:text-xs xl:text-sm hover:text-red-amber-torque hover:underline duration-200 transition uppercase">
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden md:block w-1/4">
+        <div className="hidden lg:block w-1/4">
           <SearchBar />
         </div>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className='h-6 w-auto text-blue-ignition' /> : <Image src={MenuIcon} alt="MenuIcon" className='h-3 w-auto' />}
           </button>
         </div>
       </div>
-      <div className="md:hidden container mx-auto px-4 pb-4">
+      <div className="lg:hidden container mx-auto px-4 pb-4">
         <SearchBar />
       </div>
 
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white h-full min-h-[calc(100vh-64px)]">
+        <div className="lg:hidden bg-white h-full min-h-[calc(100vh-64px)]">
           <nav className="container mx-auto flex flex-col items-center py-4 gap-6">
             {navLinks.map((link) => (
               <a

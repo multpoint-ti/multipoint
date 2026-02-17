@@ -85,7 +85,7 @@ const ValuesSectionAbout = () => {
             <div className='lg:hidden overflow-hidden mt-4' ref={emblaRef}>
                 <div className='flex max-w-xs'>
                     {valuesAboutItems.map((item) => (
-                        <div key={item.id} className="flex-shrink-0 w-full flex justify-center p-4">
+                        <div key={item.id} className="flex-shrink-0 w-full flex justify-center pb-4">
                             <div className="flex flex-col items-center gap-2 text-center bg-gray-100 p-4 rounded-xl">
                                 <Image
                                     src={item.image}

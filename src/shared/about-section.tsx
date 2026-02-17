@@ -51,12 +51,12 @@ export default function AboutSection({
                         className="rounded-lg w-auto max-h-[500px]"
                     />
                 </div>
-                <div className="text-center md:text-start items-center md:items-start md:w-1/2 flex flex-col gap-4 px-8">
+                <div className="text-center md:text-start items-center md:items-start md:w-1/2 flex flex-col gap-4">
                     <SectionTagName text={tagName} />
                     <h1 className="text-3xl md:text-5xl font-medium text-center md:text-start max-w-3xl leading-tight">
                         {title}
                     </h1>
-                    <p className="text-base md:text-lg">
+                    <p className="text-base md:text-lg text-justify">
                         {description}
                     </p>
                     {!hideExtras && (
