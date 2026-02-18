@@ -77,10 +77,10 @@ export default function RepresentantsPageComponent() {
                     <div className='flex flex-row w-full'>
                         <div className='flex flex-col items-start w-full lg:w-1/2 gap-8'>
                             <div className='flex flex-col items-start gap-3'>
-                                <h1 className="text-4xl md:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
-                                    Encontre um <br /> <span className="text-blue-gravel-mist font-bold">representante</span>
+                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
+                                    Encontre um <br /> <span className="font-bold">representante</span>
                                 </h1>
-                                <p className="text-base md:text-lg">
+                                <p className="text-base md:text-lg text-justify max-w-xl">
                                     Clique em um dos Estados destacados no mapa para acessar os dados dos nossos representantes ou utilize o filtro abaixo:
                                 </p>
                             </div>

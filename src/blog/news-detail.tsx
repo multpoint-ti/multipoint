@@ -147,12 +147,20 @@ export default function NewsDetailComponent({ slug }: NewsDetailProps) {
       });
   };
 
-  // Formatar texto inline (bold)
+  // Formatar texto inline (bold e links)
   const formatInlineText = (text: string) => {
-    const parts = text.split(/(\*\*[^*]+\*\*)/g);
+    const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
     return parts.map((part, i) => {
       if (part.startsWith('**') && part.endsWith('**')) {
         return <strong key={i}>{part.slice(2, -2)}</strong>;
+      }
+      const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      if (linkMatch) {
+        return (
+          <Link key={i} href={linkMatch[2]} className='text-blue-gravel-mist hover:underline'>
+            {linkMatch[1]}
+          </Link>
+        );
       }
       return part;
     });
@@ -187,12 +195,13 @@ export default function NewsDetailComponent({ slug }: NewsDetailProps) {
             </div>
             {/* Imagem Principal */}
             {news.imagePath && (
-              <div className='relative w-full h-64 md:h-[500px] overflow-hidden'>
+              <div className='w-full overflow-hidden'>
                 <Image
                   src={news.imagePath}
                   alt={news.title}
-                  fill
-                  className='object-cover'
+                  width={1200}
+                  height={800}
+                  className='w-full h-auto object-contain'
                 />
               </div>
             )}

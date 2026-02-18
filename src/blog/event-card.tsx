@@ -18,7 +18,7 @@ export function getEventYear(dateString: string): string {
 export function EventCard({ event }: EventCardProps) {
   return (
     <Link href={`/eventos/${event.slug}`} className="block h-full">
-      <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden flex flex-col px-6 py-8 gap-6 h-full hover:cursor-pointer hover:border-gray-400 transition-all duration-300">
+      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden flex flex-col px-6 py-8 gap-6 h-full hover:cursor-pointer hover:border-gray-400 transition-all duration-300">
         {/* Header com tag e ano */}
         <div className="flex justify-between items-center">
           <SectionTagName text="eventos" />

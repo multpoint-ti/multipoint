@@ -1,32 +1,5 @@
 [
   {
-    "id": "550e8400-e29b-41d4-a716-446655440020",
-    "slug": "mp026-vs-mp143-diferenca-visual-valvulas-injetoras",
-    "title": "MP026 vs MP143: Entenda a Diferença Visual entre as Válvulas",
-    "text": "Uma dúvida comum entre mecânicos e profissionais do setor é a diferença entre os modelos **MP026** e **MP143**. Embora a aplicação seja bem parecida, existe uma diferença visual importante que você precisa conhecer.\n\n## Aplicação Similar\n\nAmbos os modelos são válvulas injetoras da linha Magneti Marelli, com aplicação em veículos como:\n\n- Clio 1.6 16V Gasolina\n- Scénic 1.6 16V Gasolina\n\n## A Diferença Visual\n\nA principal diferença está no **furo que recebe a trava do bico:**\n\n- **MP026:** O furo se encontra no meio do bico, alinhado com a bobina.\n- **MP143:** O furo está desencontrado em relação ao posicionamento da bobina.\n\n## Por que isso importa?\n\nEssa diferença no posicionamento da trava afeta diretamente a instalação no sistema de injeção. Utilizar o modelo incorreto pode comprometer o encaixe e o funcionamento do bico injetor.\n\nNa hora da substituição, verifique sempre o posicionamento do furo da trava para garantir a compatibilidade correta.\n\nConfira os produtos: **MP026** (/produtos/6) e **MP143** (/produtos/31).",
-    "type": "NOTICIA",
-    "createdAt": "2026-02-17T10:00:00.000Z",
-    "updatedAt": "2026-02-17T10:00:00.000Z",
-    "imagePath": "https://multpoint.com/wp-content/uploads/2023/02/mp026.jpg",
-    "videoPath": null,
-    "galleryImagesPaths": [
-      "https://multpoint.com/wp-content/uploads/2023/02/mp026.jpg",
-      "https://multpoint.com/wp-content/uploads/2023/02/mp143.jpg"
-    ]
-  },
-  {
-    "id": "550e8400-e29b-41d4-a716-446655440019",
-    "slug": "mp1011f-kit-reparo-bico-injetor-sistema-delphi",
-    "title": "MP1011F | Kit Reparo para Bico Injetor Sistema Delphi",
-    "text": "O **MP1011F** é o kit de reparo completo da MultPoint para bicos injetores do sistema Delphi, ideal para manutenção preventiva e corretiva.\n\n## Conteúdo da Embalagem\n\n- 4 Filtros Delphi\n- 4 O-rings 6,40 x 4,00\n- 4 O-rings 9,19 x 2,62\n\n## Aplicação\n\n- Corsa 1.0 / 1.4\n- Celta 1.0 / 1.4\n- Prisma 1.0 / 1.4\n- Meriva 1.8\n- Stilo 1.8\n\n## Por que manter os kits em dia?\n\nA troca regular dos filtros e anéis de vedação dos bicos injetores é fundamental para manter a eficiência do sistema de injeção. Filtros obstruídos e vedações desgastadas podem causar vazamentos, perda de pressão e falhas na pulverização do combustível.\n\nCom o MP1011F da MultPoint, você garante a manutenção correta com peças de qualidade comprovada.\n\nConfira o produto: /produtos/135",
-    "type": "NOTICIA",
-    "createdAt": "2026-02-16T10:00:00.000Z",
-    "updatedAt": "2026-02-16T10:00:00.000Z",
-    "imagePath": "https://multpoint.com/wp-content/uploads/2023/02/mp1011f.jpg",
-    "videoPath": null,
-    "galleryImagesPaths": []
-  },
-  {
     "id": "550e8400-e29b-41d4-a716-446655440018",
     "slug": "bobina-injetor-como-identificar-quebra-prevenir",
     "title": "Bobina do Injetor Quebrada: Como Identificar e Prevenir o Problema",
@@ -34,7 +7,31 @@
     "type": "NOTICIA",
     "createdAt": "2026-02-15T10:00:00.000Z",
     "updatedAt": "2026-02-15T10:00:00.000Z",
-    "imagePath": "/imgs/news/bobina-quebrada-identificar.jpg",
+    "imagePath": "/imgs/news/Bobina do Injetor Quebrada saiba Como Identificar e Prevenir o Problema.png",
+    "videoPath": null,
+    "galleryImagesPaths": []
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440019",
+    "slug": "mp1011f-kit-reparo-bico-injetor-sistema-delphi",
+    "title": "MP1011F | Kit Reparo para Bico Injetor Sistema Delphi",
+    "text": "O **MP1011F** é o kit de reparo completo da MultPoint para bicos injetores do sistema Delphi, ideal para manutenção preventiva e corretiva.\n\n## Conteúdo da Embalagem\n\n- 4 Filtros Delphi\n- 4 O-rings 6,40 x 4,00\n- 4 O-rings 9,19 x 2,62\n\n## Aplicação\n\n- Corsa 1.0 / 1.4\n- Celta 1.0 / 1.4\n- Prisma 1.0 / 1.4\n- Meriva 1.8\n- Stilo 1.8\n\n## Por que manter os kits em dia?\n\nA troca regular dos filtros e anéis de vedação dos bicos injetores é fundamental para manter a eficiência do sistema de injeção. Filtros obstruídos e vedações desgastadas podem causar vazamentos, perda de pressão e falhas na pulverização do combustível.\n\nCom o MP1011F da MultPoint, você garante a manutenção correta com peças de qualidade comprovada.\n\nConfira o produto: [MP1011F](/produtos/135)",
+    "type": "NOTICIA",
+    "createdAt": "2026-02-16T10:00:00.000Z",
+    "updatedAt": "2026-02-16T10:00:00.000Z",
+    "imagePath": "/imgs/news/Kit Reparo para Bico Injetor Sistema Delphi.png",
+    "videoPath": null,
+    "galleryImagesPaths": []
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440020",
+    "slug": "mp026-vs-mp143-diferenca-visual-valvulas-injetoras",
+    "title": "MP026 vs MP143: Entenda a Diferença Visual entre as Válvulas",
+    "text": "Uma dúvida comum entre mecânicos e profissionais do setor é a diferença entre os modelos **MP026** e **MP143**. Embora a aplicação seja bem parecida, existe uma diferença visual importante que você precisa conhecer.\n\n## Aplicação Similar\n\nAmbos os modelos são válvulas injetoras da linha Magneti Marelli, com aplicação em veículos como:\n\n- Clio 1.6 16V Gasolina\n- Scénic 1.6 16V Gasolina\n\n## A Diferença Visual\n\nA principal diferença está no **furo que recebe a trava do bico:**\n\n- **MP026:** O furo se encontra no meio do bico, alinhado com a bobina.\n- **MP143:** O furo está desencontrado em relação ao posicionamento da bobina.\n\n## Por que isso importa?\n\nEssa diferença no posicionamento da trava afeta diretamente a instalação no sistema de injeção. Utilizar o modelo incorreto pode comprometer o encaixe e o funcionamento do bico injetor.\n\nNa hora da substituição, verifique sempre o posicionamento do furo da trava para garantir a compatibilidade correta.\n\nConfira os produtos: [MP026](/produtos/6) e [MP143](/produtos/31).",
+    "type": "NOTICIA",
+    "createdAt": "2026-02-17T10:00:00.000Z",
+    "updatedAt": "2026-02-17T10:00:00.000Z",
+    "imagePath": "/imgs/news/DIFERENÇA VISUAL ENTRE BICOS INJETORES MP026 E MP143.png",
     "videoPath": null,
     "galleryImagesPaths": []
   },
@@ -42,11 +39,11 @@
     "id": "550e8400-e29b-41d4-a716-446655440017",
     "slug": "mpc1115-adaptador-v-isolar-ar-quente",
     "title": "MPC1115 | Adaptador V para Isolar Ar Quente",
-    "text": "Conheça o **MPC1115**, o adaptador V da MultPoint projetado para isolar ar quente no sistema de injeção do seu veículo.\n\n## Especificações\n\n- **Tipo:** Adaptador V para isolar ar quente\n- **Medida:** 16mm\n- **Linha:** Conectores e Travas\n\n## Por que utilizar o adaptador?\n\nO isolamento correto do ar quente é fundamental para o bom funcionamento do sistema de injeção. Com temperaturas elevadas, o combustível pode vaporizar antes do tempo, causando falhas na partida e perda de desempenho.\n\nO MPC1115 da MultPoint garante o isolamento adequado, contribuindo para a eficiência e a durabilidade do sistema. Uma peça simples que faz toda a diferença na performance do motor.\n\nConfira o produto: /produtos/266",
+    "text": "Conheça o **MPC1115**, o adaptador V da MultPoint projetado para isolar ar quente no sistema de injeção do seu veículo.\n\n## Especificações\n\n- **Tipo:** Adaptador V para isolar ar quente\n- **Medida:** 16mm\n- **Linha:** Conectores e Travas\n\n## Por que utilizar o adaptador?\n\nO isolamento correto do ar quente é fundamental para o bom funcionamento do sistema de injeção. Com temperaturas elevadas, o combustível pode vaporizar antes do tempo, causando falhas na partida e perda de desempenho.\n\nO MPC1115 da MultPoint garante o isolamento adequado, contribuindo para a eficiência e a durabilidade do sistema. Uma peça simples que faz toda a diferença na performance do motor.\n\nConfira o produto: [MPC1115](/produtos/266)",
     "type": "NOTICIA",
     "createdAt": "2026-02-14T10:00:00.000Z",
     "updatedAt": "2026-02-14T10:00:00.000Z",
-    "imagePath": "https://multpoint.com/wp-content/uploads/2024/04/mpc1115.jpg",
+    "imagePath": "/imgs/news/MPC1115 Adaptador V para Isolar Ar Quente.png",
     "videoPath": null,
     "galleryImagesPaths": []
   },
@@ -54,11 +51,11 @@
     "id": "550e8400-e29b-41d4-a716-446655440016",
     "slug": "mp1001-kit-reparo-bico-injetor-essencial-oficina",
     "title": "MP1001/170 | Kit Reparo Essencial para Sua Oficina",
-    "text": "Você mecânico, precisa ter esses kits de reparo em sua oficina!\n\n## O kit mais usado do Brasil\n\nO **MP1001/170** é um dos kits de reparo mais utilizados em todo o território nacional. Com a MultPoint, você encontra os melhores preços sem abrir mão da qualidade.\n\n## Conteúdo do Kit\n\n- 1 Prolongador Completo\n- 1 Anel O-ring 7,00 x 3,00 Nitrílico\n\n## Aplicação\n\nCompatível com o sistema **IWP170**, utilizado em veículos VW Fox Flex.\n\n## Por que ter esse kit na oficina?\n\nA manutenção dos bicos injetores é um dos serviços mais recorrentes nas oficinas brasileiras. Ter o kit certo em mãos significa agilidade no atendimento, qualidade no serviço e cliente satisfeito.\n\nFaça seu orçamento com nossos representantes e garanta os melhores kits para sua oficina!\n\nConfira o produto: /produtos/118",
+    "text": "Você mecânico, precisa ter esses kits de reparo em sua oficina!\n\n## O kit mais usado do Brasil\n\nO **MP1001/170** é um dos kits de reparo mais utilizados em todo o território nacional. Com a MultPoint, você encontra os melhores preços sem abrir mão da qualidade.\n\n## Conteúdo do Kit\n\n- 1 Prolongador Completo\n- 1 Anel O-ring 7,00 x 3,00 Nitrílico\n\n## Aplicação\n\nCompatível com o sistema **IWP170**, utilizado em veículos VW Fox Flex.\n\n## Por que ter esse kit na oficina?\n\nA manutenção dos bicos injetores é um dos serviços mais recorrentes nas oficinas brasileiras. Ter o kit certo em mãos significa agilidade no atendimento, qualidade no serviço e cliente satisfeito.\n\nFaça seu orçamento com nossos representantes e garanta os melhores kits para sua oficina!\n\nConfira o produto: [MP1001/170](/produtos/118)",
     "type": "NOTICIA",
     "createdAt": "2026-02-13T10:00:00.000Z",
     "updatedAt": "2026-02-13T10:00:00.000Z",
-    "imagePath": "https://multpoint.com/wp-content/uploads/2023/02/mp1001-170.jpg",
+    "imagePath": "/imgs/news/170 Kit Reparo Essencial para Sua Oficina.png",
     "videoPath": null,
     "galleryImagesPaths": []
   },
@@ -66,30 +63,23 @@
     "id": "550e8400-e29b-41d4-a716-446655440015",
     "slug": "linha-delphi-multpoint-bicos-injetores-chevrolet",
     "title": "Linha Delphi MultPoint: 6 Modelos de Bicos Injetores para Chevrolet",
-    "text": "Se você busca eficiência, economia e durabilidade, a MultPoint oferece os melhores bicos injetores do sistema Delphi para os principais modelos Chevrolet.\n\n## Por que escolher a linha Delphi MultPoint?\n\n- Precisão na injeção de combustível\n- Mais potência e menor consumo\n- Qualidade e durabilidade comprovadas\n- 6 principais modelos do mercado disponíveis\n\n## Nossos 6 Modelos\n\n### MP10741 — Onix e Prisma 1.4\n\nPara Onix 1.4 8V Flex e Prisma 1.4 8V Flex (2013-2019). Ref. Delphi: 28300654. (/produtos/211)\n\n### MP10740 — Onix e Prisma 1.0\n\nPara Onix 1.0 8V Flex e Prisma 1.0 8V Flex (2013-2019). Ref. Delphi: 28300652. (/produtos/210)\n\n### MP10739 — Celta, Corsa e Prisma 1.0\n\nPara Celta/Corsa 1.0 8V Flex (2007-2015) e Prisma 1.0 8V Flex (2009-2012). Ref. Delphi: 24578819. (/produtos/209)\n\n### MP10732 — Corsa, Meriva, Montana e Prisma 1.4\n\nPara Corsa 1.4, Meriva 1.4, Montana 1.4 e Prisma 1.4 8V Flex. Ref. Delphi: 28061684. (/produtos/206)\n\n### MP10733 — Montana, Meriva, Stilo e Strada 1.8\n\nPara Corsa/Meriva/Montana 1.8, Doblò/Siena/Strada/Punto/Stilo 1.8 8V Flex. Ref. Delphi: 25363042. (/produtos/207)\n\n### MP10734 — Celta e Prisma 1.4\n\nPara Celta 1.0/1.4 8V Flex e Prisma 1.4 8V Flex (2007-2012). Ref. Delphi: 25366420. (/produtos/208)\n\nGaranta o melhor para o seu carro! Fale com um de nossos representantes e adquira já o seu.",
+    "text": "Se você busca eficiência, economia e durabilidade, a MultPoint oferece os melhores bicos injetores do sistema Delphi para os principais modelos Chevrolet.\n\n## Por que escolher a linha Delphi MultPoint?\n\n- Precisão na injeção de combustível\n- Mais potência e menor consumo\n- Qualidade e durabilidade comprovadas\n- 6 principais modelos do mercado disponíveis\n\n## Nossos 6 Modelos\n\n### MP10741 — Onix e Prisma 1.4\n\nPara Onix 1.4 8V Flex e Prisma 1.4 8V Flex (2013-2019). Ref. Delphi: 28300654. [Ver produto](/produtos/211)\n\n### MP10740 — Onix e Prisma 1.0\n\nPara Onix 1.0 8V Flex e Prisma 1.0 8V Flex (2013-2019). Ref. Delphi: 28300652. [Ver produto](/produtos/210)\n\n### MP10739 — Celta, Corsa e Prisma 1.0\n\nPara Celta/Corsa 1.0 8V Flex (2007-2015) e Prisma 1.0 8V Flex (2009-2012). Ref. Delphi: 24578819. [Ver produto](/produtos/209)\n\n### MP10732 — Corsa, Meriva, Montana e Prisma 1.4\n\nPara Corsa 1.4, Meriva 1.4, Montana 1.4 e Prisma 1.4 8V Flex. Ref. Delphi: 28061684. [Ver produto](/produtos/206)\n\n### MP10733 — Montana, Meriva, Stilo e Strada 1.8\n\nPara Corsa/Meriva/Montana 1.8, Doblò/Siena/Strada/Punto/Stilo 1.8 8V Flex. Ref. Delphi: 25363042. [Ver produto](/produtos/207)\n\n### MP10734 — Celta e Prisma 1.4\n\nPara Celta 1.0/1.4 8V Flex e Prisma 1.4 8V Flex (2007-2012). Ref. Delphi: 25366420. [Ver produto](/produtos/208)\n\nGaranta o melhor para o seu carro! Fale com um de nossos representantes e adquira já o seu.",
     "type": "NOTICIA",
     "createdAt": "2026-02-12T10:00:00.000Z",
     "updatedAt": "2026-02-12T10:00:00.000Z",
-    "imagePath": "https://multpoint.com/wp-content/uploads/2024/04/mp10741.jpg",
+    "imagePath": "/imgs/news/Linha Delphi MultPoint 6 Modelos de Bicos Injetores para Chevrolet.png",
     "videoPath": null,
-    "galleryImagesPaths": [
-      "https://multpoint.com/wp-content/uploads/2024/04/mp10741.jpg",
-      "https://multpoint.com/wp-content/uploads/2024/04/mp10740.jpg",
-      "https://multpoint.com/wp-content/uploads/2024/04/mp10739.jpg",
-      "https://multpoint.com/wp-content/uploads/2024/04/mp10732.jpg",
-      "https://multpoint.com/wp-content/uploads/2024/04/mp10733.jpg",
-      "https://multpoint.com/wp-content/uploads/2024/04/mp10734.jpg"
-    ]
+    "galleryImagesPaths": []
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440014",
     "slug": "mp157182-valvula-injetora-ecosport-fiesta-focus",
     "title": "MP157182 | Válvula Injetora para EcoSport, Fiesta e Focus",
-    "text": "Conheça a válvula injetora **MP157182** da MultPoint, desenvolvida para garantir desempenho e eficiência nos principais modelos Ford.\n\n## Especificações Técnicas\n\n- **Referência Bosch:** 0280 157 182\n- **Referência Ford:** AM5G9F593BA\n- **Furo da Medalha:** 6 furos\n\n## Veículos Compatíveis\n\n- EcoSport 1.6 Flex (2012 a 2017)\n- Fiesta 1.6 16V Flex (2011 a 2013)\n- Fiesta Sedan 1.6 16V Flex (2010 a 2013)\n- Focus 1.6i 16V Flex (2010 a 2013)\n- Focus Sedan 1.6i 16V Flex (2010 a 2013)\n\n## Importante\n\nEste modelo **substitui o injetor 0280 158 238**, oferecendo a mesma qualidade e compatibilidade com excelente custo-benefício.\n\nA MultPoint garante precisão na fabricação e rigoroso controle de qualidade em cada unidade produzida. Garanta já o seu e mantenha o desempenho do seu carro sempre em dia!\n\nConfira o produto: /produtos/217",
+    "text": "Conheça a válvula injetora **MP157182** da MultPoint, desenvolvida para garantir desempenho e eficiência nos principais modelos Ford.\n\n## Especificações Técnicas\n\n- **Referência Bosch:** 0280 157 182\n- **Referência Ford:** AM5G9F593BA\n- **Furo da Medalha:** 6 furos\n\n## Veículos Compatíveis\n\n- EcoSport 1.6 Flex (2012 a 2017)\n- Fiesta 1.6 16V Flex (2011 a 2013)\n- Fiesta Sedan 1.6 16V Flex (2010 a 2013)\n- Focus 1.6i 16V Flex (2010 a 2013)\n- Focus Sedan 1.6i 16V Flex (2010 a 2013)\n\n## Importante\n\nEste modelo **substitui o injetor 0280 158 238**, oferecendo a mesma qualidade e compatibilidade com excelente custo-benefício.\n\nA MultPoint garante precisão na fabricação e rigoroso controle de qualidade em cada unidade produzida. Garanta já o seu e mantenha o desempenho do seu carro sempre em dia!\n\nConfira o produto: [MP157182](/produtos/217)",
     "type": "NOTICIA",
     "createdAt": "2026-02-11T10:00:00.000Z",
     "updatedAt": "2026-02-11T10:00:00.000Z",
-    "imagePath": "https://multpoint.com/wp-content/uploads/2024/04/mp157182.jpg",
+    "imagePath": "/imgs/news/Válvula Injetora para EcoSport, Fiesta e Focus MP157182.png",
     "videoPath": null,
     "galleryImagesPaths": []
   },
@@ -101,7 +91,7 @@
     "type": "NOTICIA",
     "createdAt": "2026-02-10T10:00:00.000Z",
     "updatedAt": "2026-02-10T10:00:00.000Z",
-    "imagePath": "/imgs/news/industria-nacional-multpoint.jpg",
+    "imagePath": "/imgs/news/Indústria Nacional A Força da  Qualidade MultPoint.png",
     "videoPath": null,
     "galleryImagesPaths": []
   },
@@ -113,7 +103,7 @@
     "type": "NOTICIA",
     "createdAt": "2026-02-09T10:00:00.000Z",
     "updatedAt": "2026-02-09T10:00:00.000Z",
-    "imagePath": "/imgs/news/bico-injetor-tecnica.jpg",
+    "imagePath": "/imgs/news/Bico Injetor Técnica e Precisão no Desempenho do Motor.png",
     "videoPath": null,
     "galleryImagesPaths": []
   },
@@ -125,7 +115,7 @@
     "type": "NOTICIA",
     "createdAt": "2025-01-12T16:00:00.000Z",
     "updatedAt": "2025-01-12T16:00:00.000Z",
-    "imagePath": "/imgs/news/qualidade-bobina-injetor.jpg",
+    "imagePath": "/imgs/news/Qualidade MultPoint Bobinas de Injetor com Maior Durabilidade.png",
     "videoPath": null,
     "galleryImagesPaths": []
   },
@@ -137,7 +127,7 @@
     "type": "NOTICIA",
     "createdAt": "2025-01-12T10:00:00.000Z",
     "updatedAt": "2025-01-12T10:00:00.000Z",
-    "imagePath": "/imgs/news/troca-valvulas-injetoras.jpg",
+    "imagePath": "/imgs/news/Troca de Válvulas Injetoras Substituir a Defeituosa ou Trocar o Conjunto_.png",
     "videoPath": null,
     "galleryImagesPaths": []
   }

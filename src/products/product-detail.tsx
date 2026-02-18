@@ -138,8 +138,8 @@ export default function ProductDetailComponent({ productId }: ProductDetailProps
 
               {/* Botões */}
               <div className='flex flex-col sm:flex-row gap-4 mt-4'>
-                <Link href={`/representantes`} className='w-full'>
-                  <Button variant='default' className='w-full flex items-center gap-2 text-white'>
+                <Link href={`/representantes`} className='w-full md:w-fit'>
+                  <Button variant='default' className='w-full md:w-fit flex items-center gap-2 text-white'>
                     Encontre um representante
                     <ArrowRight className='w-4 h-4' />
                   </Button>

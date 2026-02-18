@@ -56,7 +56,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
           {/* Código MultPoint e Montadoras */}
           <div className="flex flex-col gap-1 text-sm">
-            <div className="flex items-start gap-1 text-red-amber-torque">
+            <div className="flex items-start gap-1">
               <span className="whitespace-nowrap">Código MultPoint:</span>
               <span className="">{product.multpointCode}</span>
             </div>

@@ -114,8 +114,8 @@ export default function BlogListPageComponent() {
 
         {/** News */}
         <div className='max-w-7xl space-y-8 w-full items-start mb-12'>
-          <div className='w-full items-start flex flex-col gap-3'>
-            <h1 className="text-4xl md:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
+          <div className='w-full items-start flex flex-col gap-8'>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
               Notícias
             </h1>
 
@@ -141,29 +141,13 @@ export default function BlogListPageComponent() {
               <div>
                 {/* Layout de destaque apenas na primeira página */}
                 {page === 1 && news.length >= 1 && (
-                  <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-                    {/* Coluna esquerda - Card grande */}
                     <BlogCardFeatured news={news[0]} size="large" />
-                    {/* Coluna direita - Dois cards pequenos (escondidos no mobile) */}
-                    {news.length >= 3 && (
-                      <div className='hidden lg:flex flex-col gap-6'>
-                        <BlogCardFeatured news={news[1]} size="small" />
-                        <BlogCardFeatured news={news[2]} size="small" />
-                      </div>
-                    )}
-                  </div>
                 )}
                 {/* Cards normais */}
                 {page === 1 && news.length > 1 && (
-                  <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16'>
-                    {/* No mobile: mostra a partir do índice 1, no desktop: a partir do índice 3 */}
-                    {news.slice(1).map((item, index) => (
-                      <div
-                        key={item.id}
-                        className={index < 2 ? 'lg:hidden' : ''}
-                      >
-                        <BlogCard news={item} />
-                      </div>
+                  <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 lg:mt-12'>
+                    {news.slice(1).map((item) => (
+                      <BlogCard key={item.id} news={item} />
                     ))}
                   </div>
                 )}
@@ -192,7 +176,7 @@ export default function BlogListPageComponent() {
         <div className='max-w-7xl space-y-8 w-full'>
 
           <div className='flex flex-col items-start gap-3'>
-            <h1 className="text-4xl md:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-start md:text-start max-w-3xl leading-tight">
               Eventos
             </h1>
           </div>
