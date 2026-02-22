@@ -25,12 +25,6 @@ export function ProductsFilters({
 }: ProductsFiltersProps) {
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-col gap-2">
-        <h1 className="text-4xl md:text-5xl font-medium text-start md:text-start max-w-3xl leading-tight">
-          Produtos
-        </h1>
-      </div>
-
       <div className="flex flex-col gap-8">
         {/* Pesquisa Avançada */}
         <div className="flex flex-col gap-2">
