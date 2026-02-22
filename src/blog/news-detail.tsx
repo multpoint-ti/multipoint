@@ -171,9 +171,9 @@ export default function NewsDetailComponent({ slug }: NewsDetailProps) {
       <Menu />
 
       <PageContainer>
-        <div className='flex max-w-7xl lg:space-x-16'>
+        <div className='flex flex-col xl:flex-row max-w-7xl lg:space-x-16 justify-center'>
 
-          <div className='space-y-8 w-full lg:w-3/4'>
+          <div className='space-y-8 w-full xl:w-3/4'>
             {/* Breadcrumb */}
             <Breadcrumb
               items={[
@@ -217,20 +217,16 @@ export default function NewsDetailComponent({ slug }: NewsDetailProps) {
             <div className='border-t border-gray-200 mt-12 pt-8'>
               <Link
                 href='/blog'
-                className='inline-flex items-center gap-2 text-blue-gravel-mist hover:underline'
+                className='hidden xl:inline-flex items-center gap-2 text-blue-gravel-mist hover:underline'
               >
                 <ArrowLeft className='w-4 h-4' />
                 Ver todas as notícias
               </Link>
             </div>
-
-            {/* Recomendações */}
-            <div className='mt-12'>
-              <BlogRecommendations currentSlug={slug} type="NOTICIA" />
-            </div>
           </div>
 
-          <div className='hidden lg:block w-full lg:w-1/4'>
+          {/* Recomendações */}
+          <div className='xl:block w-full xl:w-1/4'>
             <div className='sticky top-8 space-y-8'>
               <SectionTagName text='Mais Notícias' />
               <div className='space-y-4'>
