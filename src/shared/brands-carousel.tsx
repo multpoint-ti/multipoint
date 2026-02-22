@@ -20,14 +20,14 @@ const brands = [
 
 export default function BrandsCarousel() {
     return (
-        <div className="w-full flex flex-col items-center gap-8 pb-8">
+        <div className="w-full flex flex-col items-center gap-8">
             <div className='w-full flex flex-col items-center'>
-                <h3 className='uppercase font-medium text-xs md:text-sm'>Trabalhamos com peças de reposição de MONTADORAS como:</h3>
+                <h3 className='uppercase font-medium text-xs md:text-sm text-center'>Trabalhamos com peças de reposição de MONTADORAS como:</h3>
                 <span className='block w-36 h-0.5 mt-[2px] bg-blue-gravel-mist'></span>
             </div>
             <Marquee speed={40} gradient={false} pauseOnHover>
                 {brands.map((brand) => (
-                    <div key={brand.name} className="mx-8 flex items-center justify-center">
+                    <div key={brand.name} className="md:mx-8 flex items-center justify-center">
                         <Image
                             src={brand.src}
                             alt={brand.name}

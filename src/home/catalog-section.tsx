@@ -36,7 +36,7 @@ export function CatalogSection() {
               Baixe o Catálogo
             </h3>
             <p className="text-base md:text-lg max-w-md">
-              Baixe o nosso catálogo e tenha acesso a todos os produtos e especificações
+              Acesse nosso catálogo completo com todos os produtos, códigos e especificações técnicas
             </p>
             <Button
               variant="white"

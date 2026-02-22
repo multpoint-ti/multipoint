@@ -13,19 +13,19 @@ const valuesAboutItems = [
         id: 1,
         image: ValueAboutImag1,
         title: 'Transparência e Confiança',
-        description: 'Valorizamos relações transparentes e duradouras com nossos clientes, parceiros e colaboradores, baseadas na ética, respeito e confiança mútua.',
+        description: 'Acreditamos que integridade e transparência são fundamentais. Valorizamos a ética em todas as nossas relações com clientes, fornecedores e colaboradores, fortalecendo parcerias duradouras.',
     },
     {
         id: 2,
         image: ValueAboutImag2,
-        title: 'Precisão Técnica',
-        description: 'Cada peça é desenvolvida com máxima precisão e rigor técnico, garantindo eficiência e desempenho no funcionamento dos sistemas injetores.',
+        title: 'Precisão e Qualidade',
+        description: 'Cada válvula injetora passa por rigoroso controle de qualidade, desde a seleção de matérias-primas até a finalização, garantindo produtos com performance equiparada à original.',
     },
     {
         id: 3,
         image: ValueAboutImag3,
         title: 'Inovação e Evolução Contínua',
-        description: 'Investimos constantemente na melhoria de processos para acompanhar as exigências do mercado e impulsionar nosso crescimento.',
+        description: 'Investimos em tecnologia de ponta e na capacitação contínua da nossa equipe, assegurando produtos eficientes, duráveis e confiáveis para o mercado automotivo.',
     },
 ]
 
@@ -53,7 +53,7 @@ const ValuesSectionAbout = () => {
     }, [emblaApi, onSelect]);
 
     return (
-        <section className="max-w-6xl flex flex-col items-center">
+        <section className="max-w-7xl flex flex-col items-center">
             {/** For large screens */}
             <div className='flex flex-col items-center gap-4 md:gap-16'>
                 <div className='flex flex-col items-center gap-4'>
@@ -62,9 +62,9 @@ const ValuesSectionAbout = () => {
                         Mais do que peças. <span className="text-blue-ignition font-bold">Entregamos Valor.</span>
                     </h1>
                 </div>
-                <div className="hidden lg:flex flex-col md:flex-row items-center gap-2 md:gap-8">
+                <div className="hidden md:flex flex-col md:flex-row items-stretch gap-2 md:gap-12 lg:gap-20">
                     {valuesAboutItems.map((item) => (
-                        <div key={item.id} className="flex flex-col items-center gap-2 text-center">
+                        <div key={item.id} className="flex flex-col items-center gap-2 text-center bg-gray-100 px-4 py-8 flex-1">
                             <Image
                                 src={item.image}
                                 alt={item.title}
@@ -82,7 +82,7 @@ const ValuesSectionAbout = () => {
             </div>
 
             {/** For small screens */}
-            <div className='lg:hidden overflow-hidden mt-4' ref={emblaRef}>
+            <div className='md:hidden overflow-hidden mt-4' ref={emblaRef}>
                 <div className='flex max-w-xs'>
                     {valuesAboutItems.map((item) => (
                         <div key={item.id} className="flex-shrink-0 w-full flex justify-center pb-4">
@@ -90,7 +90,7 @@ const ValuesSectionAbout = () => {
                                 <Image
                                     src={item.image}
                                     alt={item.title}
-                                    className="rounded-lg h-12 w-12 bg-blue-gravel-mist p-2 mb-2"
+                                    className="rounded-lg h-12 w-12 bg-blue-ignition p-2 mb-2"
                                 />
                                 <h3 className="text-base md:text-lg font-semibold">
                                     {item.title}
@@ -103,7 +103,7 @@ const ValuesSectionAbout = () => {
                     ))}
                 </div>
             </div>
-            <div className="lg:hidden flex gap-2 items-center">
+            <div className="md:hidden flex gap-2 items-center">
                 {scrollSnaps.map((_, index) => (
                     <button key={index} onClick={() => scrollTo(index)} className="p-0 bg-transparent border-none">
                         <div

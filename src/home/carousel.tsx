@@ -11,6 +11,7 @@ import CarrouselHome2Mobile from '../../public/imgs/carrousel-home/2-mobile.svg'
 import CarrouselHome3Mobile from '../../public/imgs/carrousel-home/3-mobile.svg'
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const handleDownloadCatalog = () => {
   const link = document.createElement('a');
@@ -91,10 +92,12 @@ export function Carousel() {
           <Download className="h-5 w-5" />
           Baixar Catálogo
         </Button>
-        <Button variant="outline" className='gap-2 border-gray-400'>
-          <ShoppingBasket className="h-5 w-5" />
-          Ver Produtos
-        </Button>
+        <Link href={'/produtos'}>
+          <Button variant="outline" className='gap-2 border-gray-400'>
+            <ShoppingBasket className="h-5 w-5" />
+            Ver Produtos
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -90,7 +90,7 @@ export function Footer() {
         {/* Fale Conosco column */}
         <div className="flex flex-col w-full text-base lg:text-lg gap-4 lg:w-2/6">
           <h3 className=''>
-            Baixe o nosso catálogo e tenha acesso a todos os produtos e especificações
+            Acesse nosso catálogo completo com todos os produtos, códigos e especificações técnicas
           </h3>
           <Button variant="white" className='max-w-96 text-base lg:text-lg' onClick={handleDownloadCatalog}>
             <Download className="mr-2 h-5 w-5" />

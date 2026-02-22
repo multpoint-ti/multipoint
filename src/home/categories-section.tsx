@@ -16,17 +16,17 @@ interface CategoryItem {
 const categories: CategoryItem[] = [
   {
     title: 'PRODUTOS',
-    image: '/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg',
+    image: '/imgs/radiador.webp',
     href: '/produtos',
   },
   {
     title: 'NOTÍCIAS',
-    image: '/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg',
+    image: '/imgs/carro-examinando-mechanic.avif',
     href: '/blog',
   },
   {
     title: 'EVENTOS',
-    image: '/imgs/news/como-identificar-valvula-injetora-com-defeito-7-sinais-de-alerta.jpg',
+    image: '/imgs/news/automec-2025/automec-2025.jpg',
     href: '/blog',
   },
 ];
@@ -42,7 +42,7 @@ function CategoryCard({ item }: { item: CategoryItem }) {
         onMouseLeave={() => setIsHovered(false)}
       >
         {/* Image container */}
-        <div className="relative h-80 md:h-[400px] xl:h-[500px] overflow-hidden">
+        <div className="relative h-80 md:h-[400px] xl:h-[600px] overflow-hidden">
           <Image
             src={item.image}
             alt={item.title}
@@ -64,7 +64,7 @@ function CategoryCard({ item }: { item: CategoryItem }) {
         {/* Text container with vertical line */}
         <div className="relative bg-blue-ignition py-6 px-4">
           {/* Vertical decorative line */}
-          <div className="absolute left-8 -top-8 w-0.5 h-24 bg-white" />
+          <div className="absolute left-8 -top-10 w-1 h-26 bg-red-amber-torque" />
 
           {/* Title */}
           <h3 className="text-xl md:text-2xl font-semibold text-white pl-8 pt-2 pb-6 hover:underline">
@@ -97,7 +97,7 @@ export function CategoriesSection() {
   // Desktop: 3 columns grid
   if (!isMobile) {
     return (
-      <section className="w-full max-w-7xl mx-auto px-4 pt-12 pb-20">
+      <section className="w-full max-w-7xl mx-auto px-4 lg:pt-12 pb-20">
         <div className="grid grid-cols-3">
           {categories.map((item) => (
             <CategoryCard key={item.title} item={item} />
@@ -109,7 +109,7 @@ export function CategoriesSection() {
 
   // Mobile: Auto-sliding carousel
   return (
-    <section className="w-full py-12">
+    <section className="w-full lg:py-12 pb-16 lg:pb-0">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {categories.map((item) => (

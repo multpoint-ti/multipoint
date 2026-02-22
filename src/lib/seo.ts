@@ -6,7 +6,7 @@ import { Event } from '@/shared/types/event-types';
 // Configuração base do site
 export const siteConfig = {
   name: 'MultPoint Indústria',
-  description: 'Válvulas Injetoras e Kits para Bico Injetor - Qualidade e tecnologia em peças automotivas',
+  description: 'Referência nacional na fabricação de válvulas injetoras para reposição automotiva. Empresa 100% brasileira com performance equiparada à original.',
   url: 'https://multpoint.com',
   ogImage: '/imgs/og-image.jpg',
   locale: 'pt_BR',
@@ -29,6 +29,8 @@ export const baseMetadata: Metadata = {
     'injeção eletrônica',
     'multpoint',
     'autopeças',
+    'reposição automotiva',
+    'válvulas injetoras reposição',
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
