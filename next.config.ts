@@ -15,6 +15,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/webmail',
+        destination: 'https://webmail.multpoint.com',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
