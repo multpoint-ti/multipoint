@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: 'multpoint.com',
         pathname: '/**',
       },
+      {
+        protocol: 'http',
+        hostname: 'cdn.multpoint.com',
+        pathname: '/**',
+      },
     ],
   },
 };
