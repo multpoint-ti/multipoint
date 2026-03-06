@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'http',
+        protocol: 'https',
         hostname: 'cdn.multpoint.com',
         pathname: '/**',
       },
