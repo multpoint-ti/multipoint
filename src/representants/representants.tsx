@@ -60,11 +60,25 @@ export default function RepresentantsPageComponent() {
 
     const [selectedState, setSelectedState] = useState('all');
 
-    const getFilteredRepresentants = () => {
-        if (selectedState === 'all') {
-            return Object.values(representants).flat();
+    const getFilteredRepresentants = (): { representant: Representant; ufs: string[] }[] => {
+        const grouped = new Map<string, { representant: Representant; ufs: string[] }>();
+
+        const entries = selectedState === 'all'
+            ? Object.entries(representants)
+            : [[selectedState, representants[selectedState as keyof typeof representants] || []] as [string, Representant[]]];
+
+        for (const [uf, reps] of entries) {
+            for (const rep of reps) {
+                const existing = grouped.get(rep.nome);
+                if (existing) {
+                    existing.ufs.push(uf);
+                } else {
+                    grouped.set(rep.nome, { representant: rep, ufs: [uf] });
+                }
+            }
         }
-        return representants[selectedState as keyof typeof representants] || [];
+
+        return Array.from(grouped.values());
     };
 
     const filteredRepresentants = getFilteredRepresentants();
@@ -110,8 +124,8 @@ export default function RepresentantsPageComponent() {
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full pt-10 gap-4'>
                         {filteredRepresentants.length > 0 ? (
-                            filteredRepresentants.map((representant, index) => (
-                                <RepresentantsCard key={index} representant={representant} />
+                            filteredRepresentants.map((item, index) => (
+                                <RepresentantsCard key={index} representant={item.representant} ufs={item.ufs} />
                             ))
                         ) : (
                             <p>Nenhum representante encontrado para este Estado.</p>

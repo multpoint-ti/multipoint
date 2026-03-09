@@ -11,7 +11,7 @@ export type Representant = {
     obs?: string;
 }
 
-export const RepresentantsCard = ({ representant }: { representant: Representant }) => {
+export const RepresentantsCard = ({ representant, ufs }: { representant: Representant; ufs?: string[] }) => {
     return (
         <div className='flex flex-col h-full p-6 gap-4 border border-gray-oxide-steel rounded-xl hover:bg-gray-100'>
             <div className='text-lg font-bold uppercase'>{representant.nome}</div>
@@ -24,11 +24,20 @@ export const RepresentantsCard = ({ representant }: { representant: Representant
             {representant.emails.map((email, index) => (
                 <div className='flex flex-row items-center justify-start w-full gap-2' key={index}>
                     <MailIcon className='w-5 h-5 bg-blue-ignition rounded-full p-1 text-white' />
-                    <div className='text-base break-all'>{email.email}</div>    
+                    <div className='text-base break-all'>{email.email}</div>
                 </div>
             ))}
             {representant.obs && (
                 <div className='text-sm text-gray-500'>{representant.obs}</div>
+            )}
+            {ufs && ufs.length > 0 && (
+                <div className='flex flex-wrap gap-2 mt-auto pt-2'>
+                    {ufs.map((uf) => (
+                        <span key={uf} className='text-xs font-semibold text-white bg-blue-ignition rounded-full px-3 py-1'>
+                            {uf.toUpperCase()}
+                        </span>
+                    ))}
+                </div>
             )}
         </div>
     );
