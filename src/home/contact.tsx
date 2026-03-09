@@ -93,8 +93,8 @@ export default function Contact() {
     };
 
     const contactInfo = [
-        { icon: Mail, text: 'vendas@manchesterrep.com.br' },
-        { icon: Phone, text: '(18) 99795-5086' }
+        { icon: Mail, text: 'multpoint@multpoint.com' },
+        { icon: Phone, text: '(13) 3822-2737' }
     ];
 
     const contactType = [

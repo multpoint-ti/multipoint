@@ -44,11 +44,11 @@ export function Menu() {
           </div>
           <div className="hidden lg:flex items-center gap-2">
             <Mail className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-full bg-white' />
-            <span>vendas@manchesterrep.com.br</span>
+            <span>multpoint@multpoint.com</span>
           </div>
           <div className="flex items-center gap-2">
             <Phone className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-full bg-white' />
-            <span>(18) 99795-5086</span>
+            <span>(13) 3822-2737</span>
           </div>
           <div className="flex items-center gap-2">
             {/* Add social icons here */}

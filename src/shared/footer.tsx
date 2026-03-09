@@ -29,8 +29,8 @@ export function Footer() {
   const contactInfo = [
     { icon: Clock, text: 'Atendimento de Segunda a Sexta das 08h às 18h' },
     { icon: MapPin, text: 'Endereço: Rua São Paulo, 473 - Jardim Planalto, Registro/SP' },
-    { icon: Mail, text: 'Email: vendas@manchesterrep.com.br' },
-    { icon: Phone, text: 'Telefone: (18) 99795-5086' }
+    { icon: Mail, text: 'Email: multpoint@multpoint.com' },
+    { icon: Phone, text: 'Telefone: (13) 3822-2737' }
   ];
 
   const socialLinks = [
