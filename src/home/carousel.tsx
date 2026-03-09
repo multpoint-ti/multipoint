@@ -49,23 +49,23 @@ export function Carousel() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center w-screen">
-      <div className="relative w-screen overflow-hidden">
+    <div className="flex flex-col items-center w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden">
         <div
           className="flex transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {carouselImages.map((slide) => (
-            <div key={slide.id} className="w-screen flex-shrink-0 cursor-pointer" onClick={handleSlideClick}>
+            <div key={slide.id} className="w-full flex-shrink-0 cursor-pointer" onClick={handleSlideClick}>
               <Image
                 src={slide.image}
                 alt={`Carousel Image ${slide.id}`}
-                className="w-screen h-auto hidden md:block"
+                className="w-full h-auto hidden md:block"
               />
               <Image
                 src={slide.imageMobile}
                 alt={`Carousel Image ${slide.id}`}
-                className="w-screen h-auto block md:hidden"
+                className="w-full h-auto block md:hidden"
               />
             </div>
           ))}
