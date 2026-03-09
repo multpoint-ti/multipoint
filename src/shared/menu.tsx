@@ -52,10 +52,10 @@ export function Menu() {
           </div>
           <div className="flex items-center gap-2">
             {/* Add social icons here */}
-            <a href="">
+            <a href="https://web.facebook.com/MPValvulasInjetoras/?_rdc=1&_rdr#">
               <Facebook className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-sm bg-white' />
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/multpoint/">
               <Instagram className='h-5 w-5 p-[2px] text-blue-gravel-mist rounded-sm bg-white' />
             </a>
           </div>

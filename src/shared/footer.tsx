@@ -34,8 +34,8 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { href: 'https://www.facebook.com', icon: Facebook },
-    { href: 'https://www.instagram.com', icon: Instagram }
+    { href: 'https://web.facebook.com/MPValvulasInjetoras/?_rdc=1&_rdr#', icon: Facebook },
+    { href: 'https://www.instagram.com/multpoint/', icon: Instagram }
   ]
 
   return (

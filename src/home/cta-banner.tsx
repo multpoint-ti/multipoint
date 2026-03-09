@@ -24,13 +24,13 @@ export function CtaBanner() {
           </h2>
 
           <div className="mt-4 flex gap-4 flex-row">
-            <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://web.facebook.com/MPValvulasInjetoras/?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer">
               <Button variant="default" className="gap-2 bg-blue-ignition text-white">
                 <Facebook className="h-5 w-5" />
                 Facebook
               </Button>
             </Link>
-            <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.instagram.com/multpoint/" target="_blank" rel="noopener noreferrer">
               <Button variant="default" className="gap-2 bg-blue-ignition text-white">
                 <Instagram className="h-5 w-5" />
                 Instagram
