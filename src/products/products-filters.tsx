@@ -61,8 +61,6 @@ export function ProductsFilters({
                 <option value="KITS_PARA_BICO_INJETOR">Kits para Bico Injetor</option>
                 <option value="GUARNICOES">Guarnições</option>
                 <option value="CONECTORES_E_TRAVAS">Conectores e Travas</option>
-                <option value="DELPHI">Delphi</option>
-                <option value="OUTROS">Outros</option>
               </select>
             </div>
 
