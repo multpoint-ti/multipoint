@@ -122,7 +122,7 @@ export default function Contact() {
 
                     <div className='flex bg-white px-4 py-3 rounded-lg items-center gap-2 text-base md:text-lg'>
                         <Clock className='hidden md:block h-4 w-4' />
-                        <p>Atendimento de Segunda a Sexta das 08h às 18h</p>
+                        <p>Atendimento de Segunda a Sexta das 07h às 17h</p>
                     </div>
 
                     <div className='gap-2 hidden md:flex flex-col text-base md:text-lg'>
