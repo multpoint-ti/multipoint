@@ -5,62 +5,87 @@ import Image from 'next/image';
 import SectionTagName from '@/shared/section-tag-name';
 import { useCallback, useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import productsData from '@/data/product.json';
 
 type ProductCardData = {
     id: number;
     line: string;
-    lineKey: string;
-    automaker: string;
+    subtitle: string;
+    href: string;
     image: string;
-    count: number;
 };
 
-const formatProductLineName = (line: string): string => {
-    const names: { [key: string]: string } = {
-        'VALVULAS_INJETORAS': 'Válvulas Injetoras',
-        'KITS_PARA_BICO_INJETOR': 'Kits para Bico Injetor',
-        'GUARNICOES': 'Guarnições',
-        'CONECTORES_E_TRAVAS': 'Conectores e Travas',
-        'DELPHI': 'Delphi',
-        'OUTROS': 'Outros Produtos',
-    };
-    return names[line] || line;
-};
-
-const getProductCardsData = (): ProductCardData[] => {
-    const cards: ProductCardData[] = [];
-    let id = 1;
-
-    const lines = [...new Set(productsData.map((p: { productLine: string }) => p.productLine))];
-
-    lines.forEach((line) => {
-        const productsInLine = productsData.filter((p: { productLine: string }) => p.productLine === line);
-        const automakers = [...new Set(productsInLine.flatMap((p: { automakers: { name: string }[] }) =>
-            p.automakers.map(a => a.name)
-        ))];
-
-        automakers.forEach((automaker) => {
-            const productsForAutomaker = productsInLine.filter((p: { automakers: { name: string }[] }) =>
-                p.automakers.some(a => a.name === automaker)
-            );
-            const firstWithImage = productsForAutomaker.find((p: { images?: { path: string }[] }) => p.images && p.images.length > 0);
-
-            cards.push({
-                id: id++,
-                line: formatProductLineName(line),
-                lineKey: line,
-                automaker: automaker as string,
-                image: firstWithImage?.images?.[0]?.path || '/imgs/products/image 36.png',
-                count: productsForAutomaker.length,
-            });
-        });
-    });
-
-    return cards;
-};
-
-const productCards = getProductCardsData();
+const productCards: ProductCardData[] = [
+    {
+        id: 1,
+        line: 'Válvulas Injetoras',
+        subtitle: 'Magneti Marelli',
+        href: '/produtos?productLine=VALVULAS_INJETORAS&automaker=Magneti%20Marelli',
+        image: 'https://cdn.multpoint.com/2023/02/mp001.jpg',
+    },
+    {
+        id: 2,
+        line: 'Válvulas Injetoras',
+        subtitle: 'Magneti Marelli IPE',
+        href: '/produtos?productLine=VALVULAS_INJETORAS&automaker=Magneti%20Marelli%20IPE',
+        image: 'https://cdn.multpoint.com/2023/02/mp1017.jpg',
+    },
+    {
+        id: 3,
+        line: 'Válvulas Injetoras',
+        subtitle: 'Bosch',
+        href: '/produtos?productLine=VALVULAS_INJETORAS&automaker=Bosch',
+        image: 'https://cdn.multpoint.com/2023/02/MP415.jpg',
+    },
+    {
+        id: 4,
+        line: 'Válvulas Injetoras',
+        subtitle: 'Delphi',
+        href: '/produtos?productLine=VALVULAS_INJETORAS&automaker=Delphi',
+        image: 'https://cdn.multpoint.com/2024/04/mp10732.jpg',
+    },
+    {
+        id: 5,
+        line: 'Válvulas Injetoras',
+        subtitle: 'Arla',
+        href: '/produtos?productLine=VALVULAS_INJETORAS&automaker=Arla',
+        image: 'https://cdn.multpoint.com/2023/02/mp032.jpg',
+    },
+    {
+        id: 6,
+        line: 'Válvulas Injetoras',
+        subtitle: 'Motocicletas',
+        href: '/produtos?productLine=VALVULAS_INJETORAS&automaker=Motocicletas',
+        image: 'https://cdn.multpoint.com/2023/02/mp063.jpg',
+    },
+    {
+        id: 7,
+        line: "Kit's Reparo do Bico Injetor",
+        subtitle: '',
+        href: '/produtos?productLine=KITS_PARA_BICO_INJETOR',
+        image: 'https://cdn.multpoint.com/2023/02/mp1001-170.jpg',
+    },
+    {
+        id: 8,
+        line: 'Maleta de O-ring',
+        subtitle: '',
+        href: '/produtos?productLine=MALETA_ORING',
+        image: '/imgs/products/image 36.png',
+    },
+    {
+        id: 9,
+        line: 'Guarnição da Flange do Módulo de Combustível',
+        subtitle: '',
+        href: '/produtos?productLine=GUARNICOES',
+        image: 'https://cdn.multpoint.com/2023/02/mp2001.jpg',
+    },
+    {
+        id: 10,
+        line: 'Adaptadores, Engates Rápidos e Travas',
+        subtitle: '',
+        href: '/produtos?productLine=CONECTORES_E_TRAVAS',
+        image: 'https://cdn.multpoint.com/2023/02/MPC001.jpg',
+    },
+];
 
 const ProductsLineCarousel = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -116,20 +141,20 @@ const ProductsLineCarousel = () => {
 
                 {/** carousel */}
                 <div className="overflow-hidden w-full" ref={emblaRef}>
-                    <div className="flex w-full gap-4 md:gap-6">
+                    <div className="flex w-full">
                         {productCards.map((card) => (
-                            <a key={card.id} className="flex-shrink-0" href={`/produtos?productLine=${card.lineKey}&automaker=${encodeURIComponent(card.automaker)}`}>
-                                <div className="bg-white w-full min-w-64 md:min-w-74 h-96 overflow-hidden relative group cursor-pointer flex flex-col items-center gap-12">
+                            <a key={card.id} className="flex-shrink-0 pr-4 md:pr-6" href={card.href}>
+                                <div className="bg-white w-full min-w-64 md:min-w-74 max-w-64 md:max-w-74 h-96 overflow-hidden relative group cursor-pointer flex flex-col items-center gap-12">
                                     <div className="relative z-10 px-6 w-full flex flex-col items-start">
                                         <div className="border-l-4 border-blue-gravel-mist group-hover:border-white pl-4 pt-12 transition-colors duration-300">
-                                            <h3 className="text-xs font-bold uppercase text-blue-gravel-mist group-hover:text-white transition-colors duration-300">{card.line}</h3>
-                                            <p className="text-lg md:text-2xl font-medium text-blue-gravel-mist group-hover:text-white transition-colors duration-300">{card.automaker}</p>
+                                            <h3 className={`font-bold uppercase text-blue-gravel-mist group-hover:text-white transition-colors duration-300 ${card.subtitle ? 'text-xs' : 'text-base md:text-lg leading-tight font-medium'}`}>{card.line}</h3>
+                                            {card.subtitle && <p className="text-lg md:text-2xl font-medium text-blue-gravel-mist group-hover:text-white transition-colors duration-300">{card.subtitle}</p>}
                                         </div>
                                     </div>
                                     <div className="relative">
                                         <Image
                                             src={card.image}
-                                            alt={`${card.line} - ${card.automaker}`}
+                                            alt={card.subtitle ? `${card.line} - ${card.subtitle}` : card.line}
                                             width={300}
                                             height={200}
                                             className="w-48 md:w-50 h-auto object-cover"
