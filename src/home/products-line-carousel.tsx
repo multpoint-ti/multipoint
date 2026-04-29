@@ -69,7 +69,7 @@ const productCards: ProductCardData[] = [
         line: 'Maleta de O-ring',
         subtitle: '',
         href: '/produtos?productLine=MALETA_ORING',
-        image: '/imgs/products/image 36.png',
+        image: 'https://cdn.multpoint.com/2023/02/mp1050.jpg',
     },
     {
         id: 9,
