@@ -1565,6 +1565,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -1604,6 +1608,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -1643,6 +1651,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -1682,6 +1694,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -1724,6 +1740,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -1763,6 +1783,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -1802,6 +1826,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -1841,6 +1869,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -1885,6 +1917,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -1918,6 +1954,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -1957,6 +1997,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -1988,6 +2032,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -2024,6 +2072,10 @@
       {
         "id": "A3",
         "name": "Deka"
+      },
+      {
+        "id": "A_IPE",
+        "name": "Magneti Marelli IPE"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
@@ -4170,18 +4222,24 @@
     "multpointCode": "MP063",
     "shortCode": "IWP063",
     "automakerCode": [
-      "Cod Harley : 2766501A"
+      "Cod Harley: 2766501A"
     ],
     "automakers": [
       {
         "id": "A13",
         "name": "Harley-Davidson"
+      },
+      {
+        "id": "A_MOTO",
+        "name": "Motocicletas"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
-    "years": [],
+    "years": [
+      "2001-2005"
+    ],
     "vehiculesApplication": [
-      "Harley-Davidson VRSC – V-ROD Todas"
+      "Harley-Davidson Linha Sportster"
     ],
     "images": [
       {
@@ -4208,24 +4266,19 @@
       {
         "id": "A13",
         "name": "Harley-Davidson"
+      },
+      {
+        "id": "A_MOTO",
+        "name": "Motocicletas"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
     "years": [
-      "2001-2005",
       "2002-2005",
-      "2001-2013",
-      "2006-2013"
+      "2001-2013"
     ],
     "vehiculesApplication": [
-      "Harley-Davidson Softail",
-      "Harley-Davidson Dyna",
-      "Harley-Davidson Touring",
-      "Harley-Davidson FLHR",
-      "Harley-Davidson FLHT",
-      "Ducati Monster 696",
-      "Ducati SS800",
-      "Ducati M620"
+      "Harley-Davidson Linha Sportster"
     ],
     "images": [
       {
@@ -4252,13 +4305,19 @@
       {
         "id": "A13",
         "name": "Harley-Davidson"
+      },
+      {
+        "id": "A_MOTO",
+        "name": "Motocicletas"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",
-    "years": [],
+    "years": [
+      "2001-2013",
+      "2006-2013"
+    ],
     "vehiculesApplication": [
-      "Harley Davidson 883",
-      "Linha Sportster"
+      "Harley-Davidson Linha Sportster"
     ],
     "images": [
       {
@@ -4279,12 +4338,16 @@
     "multpointCode": "MP032",
     "shortCode": "",
     "automakerCode": [
-      "Magnetti Marelli: 050103ARLA"
+      "Magneti Marelli: 50103ARLA"
     ],
     "automakers": [
       {
         "id": "A1",
         "name": "Magneti Marelli"
+      },
+      {
+        "id": "A_ARLA",
+        "name": "Arla"
       }
     ],
     "productLine": "VALVULAS_INJETORAS",

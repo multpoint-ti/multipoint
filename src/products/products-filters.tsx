@@ -48,16 +48,21 @@ export function ProductsFilters({
           <h3 className="text-lg font-medium ">Filtros</h3>
           <div className="flex flex-col gap-4">
 
-            {/* Linha de Produto */}
+            {/* Linhas de Produto */}
             <div className="flex flex-col gap-1">
-              <label className="text-sm font-medium ">Linha de Produto</label>
+              <label className="text-sm font-medium ">Linhas de Produto</label>
               <select
                 className="w-full py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent bg-white"
                 onChange={(e) => onProductLineChange(e.target.value)}
                 value={productLineValue}
               >
                 <option value="">Todas</option>
-                <option value="VALVULAS_INJETORAS">Válvulas Injetoras</option>
+                <option value="VALVULAS_INJETORAS|Magneti Marelli">Válvulas Injetoras - Magneti Marelli</option>
+                <option value="VALVULAS_INJETORAS|Magneti Marelli IPE">Válvulas Injetoras - Magneti Marelli IPE</option>
+                <option value="VALVULAS_INJETORAS|Bosch">Válvulas Injetoras - Bosch</option>
+                <option value="VALVULAS_INJETORAS|Delphi">Válvulas Injetoras - Delphi</option>
+                <option value="VALVULAS_INJETORAS|Arla">Válvulas Injetoras - Arla</option>
+                <option value="VALVULAS_INJETORAS|Motocicletas">Válvulas Injetoras - Motocicletas</option>
                 <option value="KITS_PARA_BICO_INJETOR">Kit&apos;s Reparo do Bico Injetor</option>
                 <option value="MALETA_ORING">Maleta de O-ring</option>
                 <option value="GUARNICOES">Guarnição da Flange do Módulo de Combustível</option>

@@ -27,7 +27,7 @@ const productCards: ProductCardData[] = [
         line: 'Válvulas Injetoras',
         subtitle: 'Magneti Marelli IPE',
         href: '/produtos?productLine=VALVULAS_INJETORAS&automaker=Magneti%20Marelli%20IPE',
-        image: 'https://cdn.multpoint.com/2023/02/mp1017.jpg',
+        image: 'https://cdn.multpoint.com/2023/02/mpe009.jpg',
     },
     {
         id: 3,

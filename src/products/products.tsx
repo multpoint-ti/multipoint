@@ -108,12 +108,20 @@ export default function ProductsListPageComponent() {
             <div className='lg:col-span-1'>
               <ProductsFilters
                 onSearchChange={setSearch}
-                onProductLineChange={setProductLine}
+                onProductLineChange={(value) => {
+                  const [line, maker = ''] = value.split('|');
+                  setProductLine(line);
+                  setAutomaker(maker);
+                }}
                 onAutomakerChange={setAutomaker}
                 onModelChange={() => { }}
                 onYearChange={setYear}
                 searchValue={search}
-                productLineValue={productLine}
+                productLineValue={
+                  productLine === 'VALVULAS_INJETORAS' && automaker
+                    ? `${productLine}|${automaker}`
+                    : productLine
+                }
                 automakerValue={automaker}
                 yearValue={year}
               />
